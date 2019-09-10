@@ -65,12 +65,22 @@ MathJax.Hub.Config({
     .dropdown-menu .dropdown-item {
       color: rgba(255, 255, 255, 0.9);
     }
+    input.form-control, input.custom-file-control, input.form-control::placeholder, input.custom-file-control::placeholder {
+    color: #888888 !important;
+    }
+  .form-control:focus {
+        border-color: #B48457;
+  }
+    .form-control, .custom-file-control, .is-focused .form-control, .is-focused .custom-file-control {
+    background-image: linear-gradient(to top, #B48457 2px, rgba(9, 92, 159, 0) 2px), linear-gradient(to top, rgba(0, 0, 0, 0.26) 0, rgba(0, 0, 0, 0) 0);
+  }
+
   </style>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 <!-- Menubar -->
-<wrapper class="d-flex flex-column bg-yosemite" style="background-image: url('images/index/yosemite-waterfall-sm-opt.jpg');"><nav class="navbar navbar-expand-sm fixed-top-sm justify-content-start flex-nowrap navbar-primary py-2 pl-1 nav-color-override bg-index-nav"><div class="container">
+<wrapper class="d-flex flex-column bg-yosemite" style="background-image: url('images/index/yosemite-waterfall-sm-opt.jpg');"><nav class="navbar navbar-expand-sm fixed-top-sm justify-content-start flex-nowrap py-2 pl-1 nav-color-override bg-index-nav navbar-dark"><div class="container">
 <a class="navbar-brand ml-2 ml-sm-0 mr-auto" href="https://bashtage.github.io/kevinsheppard.com/">
 <span id="blog-title">Kevin Sheppard</span>
 </a>
@@ -79,11 +89,11 @@ MathJax.Hub.Config({
 </button>
 <div class="navbar-collapse collapse" id="bs-navbar1">
 <form action="search/" class="form-inline my-2 my-lg-0 ml-auto">
-<input aria-label="Search" autocomplete="off" class="form-control mr-sm-2 bg-light text-dark pl-2" id="tipue_search_input" name="q" placeholder="Search" type="search"/><button class="btn btn-outline-primary bg-page my-1 my-sm-0" type="submit">Search</button>
+<input aria-label="Search" autocomplete="off" class="form-control mr-sm-2 text-dark pl-2" id="tipue_search_input" name="q" placeholder="Enter search..." type="search"/><button class="btn btn-outline-light my-1 my-sm-0" type="submit">Search</button>
 </form>
 </div>
 </div>
-</nav><nav class="navbar navbar-expand-sm nav-color-override bg-index-nav navbar-primary pb-1"><div class="navbar-collapse collapse pt-2 pt-sm-0" id="bs-navbar2">
+</nav><nav class="navbar navbar-expand-sm nav-color-override bg-index-nav navbar-dark navbar-primary pb-1"><div class="navbar-collapse collapse pt-2 pt-sm-0" id="bs-navbar2">
 <div class="container">
 <ul class="navbar-nav mr-auto">
 <li class="nav-item">
@@ -201,7 +211,8 @@ MathJax.Hub.Config({
 </div>
 </div>
 </div>
-</section></main><footer class="container-fluid w-100 text-light py-4 mt-4 bg-footer-nav"><div class="container">
+</section></main><footer class="w-100 text-light py-4 mt-4 bg-footer-nav"><div class="container-fluid">
+<div class="container">
 <div class="row">
 <div class="col-lg-8 col-md-10 mx-auto">
 <ul class="list-inline text-center">
@@ -240,12 +251,18 @@ MathJax.Hub.Config({
 <!--<p class="copyright text-muted">Copyright © Your Website 2018</p>-->
 </div>
 </div>
-      © 2019         <a href="mailto:kevin.k.sheppard@gmail.com">Kevin Sheppard</a> - 
+</div>
+</div>
+<div class="container-fluid">
+<div class="container">
+<div class="row">
+<p> © 2019         <a href="mailto:kevin.k.sheppard@gmail.com">Kevin Sheppard</a> - 
 Content licensed <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="license">CC-BY-NC-ND</a>
 except code blocks which are <a href="https://opensource.org/licenses/NCSA/" rel="license">NCSA</a> licensed.
-
-      
-    </div>
+ </p>
+</div>
+</div>
+</div>
 </footer></wrapper><script src="assets/js/jquery.min.js"></script><script src="assets/js/popper.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/baguetteBox.min.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
