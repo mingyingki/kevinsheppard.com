@@ -1,6 +1,12 @@
 var tipuesearch = {
   "pages": [
     {
+      "title": "MFE MATLAB",
+      "text": "Solutions are posted after the class that covers the assignment has completed.  Solutions are available both as\nMATLAB Live Scripts, which provide an integrated view of code, text and mathematics and generic m-file scripts.\nLive Scripts are only usable in recent versions of MATLAB.\n\n\nMATLAB Notes\nIntroduction\nIntroduction Solutions\n\n\nCompanion Course\nSolutions\n\n\n\n\nMATLAB Notes\u00b6\nThis set of notes is a detailed introduction of using MATLAB and covers virtually all aspects required to implement\nnew models in MATLAB.  It assumes no knowledge of MATLAB and coverall everything required to complete econometric\nand statistical analysis in MATLAB.\nMATLAB Notes for Econometric and Statistical Analysis\nMATLAB Notes for Econometric and Statistical Analysis Data\nIntroduction\u00b6\nMATLAB Introduction Course\nMATLAB Introduction Course Data\nIntroduction Solutions\u00b6\n\n\n\nMATLAB Live Script (mlx)\nMATLAB Script (m)\n\n\n\n\nImporting Data into MATLAB\nImporting Data into MATLAB\n\n\nUsing functions\nUsing functions\n\n\nAccessing elements in matrices\nAccessing elements in matrices\n\n\nProgram flow\nProgram flow\n\n\nLogical statements\nLogical statements\n\n\nTables\nTables\n\n\nGraphics\nGraphics\n\n\n\nCompanion Course\u00b6\nMATLAB Companion Course (Complete)\nSolutions\u00b6\n\nSolution Availability\nSolutions are provided in the week when a module is taught.",
+      "tags": "matlab,mfe",
+      "url": "https://bashtage.github.io/kevinsheppard.com/teaching/matlab/mfe-matlab/"
+    },
+    {
       "title": "Presentations (Beamer) in LyX",
       "text": "",
       "tags": "lyx",
@@ -194,7 +200,7 @@ var tipuesearch = {
     },
     {
       "title": "MFE Teaching Resources",
-      "text": "This is a place holder for the 2019/20 MFE Course content.",
+      "text": "This is a place holder for the 2019/20 MFE Course content. I lecture in Hilary term.\nMATLAB\u00b6\nThe companion course is designed to accompany Financial Econometrics I and II and\nto provide tools needed in Empirical Asset pricing.",
       "tags": "",
       "url": "https://bashtage.github.io/kevinsheppard.com/teaching/mfe/"
     },
