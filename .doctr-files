@@ -2648,8 +2648,14 @@
 ./notebook-specimen/index.ipynb
 ./photos/index.html
 ./photos/index.src.html
+./research/cv/index.html
+./research/cv/index.md
 ./research/index.html
 ./research/index.md
+./research/publications/index.html
+./research/publications/index.rst
+./research/working-papers/index.html
+./research/working-papers/index.md
 ./robots.txt
 ./rss.xml
 ./safari-pinned-tab.svg

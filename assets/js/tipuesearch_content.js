@@ -1,6 +1,24 @@
 var tipuesearch = {
   "pages": [
     {
+      "title": "Working Papers",
+      "text": "Write your page here.",
+      "tags": "",
+      "url": "https://bashtage.github.io/kevinsheppard.com/research/working-papers/"
+    },
+    {
+      "title": "Publications",
+      "text": "Write your page here.",
+      "tags": "",
+      "url": "https://bashtage.github.io/kevinsheppard.com/research/publications/"
+    },
+    {
+      "title": "CV - Kevin Sheppard",
+      "text": "Write your page here.",
+      "tags": "",
+      "url": "https://bashtage.github.io/kevinsheppard.com/research/cv/"
+    },
+    {
       "title": "MFE Financial Econometrics Notes",
       "text": "These notes are used in Financial Econometrics I & II in the M.Sc. in Financial Economics at the \nUniversity of Oxford.  Comments and corrections are welcome. \nNotes\u00b6\nFinancial Econometrics \nSplit By Chapter\u00b6\n\nChapter 1\nChapter 2\nChapter 3\nChapter 4\nChapter 5\nChapter 6\nChapter 7\nChapter 8\nChapter 9\nFront matter\nBibliography\n\nTablet Optimized\u00b6\nThese files contain the same content but are built with a these that makes \nthem more friendly for reading on a tablet or iPad.\nFinancial Econometrics (tablet optimized) \nSplit By Chapter\u00b6\n\nChapter 1\nChapter 2\nChapter 3\nChapter 4\nChapter 5\nChapter 6\nChapter 7\nChapter 8\nChapter 9\nFront matter\nBibliography",
       "tags": "mfe",
@@ -229,28 +247,10 @@ var tipuesearch = {
       "url": "https://bashtage.github.io/kevinsheppard.com/blog/moving-to-static-site-generation/"
     },
     {
-      "title": "Subpage2",
-      "text": "This is a subpage",
-      "tags": "",
-      "url": "https://bashtage.github.io/kevinsheppard.com/subpages/subpage/"
-    },
-    {
-      "title": "Subpage",
-      "text": "This is not really a subpage.",
-      "tags": "",
-      "url": "https://bashtage.github.io/kevinsheppard.com/subpage/"
-    },
-    {
       "title": "index",
       "text": "",
       "tags": "",
       "url": "https://bashtage.github.io/kevinsheppard.com/"
-    },
-    {
-      "title": "Welcome",
-      "text": "Write your page here.",
-      "tags": "",
-      "url": "https://bashtage.github.io/kevinsheppard.com/welcome/"
     },
     {
       "title": "Kevin Sheppard's Photos",
