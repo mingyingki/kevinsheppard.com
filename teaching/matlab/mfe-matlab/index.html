@@ -8,12 +8,6 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>MFE MATLAB | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
-<style>
-    html, body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fafafa;
-    }
-  </style>
 <link href="../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
 <link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css"/>
@@ -46,7 +40,13 @@ MathJax.Hub.Config({
         processEscapes: false,
   }
 });
-</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta content="Kevin Sheppard" name="author"/>
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><style>
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
+    }
+</style>
+<meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="MFE MATLAB" property="og:title"/>
 <meta content="https://bashtage.github.io/kevinsheppard.com/teaching/matlab/mfe-matlab/" property="og:url"/>
@@ -63,7 +63,7 @@ MathJax.Hub.Config({
 <a class="navbar-brand ml-2 ml-sm-0 mr-auto" href="https://bashtage.github.io/kevinsheppard.com/">
 <span id="blog-title">Kevin Sheppard</span>
 </a>
-<button aria-controls="bs-navbar1, bs-navbar2" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler order-first" data-target="#bs-navbar1, #bs-navbar2" data-toggle="collapse" type="button">
+<button aria-controls="bs-navbar1, bs-navbar2" aria-expanded="false" aria-label="Toggle navigation" class="custom-toggler navbar-toggler order-first" data-target="#bs-navbar1, #bs-navbar2" data-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="navbar-collapse collapse" id="bs-navbar1">
@@ -89,7 +89,7 @@ MathJax.Hub.Config({
 </div>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../../../photos/">Photos</a>
+<a class="nav-link" href="../../../galleries/">Photos</a>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="../../../blog/">Blog</a>
@@ -106,9 +106,9 @@ MathJax.Hub.Config({
 </div>
 </div>
 </nav><main class="flex-fill" id="content" role="main"><div class="jumbotron" style="background: center center no-repeat url(../../../images/teaching/mfe-financial-econometrics-logo.svg);background-size: cover;">
-<div class="container text-dark">
+<div class="container text-dark" style="min-height: 15rem;">
 <h1 class="display-3">MFE Financial Econometrics</h1>
-<p>Notes, assignment and solutions for the MATLAB companion course the accompanies Financial Econometrics I &amp; II.  </p>
+<p>Notes, assignment and solutions for the MATLAB companion course the accompanies Financial Econometrics I &amp; II.</p>
 </div>
 </div> <div class="container">
 <div class="body-content">
@@ -135,11 +135,8 @@ Live Scripts are only usable in recent versions of MATLAB.</p>
 </div>
 <h2 id="matlab-notes">MATLAB Notes<a class="headerlink" href="#matlab-notes" title="Permanent link">¶</a>
 </h2>
-<p>This set of notes is a detailed introduction of using MATLAB and covers virtually all aspects required to implement
-new models in MATLAB.  It assumes no knowledge of MATLAB and coverall everything required to complete econometric
-and statistical analysis in MATLAB.</p>
-<p><a href="../../../files/teaching/matlab/course/matlab_notes_2019.pdf">MATLAB Notes for Econometric and Statistical Analysis</a></p>
-<p><a href="../../../files/teaching/matlab/course/matlab_notes_data.zip">MATLAB Notes for Econometric and Statistical Analysis Data</a></p>
+<p>A <a href="../notes/">complete set of notes</a> covering the core aspects of MATLAB used in
+econometric analysis serves as a reference for the companion course.</p>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">¶</a>
 </h2>
 <p><a href="../../../files/teaching/matlab/course/mfe_matlab_introductory_course_2019.pdf">MATLAB Introduction Course</a></p>

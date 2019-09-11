@@ -8,12 +8,6 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
-<style>
-    html, body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fafafa;
-    }
-  </style>
 <link href="../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/css/rst.css" rel="stylesheet" type="text/css"/>
@@ -46,7 +40,14 @@ MathJax.Hub.Config({
         processEscapes: false,
   }
 });
-</script><!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</script><!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><style>
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fafafa;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css?family=Bitter&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/css/blog.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -55,7 +56,7 @@ MathJax.Hub.Config({
 <a class="navbar-brand ml-2 ml-sm-0 mr-auto" href="https://bashtage.github.io/kevinsheppard.com/">
 <span id="blog-title">Kevin Sheppard</span>
 </a>
-<button aria-controls="bs-navbar1, bs-navbar2" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler order-first" data-target="#bs-navbar1, #bs-navbar2" data-toggle="collapse" type="button">
+<button aria-controls="bs-navbar1, bs-navbar2" aria-expanded="false" aria-label="Toggle navigation" class="custom-toggler navbar-toggler order-first" data-target="#bs-navbar1, #bs-navbar2" data-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="navbar-collapse collapse" id="bs-navbar1">
@@ -81,7 +82,7 @@ MathJax.Hub.Config({
 </div>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../photos/">Photos</a>
+<a class="nav-link" href="../galleries/">Photos</a>
 </li>
 <li class="nav-item active">
 <a class="nav-link" href=".">Blog <span class="sr-only">(active)</span></a>
@@ -104,18 +105,25 @@ MathJax.Hub.Config({
 <div class="body-content">
 <!--Body content-->
 <div class="postindex">
-<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a class="u-url" href="welcome/">Welcome</a></h1>
+<article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a class="u-url" href="moving-to-static-site-generation/">Moving to Static Site Generation</a></h1>
 <div class="metadata">
 <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Kevin Sheppard
             </span></p>
 <p class="dateline">
-<a href="welcome/" rel="bookmark">
+<a href="moving-to-static-site-generation/" rel="bookmark">
 <time class="published dt-published" datetime="2019-09-02T10:34:36+01:00" itemprop="datePublished" title="2019-09-02 10:34">2019-09-02 10:34</time></a>
 </p>
 </div>
-</header><div class="e-content entry-content">
-<p>Write your post here.</p>
+</header><div class="p-summary entry-summary">
+<div>
+<p><img align="right" src="../images/blog/under-construction.png" style="max-height:25vh;"/></p>
+<p>This is the first post on my new site.  This site is a static site generated using <a href="https://getnikola.com/">Nikola</a>, 
+a static-site generator written in Python. I chose it because I know Python pretty well and
+so can customize any feature I want. It also natively supports <a href="https://jupyter.org/">Jupyter Notebooks</a>, which is 
+a big plus. </p>
+<p class="more"><a href="moving-to-static-site-generation/">Read more…</a></p>
+</div>
 </div>
 </article>
 </div>

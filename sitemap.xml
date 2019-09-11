@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/</loc>
-  <lastmod>2019-09-04T17:01:00Z</lastmod>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/2019/</loc>
@@ -15,11 +15,15 @@
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/archive.html</loc>
-  <lastmod>2019-09-10T22:46:00Z</lastmod>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/blog/</loc>
-  <lastmod>2019-09-03T12:52:00Z</lastmod>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/blog/moving-to-static-site-generation/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/blog/welcome/</loc>
@@ -27,7 +31,23 @@
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/categories/</loc>
-  <lastmod>2019-09-03T12:52:00Z</lastmod>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/categories/cat_documentation/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/categories/code/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/categories/website/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/code/matlab/mfe-toolbox/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/galleries/</loc>
@@ -167,15 +187,23 @@
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/matlab/</loc>
-  <lastmod>2019-09-10T15:43:00Z</lastmod>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/matlab/mfe-matlab/</loc>
   <lastmod>2019-09-10T15:43:00Z</lastmod>
  </url>
  <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/matlab/notes/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/mfe/</loc>
-  <lastmod>2019-09-03T12:52:00Z</lastmod>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/mfe/notes/</loc>
+  <lastmod>2019-09-11T12:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/other/</loc>

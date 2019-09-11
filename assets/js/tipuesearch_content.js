@@ -1,8 +1,26 @@
 var tipuesearch = {
   "pages": [
     {
+      "title": "MFE Financial Econometrics Notes",
+      "text": "These notes are used in Financial Econometrics I & II in the M.Sc. in Financial Economics at the \nUniversity of Oxford.  Comments and corrections are welcome. \nNotes\u00b6\nFinancial Econometrics \nSplit By Chapter\u00b6\n\nChapter 1\nChapter 2\nChapter 3\nChapter 4\nChapter 5\nChapter 6\nChapter 7\nChapter 8\nChapter 9\nFront matter\nBibliography\n\nTablet Optimized\u00b6\nThese files contain the same content but are built with a these that makes \nthem more friendly for reading on a tablet or iPad.\nFinancial Econometrics (tablet optimized) \nSplit By Chapter\u00b6\n\nChapter 1\nChapter 2\nChapter 3\nChapter 4\nChapter 5\nChapter 6\nChapter 7\nChapter 8\nChapter 9\nFront matter\nBibliography",
+      "tags": "mfe",
+      "url": "https://bashtage.github.io/kevinsheppard.com/teaching/mfe/notes/"
+    },
+    {
+      "title": "MATLAB Introduction",
+      "text": "This set of notes is a detailed introduction of using MATLAB and covers virtually all aspects required to implement\nnew models in MATLAB.  It assumes no knowledge of MATLAB and coverall everything required to complete econometric\nand statistical analysis in MATLAB.\nMATLAB Notes for Econometric and Statistical Analysis\nData\u00b6\nSome sections of the notes makes use of additional data files.\nMATLAB Notes for Econometric and Statistical Analysis Data",
+      "tags": "",
+      "url": "https://bashtage.github.io/kevinsheppard.com/teaching/matlab/notes/"
+    },
+    {
+      "title": "MFE Toolbox",
+      "text": "Write your page here.",
+      "tags": "",
+      "url": "https://bashtage.github.io/kevinsheppard.com/code/matlab/mfe-toolbox/"
+    },
+    {
       "title": "MFE MATLAB",
-      "text": "Solutions are posted after the class that covers the assignment has completed.  Solutions are available both as\nMATLAB Live Scripts, which provide an integrated view of code, text and mathematics and generic m-file scripts.\nLive Scripts are only usable in recent versions of MATLAB.\n\n\nMATLAB Notes\nIntroduction\nIntroduction Solutions\n\n\nCompanion Course\nSolutions\n\n\n\n\nMATLAB Notes\u00b6\nThis set of notes is a detailed introduction of using MATLAB and covers virtually all aspects required to implement\nnew models in MATLAB.  It assumes no knowledge of MATLAB and coverall everything required to complete econometric\nand statistical analysis in MATLAB.\nMATLAB Notes for Econometric and Statistical Analysis\nMATLAB Notes for Econometric and Statistical Analysis Data\nIntroduction\u00b6\nMATLAB Introduction Course\nMATLAB Introduction Course Data\nIntroduction Solutions\u00b6\n\n\n\nMATLAB Live Script (mlx)\nMATLAB Script (m)\n\n\n\n\nImporting Data into MATLAB\nImporting Data into MATLAB\n\n\nUsing functions\nUsing functions\n\n\nAccessing elements in matrices\nAccessing elements in matrices\n\n\nProgram flow\nProgram flow\n\n\nLogical statements\nLogical statements\n\n\nTables\nTables\n\n\nGraphics\nGraphics\n\n\n\nCompanion Course\u00b6\nMATLAB Companion Course (Complete)\nSolutions\u00b6\n\nSolution Availability\nSolutions are provided in the week when a module is taught.",
+      "text": "Solutions are posted after the class that covers the assignment has completed.  Solutions are available both as\nMATLAB Live Scripts, which provide an integrated view of code, text and mathematics and generic m-file scripts.\nLive Scripts are only usable in recent versions of MATLAB.\n\n\nMATLAB Notes\nIntroduction\nIntroduction Solutions\n\n\nCompanion Course\nSolutions\n\n\n\n\nMATLAB Notes\u00b6\nA complete set of notes covering the core aspects of MATLAB used in\neconometric analysis serves as a reference for the companion course.\nIntroduction\u00b6\nMATLAB Introduction Course\nMATLAB Introduction Course Data\nIntroduction Solutions\u00b6\n\n\n\nMATLAB Live Script (mlx)\nMATLAB Script (m)\n\n\n\n\nImporting Data into MATLAB\nImporting Data into MATLAB\n\n\nUsing functions\nUsing functions\n\n\nAccessing elements in matrices\nAccessing elements in matrices\n\n\nProgram flow\nProgram flow\n\n\nLogical statements\nLogical statements\n\n\nTables\nTables\n\n\nGraphics\nGraphics\n\n\n\nCompanion Course\u00b6\nMATLAB Companion Course (Complete)\nSolutions\u00b6\n\nSolution Availability\nSolutions are provided in the week when a module is taught.",
       "tags": "matlab,mfe",
       "url": "https://bashtage.github.io/kevinsheppard.com/teaching/matlab/mfe-matlab/"
     },
@@ -200,15 +218,15 @@ var tipuesearch = {
     },
     {
       "title": "MFE Teaching Resources",
-      "text": "This is a place holder for the 2019/20 MFE Course content. I lecture in Hilary term.\nMATLAB\u00b6\nThe companion course is designed to accompany Financial Econometrics I and II and\nto provide tools needed in Empirical Asset pricing.",
+      "text": "This is a place holder for the 2019/20 MFE Course content. I lecture in Hilary term.\nNotes\u00b6\nThe complete set of notes covers all aspects of the Financial Econometrics I and II courses. \nMATLAB\u00b6\nThe companion course is designed to accompany Financial Econometrics I and II and\nto provide tools needed in Empirical Asset pricing.",
       "tags": "",
       "url": "https://bashtage.github.io/kevinsheppard.com/teaching/mfe/"
     },
     {
-      "title": "Welcome",
-      "text": "Write your post here.",
-      "tags": "",
-      "url": "https://bashtage.github.io/kevinsheppard.com/blog/welcome/"
+      "title": "Moving to Static Site Generation",
+      "text": "This is the first post on my new site.  This site is a static site generated using Nikola, \na static-site generator written in Python. I chose it because I know Python pretty well and\nso can customize any feature I want. It also natively supports Jupyter Notebooks, which is \na big plus. \n\n\nWhile switching over I seriously considered Hugo, a generator\nwritten in Go which seems to have a very large and dedicated base. I may eventually switch \nover. Hugo although the Jupyter integration is nearly non-existent (i.e., manually export to\nmarkdown).\nThe Old Stack\u00b6\nThe good\u00b6\nFor many years I have used mediawiki as a Content Management System. \nI found this to be a relatively simple approach since it allowed be to create and populate a page\nwith links to other documents or files, whether these existed or not. If a page or file did \nnot exist, I could click on its link (which has a 404-color code) and either edit the missing\npage or add the file.  The wiki software also has a number of special pages that let me see\nall missing file.  As a bonus, MediaWiki indexes all content so that the site is immediately \nsearchable. There are many extensions that are helpful in integrating with other services,\ne.g., embedding YouTube videos. \nThe bad\u00b6\nWhat I didn't like about the old site was its fragility.  I regularly received emails telling \nme that my site was down.  These were driven by a connectivity issue with the MariaDB that stored\nthe site's data or with php-fpm which managed the relationship between the nginx front end\nand the PHP engine. My site depended on the correct operation of:\n\nnginx\nMariaDB\nphp-fpm\nMediaWiki\nA DigitalOcean droplet\n\nI also didn't like the feeling that I had to regularly patch the software. While I could setup\nUbuntu to automatically apply patches, I was always nervous about doing this with the MediaWiki\nsoftware. Instead, I would manually patch when I received an email from their security mailing list.\nIn addition, I had to occasionally migrate PHP versions when the current LTS increased its minimum\nsupported version. This was particularly challenging for me since I do not regularly use PHP and so \nI had to reinvent the wheel each time this happened (which I think was only twice, in fairness)\nThe extension landscape was also very uneven.  Many extensions I tried had no long-term support and \nso would continue to work until they used a feature that had been removed. This required repeatedly \nsearching for new extensions, and eventually lead me to remove most of them.  \nThe new site\u00b6\nThe good\u00b6\nThe new site is static in the sense that it is only a collection of HTML, CSS, JavaScript, images\nand other content files.  The only server I need is a webserver (e.g., nginx). While I \nam initially hosting it on the same droplet I used for my MediaWiki installation, I plan \non moving to GitHub pages using Travis CI to build the pages.  This will both save my time and\nmoney.\nThe bad\u00b6\nWhile writing a simple site or pure blog is pretty food proof, Nikola is not a great site generator.\nThe biggest problems I have faced are (some) lack of out-of-box customizability, lack of\na theme I like, and nothing helping me ensure that I do not have missing or orphan pages.\nThe upside for me is that these are all pretty simple to fix writing a few custom plugins. \nFor example, I wrote one that reads the site contents, file a list of files and finds all\nlinks to these files.  It then uses a couple of set operations to determine if there are\nany missing files (really important) or orphan files (less important, but still annoying).",
+      "tags": "code,website",
+      "url": "https://bashtage.github.io/kevinsheppard.com/blog/moving-to-static-site-generation/"
     },
     {
       "title": "Subpage2",

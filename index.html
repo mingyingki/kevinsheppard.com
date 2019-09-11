@@ -7,12 +7,6 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>index | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
-<style>
-    html, body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #fafafa;
-    }
-  </style>
 <link href="assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/rst.css" rel="stylesheet" type="text/css"/>
@@ -46,36 +40,12 @@ MathJax.Hub.Config({
   }
 });
 </script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><style>
-    .dropdown-menu {
-      background-color: rgba(0, 0, 0, 0) !important;
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #3c3425;
     }
-
-    .dropdown-menu .dropdown-item.focus, .dropdown-menu .dropdown-item.hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
-      background-color: rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .dropdown-menu .dropdown-item.active, .dropdown-menu .dropdown-item:active {
-      background-color: rgba(0, 0, 0, 0.2) !important;
-    }
-
-    .navbar-dark .navbar-nav .nav-link {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .dropdown-menu .dropdown-item {
-      color: rgba(255, 255, 255, 0.9);
-    }
-    input.form-control, input.custom-file-control, input.form-control::placeholder, input.custom-file-control::placeholder {
-    color: #888888 !important;
-    }
-  .form-control:focus {
-        border-color: #B48457;
-  }
-    .form-control, .custom-file-control, .is-focused .form-control, .is-focused .custom-file-control {
-    background-image: linear-gradient(to top, #B48457 2px, rgba(9, 92, 159, 0) 2px), linear-gradient(to top, rgba(0, 0, 0, 0.26) 0, rgba(0, 0, 0, 0) 0);
-  }
-
-  </style>
+</style>
+<link href="assets/css/home.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
@@ -84,7 +54,7 @@ MathJax.Hub.Config({
 <a class="navbar-brand ml-2 ml-sm-0 mr-auto" href="https://bashtage.github.io/kevinsheppard.com/">
 <span id="blog-title">Kevin Sheppard</span>
 </a>
-<button aria-controls="bs-navbar1, bs-navbar2" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler order-first" data-target="#bs-navbar1, #bs-navbar2" data-toggle="collapse" type="button">
+<button aria-controls="bs-navbar1, bs-navbar2" aria-expanded="false" aria-label="Toggle navigation" class="custom-toggler navbar-toggler order-first" data-target="#bs-navbar1, #bs-navbar2" data-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="navbar-collapse collapse" id="bs-navbar1">
@@ -110,7 +80,7 @@ MathJax.Hub.Config({
 </div>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="photos/">Photos</a>
+<a class="nav-link" href="galleries/">Photos</a>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="blog/">Blog</a>
@@ -134,10 +104,10 @@ MathJax.Hub.Config({
 <img alt="Kevin Sheppard" class="profile mx-auto d-block" src="images/kevin-sheppard-stylized-v2-opt.png"/><div class="card-content">
 <h2 itemprop="name">Kevin Sheppard</h2>
 <h3 itemprop="jobTitle">Associate Professor</h3>
-<h3 itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization">
+<h3 itemprop="worksFor" itemscope="" itemtype="https://schema.org/Organization">
 <span itemprop="name">University of Oxford</span>
 </h3>
-<h4 itemprop="location">
+<h4 itemprop="location" itemtype="https://schema.org/Place">
 <i class="fas fa-map-marker-alt"></i> Oxford/London</h4>
 <div class="icon-block py-4">
 <a class="contact" href="mailto:kevin.k.sheppard@gmail.com">
@@ -156,11 +126,26 @@ MathJax.Hub.Config({
 </div>
 <div class="col-sm-7">
 <div class="row">
-<div class="col">
-<h1>Biography</h1>
-<p></p>
-<p></p>
-<p></p>
+<div class="col background-info">
+<h1>Background</h1>
+<p>I currently work at the University of Oxford as a Financial Econometrician. My
+                research focuses on volatility and uncertainty. An important pillar of my research
+                is on measuring and modeling conditional correlation, which is a key input into in
+                risk modeling in portfolios.</p>
+<p>I have produces a large volume of teaching resources, including a large set of
+                notes in <a href="teaching/mfe/notes/">Financial Econometrics</a>, and
+                introductions to both <a href="teaching/python/notes/">Python</a> and
+                <a href="teaching/matlab/notes/">MATLAB</a>. I have also produce a number of
+                widely used toolboxes related to my research. The most
+                popular of these are the <a href="code/matlab/mfe-toolbox">MFE Toolbox for MATLAB</a>,
+                the arch (<a href="https://github.com/bashtage/arch/">documentation</a>,
+                <a href="code/matlab/mfe-toolbox"><i class="fab fa-github"></i></a>) and
+                linearmodels (<a href="https://github.com/bashtage/linearmodels/">documentation</a>,
+                <a href="code/matlab/mfe-toolbox"><i class="fab fa-github"></i></a>) modules for
+                Python. See my <a href="https://github.com/bashtage">GitHub page</a> for a complete list of projects.</p>
+<p>I enjoy hiking and being outdoors, although I don't get out as much as I would like.
+                You can see some pictures from hiking in the <a href="galleries/">gallery</a>. I
+                have a sweet but rambunctious chocolate labrador <a href="galleries/Callie-(2015)/">Callie</a>.</p>
 </div>
 </div>
 <div class="row">
