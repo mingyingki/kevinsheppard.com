@@ -290,7 +290,7 @@ var tipuesearch = {
     },
     {
       "title": "index",
-      "text": "",
+      "text": "Background\u00b6\nI currently work at the University of Oxford as a Financial Econometrician. \nMy research focuses on volatility and uncertainty. Measuring and modeling \nconditional correlation, a key input into portfolio risk models is a \ncornerstone of my research.\nI have produced a large volume of teaching resources, including a complete \nset of notes in Financial Econometrics, and introductions to both \nPython and MATLAB. \nI also maintain a number of widely used toolboxes related to my research. The most\nbroadly used of these are the MFE Toolbox for MATLAB, \nand the arch (documentation, \n) \nand linearmodels (documentation, )\nmodules for Python. See my GitHub page for a \ncomplete list of projects.\nI enjoy hiking and being outdoors, although I don't get out as much as I \nwould like. You can see some pictures of my adventures in the gallery. \nI have a sweet but rambunctious chocolate labrador, Callie.",
       "tags": "",
       "url": "https://bashtage.github.io/kevinsheppard.com/"
     },
