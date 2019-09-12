@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/archive.html</loc>
-  <lastmod>2019-09-12T12:24:00Z</lastmod>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/blog/</loc>
@@ -48,6 +48,10 @@
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/code/matlab/mfe-toolbox/</loc>
   <lastmod>2019-09-11T12:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/code/matlab/ucsd-garch/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/galleries/</loc>
@@ -211,7 +215,11 @@
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/mfe/</loc>
-  <lastmod>2019-09-11T12:39:00Z</lastmod>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/mfe/advanced-econometrics/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/mfe/notes/</loc>
@@ -227,7 +235,7 @@
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/</loc>
-  <lastmod>2019-09-08T19:58:00Z</lastmod>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-1/</loc>
@@ -264,6 +272,26 @@
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-9/</loc>
   <lastmod>2019-09-08T19:59:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/videos/anaconda-linux/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/videos/anaconda-widows/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/videos/ipython-magics/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/videos/ipython/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/course/videos/jupyter-notebooks/</loc>
+  <lastmod>2019-09-12T17:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/</loc>

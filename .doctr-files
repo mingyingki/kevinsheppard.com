@@ -91,10 +91,13 @@
 ./categories/website/index.html
 ./code/matlab/mfe-toolbox/index.html
 ./code/matlab/mfe-toolbox/index.md
+./code/matlab/ucsd-garch/index.html
 ./favicon-16x16.png
 ./favicon-32x32.png
 ./favicon.ico
 ./favicon.png
+./files/code/matlab/mfe-toolbox-documentation.pdf
+./files/code/matlab/ucsd_garch.zip
 ./files/teaching/matlab/course/accessing_elements.m
 ./files/teaching/matlab/course/accessing_elements.mlx
 ./files/teaching/matlab/course/graphics.m
@@ -2610,6 +2613,8 @@
 ./images/mastheads/matlab-masthead-opt.thumbnail.png
 ./images/mastheads/matlab-masthead.png
 ./images/mastheads/matlab-masthead.thumbnail.png
+./images/mastheads/other-teaching.jpg
+./images/mastheads/other-teaching.thumbnail.jpg
 ./images/mastheads/python.png
 ./images/mastheads/python.svg
 ./images/mastheads/python.thumbnail.png
@@ -2698,6 +2703,7 @@
 ./teaching/matlab/mfe-matlab/index.md
 ./teaching/matlab/notes/index.html
 ./teaching/matlab/notes/index.md
+./teaching/mfe/advanced-econometrics/index.html
 ./teaching/mfe/index.html
 ./teaching/mfe/index.md
 ./teaching/mfe/notes/index.html
@@ -2724,6 +2730,11 @@
 ./teaching/python/course/lesson-8/index.ipynb
 ./teaching/python/course/lesson-9/index.html
 ./teaching/python/course/lesson-9/index.ipynb
+./teaching/python/course/videos/anaconda-linux/index.html
+./teaching/python/course/videos/anaconda-widows/index.html
+./teaching/python/course/videos/ipython-magics/index.html
+./teaching/python/course/videos/ipython/index.html
+./teaching/python/course/videos/jupyter-notebooks/index.html
 ./teaching/python/index.html
 ./teaching/python/index.md
 ./teaching/python/notes/index.html
