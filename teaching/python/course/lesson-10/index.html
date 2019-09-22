@@ -5,7 +5,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Lesson 3 | Kevin Sheppard</title>
+<title>Lesson 10 | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
 <link href="../../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
@@ -18,7 +18,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../../../assets/css/tipuesearch.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/kevinsheppard.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
-<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-3/" rel="canonical"/>
+<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-10/" rel="canonical"/>
 <link href="../../../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../../../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -47,23 +47,24 @@ MathJax.Hub.Config({
 </style>
 <meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
-<meta content="Lesson 3" property="og:title"/>
-<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-3/" property="og:url"/>
-<meta content="Basic Python Types¶This lesson covers:
+<meta content="Lesson 10" property="og:title"/>
+<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-10/" property="og:url"/>
+<meta content="Graphics¶This lesson covers:
 
-Inputting scalars and strings
-Lists
-Dictionaries
-
-
-
+Basic plotting 
+Subplots 
+Histograms 
+Scatter Plots
 
 
 
 
 
-Problem: Input scalar floating point and integers¶
-Create a variable called scalar_float containing $\p" property="og:description"/>
+
+
+
+Plotting in notebooks requires using a magic command, which starts with %, to initialize
+the plotting backend." property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -137,7 +138,7 @@ Create a variable called scalar_float containing $\p" property="og:description"/
 <div class="row">
 <div class="col-xl-1"></div>
 <div class="col-xl-10">
-<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 3</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 10</a></h1>
 </header><div class="e-content entry-content" itemprop="articleBody text">
 <div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -145,13 +146,14 @@ Create a variable called scalar_float containing $\p" property="og:description"/
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Basic-Python-Types">Basic Python Types<a class="anchor-link" href="#Basic-Python-Types">¶</a>
+<h2 id="Graphics">Graphics<a class="anchor-link" href="#Graphics">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Inputting scalars and strings</li>
-<li>Lists</li>
-<li>Dictionaries</li>
+<li>Basic plotting </li>
+<li>Subplots </li>
+<li>Histograms </li>
+<li>Scatter Plots</li>
 </ul>
 </div>
 </div>
@@ -161,13 +163,31 @@ Create a variable called scalar_float containing $\p" property="og:description"/
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Input-scalar-floating-point-and-integers">Problem: Input scalar floating point and integers<a class="anchor-link" href="#Problem:-Input-scalar-floating-point-and-integers">¶</a>
-</h3>
-<ol>
-<li>Create a variable called <code>scalar_float</code> containing $\pi$ to 4 digits.</li>
-<li>Create a variable called <code>scalar_int</code> containing 31415. </li>
-<li>Print each value using the <code>print</code> function.   </li>
-</ol>
+<p>Plotting in notebooks requires using a magic command, which starts with <code>%</code>, to initialize
+the plotting backend.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Begin by loading the data in hf.hdf. This data set contains high-frequency price data for IBM and MSFT
+on a single day stored as two Series. IBM is stored as 'IBM' in the HDF file, and MSFT is stored
+as 'MSFT.</p>
 </div>
 </div>
 </div>
@@ -187,17 +207,35 @@ Create a variable called scalar_float containing $\p" property="og:description"/
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Create-a-string-and-an-f-string">Problem: Create a string and an f-string<a class="anchor-link" href="#Problem:-Create-a-string-and-an-f-string">¶</a>
+<h3 id="Problem:-Basic-Plotting">Problem: Basic Plotting<a class="anchor-link" href="#Problem:-Basic-Plotting">¶</a>
 </h3>
 <ol>
-<li>Create a variable called <code>a_string</code> containing <code>This is a string</code>
-</li>
-<li>Create a f-string the prints <code>The value of scalar_float is 3.1415</code> using
-the variable created in the previous step</li>
-<li>Create two string, <code>first</code> containing <code>String concatenation</code> and the second containing
-<code>is like addition</code>, and join the two using <code>+</code> to produce
-<code>String concatenation is like addition</code>. </li>
+<li>Plot the <code>ibm</code> series which contains the price of IBM. </li>
+<li>Add a title and label the axes. </li>
+<li>Add markers and remove the line. </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -217,14 +255,10 @@ the variable created in the previous step</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Create-a-list">Problem: Create a list<a class="anchor-link" href="#Problem:-Create-a-list">¶</a>
+<h3 id="Problem:-Subplot">Problem: Subplot<a class="anchor-link" href="#Problem:-Subplot">¶</a>
 </h3>
-<ol>
-<li>Create a list containing <code>scalar_float</code> and <code>scalar_int</code>
-</li>
-<li>Add <code>a_string</code> to the list.</li>
-<li>Select the the lst two elements of the list</li>
-</ol>
+<p>Create a 2 by 1 subplot with the price of IBM in the top subplot and the price of MSFT in the
+bottom subplot.</p>
 </div>
 </div>
 </div>
@@ -244,13 +278,10 @@ the variable created in the previous step</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Create-a-list-of-lists">Problem: Create a list of lists<a class="anchor-link" href="#Problem:-Create-a-list-of-lists">¶</a>
+<h3 id="Problem:-Plot-with-Dates">Problem: Plot with Dates<a class="anchor-link" href="#Problem:-Plot-with-Dates">¶</a>
 </h3>
-<ol>
-<li>Create a list containing the two lists <code>[1, 2, 3]</code> and <code>[4, 5, 6]</code>
-</li>
-<li>Select the element 5 from the nested list</li>
-</ol>
+<p>Use <code>matplotlib</code> to directly plot <code>ibm</code> against its <code>index</code>. This is a repeat of a previous
+plot but shows how to use the <code>plot</code> command directly.</p>
 </div>
 </div>
 </div>
@@ -270,12 +301,10 @@ the variable created in the previous step</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Create-a-dictionary">Problem: Create a dictionary<a class="anchor-link" href="#Problem:-Create-a-dictionary">¶</a>
+<h3 id="Problem:-Histogram">Problem: Histogram<a class="anchor-link" href="#Problem:-Histogram">¶</a>
 </h3>
-<ol>
-<li>Create a dictionary containing the key-value pairs <code>"float"</code> and 3.1415, <code>"int"</code> and 31415,
-and <code>"string"</code> and <code>"three-point-one-four-one-five"</code>.</li>
-</ol>
+<p>Produce a histogram of MSFT 1-minute returns (Hint: you have to produce the 1-minute Microsoft
+returns first using <code>resample</code> and <code>pct_change</code>).</p>
 </div>
 </div>
 </div>
@@ -295,37 +324,11 @@ and <code>"string"</code> and <code>"three-point-one-four-one-five"</code>.</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Lookup-and-Change-a-value">Problem: Lookup and Change a value<a class="anchor-link" href="#Problem:-Lookup-and-Change-a-value">¶</a>
+<h3 id="Problem:-Scatter-Plot">Problem: Scatter Plot<a class="anchor-link" href="#Problem:-Scatter-Plot">¶</a>
 </h3>
-<ol>
-<li>Look up the value of <code>"float"</code>.</li>
-<li>Change the value of <code>"float"</code> to <code>22 / 7</code>.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Add-and-remove-a-key">Problem: Add and remove a key<a class="anchor-link" href="#Problem:-Add-and-remove-a-key">¶</a>
-</h3>
-<ol>
-<li>Add the new key "better_float" with the value 3.141592.</li>
-<li>Remove the key "float" and its value.</li>
-</ol>
+<p>Scatter the 5-minute MSFT returns against the 5-minute IBM returns.</p>
+<p><em>Hint</em>: You will need to create both 5-minute return series, merge them, and then plot using 
+the combined DataFrame.</p>
 </div>
 </div>
 </div>

@@ -166,10 +166,10 @@ Executing a standalone Python file in IPyth" property="og:description"/>
 </h3>
 <h4 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a>
 </h4>
-<p><strong>Note</strong>: I strong recommend that you install 
-<a href="https://www.microsoft.com/en-gb/p/windows-terminal-preview/9n0dx20hk701">Windows Terminal (Preview)</a> from the Microsoft Store. You
-should run these commands in the <code>cmd</code> tab.</p>
-<p>On Windows, you should launch <em>Windows Terminal (Preview)</em>. Alternatively you could run cmd.exe.</p>
+<p><strong>Note</strong>: I strongly recommend that you install 
+<a href="https://www.microsoft.com/en-gb/p/windows-terminal-preview/9n0dx20hk701">Windows Terminal (Preview)</a>
+from the Microsoft Store. You should run these commands in the <code>cmd</code> tab.</p>
+<p>On Windows, you should launch <em>Windows Terminal (Preview)</em>. Alternatively, you could run cmd.exe.</p>
 <h4 id="OSX">OSX<a class="anchor-link" href="#OSX">¶</a>
 </h4>
 <p>Launch Terminal.app from spotlight.</p>
@@ -188,11 +188,14 @@ should run these commands in the <code>cmd</code> tab.</p>
 </h3>
 <ol>
 <li>Open a terminal</li>
-<li>Change directory to the location where you store your notebooks.  It can also be any directory above the directory, but
-cannot be below. For example, if you store your work in /home/username/mfe/financial-econometrics/notebooks, than you could 
-launch it in /home/username or /home/username/mfe/financial-econometrics, and then navigate to the notebooks directory.</li>
-<li>Run the command <code>jupyter notebook</code>. You should see a browser open and a window like the one below. I recommend using 
-<a href="https://www.google.com/chrome/">Google Chrome</a>, although any modern browser should work fine.</li>
+<li>Change directory to the location where you store your notebooks.  It can also
+be any directory above the directory, but cannot be below. For example, if 
+you store your work in /home/username/mfe/financial-econometrics/notebooks, 
+then you could launch it in /home/username or /home/username/mfe/financial-econometrics, 
+and then navigate to the notebooks directory.</li>
+<li>Run the command <code>jupyter notebook</code>. You should see a browser open and a window 
+like the one below. I recommend using <a href="https://www.google.com/chrome/">Google Chrome</a>, 
+although any modern browser should work fine.</li>
 </ol>
 <p><strong>Note</strong>: To close the notebook application, press CTRL+C (or CMD+C) in the terminal window.</p>
 <p><img alt="Jupyter Notebook" src="../../../../images/teaching/python/course/jupyter-notebook.png" title="Jupyter Notebook"/></p>
@@ -209,8 +212,8 @@ launch it in /home/username or /home/username/mfe/financial-econometrics, and th
 <ol>
 <li>Open a terminal.</li>
 <li>Run IPython by entering <code>ipython</code> in the terminal window. You should see a 
-window like the one below with the iconic <code>In [1]</code> indicating that you are at 
-the start of a new IPython session.</li>
+window like the one below with the iconic <code>In [1]</code> indicating that you are at the
+start of a new IPython session.</li>
 </ol>
 <p><img alt="IPython in Windows Terminal" src="../../../../images/teaching/python/course/ipython-windows.png" title="IPython in Windows Terminal"/></p>
 </div>
@@ -223,11 +226,12 @@ the start of a new IPython session.</li>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Launching-IPython-in-Jupyter-QtConsole">Launching IPython in Jupyter QtConsole<a class="anchor-link" href="#Launching-IPython-in-Jupyter-QtConsole">¶</a>
 </h3>
-<p>Anaconda includes a QtConsole application which provides a rich interface to IPython that can display images inline. While I like
-the experience that QtConsole provides to IPython, this method is optional and is only ideal for short sessions since it is less easy
+<p>Anaconda includes a QtConsole application which provides a rich interface to IPython
+that can display images inline. While I like the experience that QtConsole provides to 
+IPython, this method is optional and is only ideal for short sessions since it is less easy
 to save your work as you go.</p>
-<p>To open QtConsole, launch Jupyter QtConsole from the Start menu, Spotlight, or your operating system's launcher. You should see
-a window like the one below.</p>
+<p>To open QtConsole, launch Jupyter QtConsole from the Start menu, Spotlight, or your operating 
+system's launcher. You should see a window like the one below.</p>
 <p><img alt="IPython QtConsole" src="../../../../images/teaching/python/course/ipython-qtconsole.png" title="IPython QtConsole"/></p>
 </div>
 </div>
@@ -251,7 +255,8 @@ Note that Python is white-space sensitive, and so these lines should <strong>not
 <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'exp(1)={x}, log(exp(1))={y}'</span><span class="p">)</span>
 </pre></div>
 <ol>
-<li>Run the code in an IPython session using <code>%run -i lesson-2.py</code>.  Note: you should create the python file in the same directory as the notebook. </li>
+<li>Run the code in an IPython session using <code>%run -i lesson-2.py</code>.  Note: you should create 
+the python file in the same directory as the notebook. </li>
 </ol>
 <p>If everything works as expected, you should see</p>
 <div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mf">2.718281828459045</span><span class="p">,</span> <span class="n">log</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">=</span><span class="mf">1.0</span>
@@ -267,22 +272,23 @@ Note that Python is white-space sensitive, and so these lines should <strong>not
 <h3 id="Jupyter-notebooks-in-PyCharm-Professional">Jupyter notebooks in PyCharm Professional<a class="anchor-link" href="#Jupyter-notebooks-in-PyCharm-Professional">¶</a>
 </h3>
 <div class="alert alert-info">
-PyCharm Professions is my recommended approach if you are going to use Python throughout the course.
+PyCharm Professional is my recommended approach if you are going to use Python throughout the course.
 It provides the best experience and can be acquired for free using the student program.
 </div>
-<p>PyCharm Professions has deeply integrated Jupyter Notebooks. To create an IPython
+<p>PyCharm Professional has deeply integrated Jupyter Notebooks. To create an IPython
 notebook:</p>
 <ol>
 <li>Open PyCharm Profession</li>
 <li>Open the directory where your notebooks are stored</li>
-<li>Right click on the root directory and select <code>New &gt; Jupyter Notebook</code>. Give your file a
+<li>Right-click on the root directory and select <code>New &gt; Jupyter Notebook</code>. Give your file a
 meaningful name, and it will open in the main window.</li>
 </ol>
 <p><img alt="PyCharm New Notebook" src="../../../../images/teaching/python/course/pycharm-new-notebook.png" title="PyCharm New Notebook"/></p>
-<p>PyCharm uses a special syntax where cells look like code and so can be edited like text. This 
-allows PyCharm to use introspection and code completion on wht code you have written, a highly
-useful set of features. PyCharm stores the notebook in a Jupyter notebook file (<code>.ipynb</code>), which means that you 
-can trivially open it in any other Jupyter notebook aware app.  This differs from <a href="#jupyter-notebooks-in-vsCode">VS code</a>
+<p>PyCharm uses a special syntax where cells look like code and so can be edited like
+text. This allows PyCharm to use introspection and code completion on the code 
+you have written, a highly useful set of features. PyCharm stores the notebook in 
+a Jupyter notebook file (<code>.ipynb</code>), which means that you can trivially open it in 
+any other Jupyter notebook aware app.  This differs from <a href="#jupyter-notebooks-in-vsCode">VS code</a>
 which stores the file as a play Python file (<code>.py</code>) and requires an explicit export to 
 a Jupyter notebook file.</p>
 <p>A code cell is demarcated using <code>#%%</code> and a markdown cell begins with <code>#%% md</code>.  Below is a screenshot
@@ -294,8 +300,8 @@ of this notebook in PyCharm.</p>
 <em>Scientific Mode</em> in the View menu. You can then use <code>#%%</code> to indicate the start and end of cells.
 Individual Cells can be executed in the console by pressing CTRL+Enter.</p>
 <ol>
-<li>In PyCharm, right click on the root directory and select <code>New &gt; Python File</code>. Give you file a 
-meaning ful name.</li>
+<li>In PyCharm, right-click on the root directory and select <code>New &gt; Python File</code>. Give
+your file a meaningful name.</li>
 <li>
 <p>Enter</p>
 <div class="highlight"><pre><span></span><span class="c1">#%%</span>
@@ -307,7 +313,8 @@ meaning ful name.</li>
 </li>
 <li>Enable Scientific Mode in the View menu.</li>
 <li>Run the first cell by placing you mouse in the cell and pressing CTRL+Enter.</li>
-<li>Run the second cell by clicking on the Play button (arrow) that appears in the gutter of the editor.</li>
+<li>Run the second cell by clicking on the Play button (arrow) that appears in the
+gutter of the editor.</li>
 </ol>
 <div class="alert alert-warning">
 <b>Note:</b> Magic Python in PyCharm only supports python code, and so it is not possible to mix
@@ -323,16 +330,17 @@ Markdown text and Python in the same file.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Jupyter-notebooks-in-VSCode">Jupyter notebooks in VSCode<a class="anchor-link" href="#Jupyter-notebooks-in-VSCode">¶</a>
 </h3>
-<p><a href="https://code.visualstudio.com/">Visual Studio Code</a> (or VS Code) is a lightweight IDE that 
-supports adding features through extensions.  The key extension for working with notebooks
-is <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension for Visual Studio Code</a>.
+<p><a href="https://code.visualstudio.com/">Visual Studio Code</a> (or VS Code) is a lightweight
+IDE that supports adding features through extensions.  The key extension for 
+working with notebooks is 
+<a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension for Visual Studio Code</a>.
 With this extension installed, it is possible to use a special file format called Magic Python
 to write notebook-like files that can be exported to Jupyter notebook files.</p>
 <ol>
 <li>Install VS Code and the Python extension</li>
 <li>Open the command palette and enter "Jupyter start" and select the only available item.</li>
 <li>
-<p>This is a Python file that support a cell demarcation using <code>#%%</code> for code cells and <code>#%% [markdown]</code> 
+<p>This is a Python file that supports a cell demarcation using <code>#%%</code> for code cells and <code>#%% [markdown]</code> 
 for cells that contain markdown code.  Note that markdown text <strong>must</strong> be either:</p>
 <ul>
 <li>
@@ -369,9 +377,10 @@ for cells that contain markdown code.  Note that markdown text <strong>must</str
 </li>
 </ol>
 <p>The cells have a special button above them that allows the contents to be
-executed and the result to be displayed in the interactive window. See the screenshot 
-below for an example of the experience of using VS Code. There is also an interactive 
-console at the bottom left where commands can be directly executed.</p>
+executed and the result to be displayed in the interactive window. See the 
+screenshot below for an example of the experience of using VS Code. There 
+is also an interactive console at the bottom left where commands can be 
+directly executed.</p>
 <p><img alt="VS Code Notebook" src="../../../../images/teaching/python/course/vscode-notebook.png" title="VS Code Notebook"/></p>
 </div>
 </div>
@@ -400,8 +409,8 @@ console at the bottom left where commands can be directly executed.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Exporting-to-an-Jupyter-notebook">Exporting to an Jupyter notebook<a class="anchor-link" href="#Exporting-to-an-Jupyter-notebook">¶</a>
 </h4>
-<p>To export a Magic Python file, open the command palette and enter "import jupyter". Select the option to import
-the notebook.</p>
+<p>To export a Magic Python file, open the command palette and enter "import jupyter". 
+Select the option to import the notebook.</p>
 <p><img alt="VS Code Import" src="../../../../images/teaching/python/course/vscode-import.png" title="VS Code Import"/></p>
 </div>
 </div>
