@@ -162,43 +162,18 @@ Executing a standalone Python file in IPyth" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Opening-a-Terminal">Opening a Terminal<a class="anchor-link" href="#Opening-a-Terminal">¶</a>
+<h3 id="Opening-an-Anaconda-Terminal">Opening an Anaconda Terminal<a class="anchor-link" href="#Opening-an-Anaconda-Terminal">¶</a>
 </h3>
+<p>An Anaconda terminal allows <code>python</code> to be run directly.  It also allows other useful programs, for example <code>pip</code>, the Python package manager to be used to install packages that are not available through Anaconda.</p>
 <h4 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a>
 </h4>
-<p><strong>Note</strong>: I strongly recommend that you install 
-<a href="https://www.microsoft.com/en-gb/p/windows-terminal-preview/9n0dx20hk701">Windows Terminal (Preview)</a>
-from the Microsoft Store. You should run these commands in the <code>cmd</code> tab.</p>
-<p>On Windows, you should launch <em>Windows Terminal (Preview)</em>. Alternatively, you could run cmd.exe.</p>
-<h4 id="OSX">OSX<a class="anchor-link" href="#OSX">¶</a>
+<p>Launch Anaconda Prompt from the start menu.</p>
+<h4 id="OSX-and-Linux">OSX and Linux<a class="anchor-link" href="#OSX-and-Linux">¶</a>
 </h4>
-<p>Launch Terminal.app from spotlight.</p>
-<h4 id="Linux">Linux<a class="anchor-link" href="#Linux">¶</a>
-</h4>
-<p>Open the terminal (instructions depend on your distribution).</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Launching-Jupyter-notebook">Launching Jupyter notebook<a class="anchor-link" href="#Launching-Jupyter-notebook">¶</a>
-</h3>
-<ol>
-<li>Open a terminal</li>
-<li>Change directory to the location where you store your notebooks.  It can also
-be any directory above the directory, but cannot be below. For example, if 
-you store your work in /home/username/mfe/financial-econometrics/notebooks, 
-then you could launch it in /home/username or /home/username/mfe/financial-econometrics, 
-and then navigate to the notebooks directory.</li>
-<li>Run the command <code>jupyter notebook</code>. You should see a browser open and a window 
-like the one below. I recommend using <a href="https://www.google.com/chrome/">Google Chrome</a>, 
-although any modern browser should work fine.</li>
-</ol>
-<p><strong>Note</strong>: To close the notebook application, press CTRL+C (or CMD+C) in the terminal window.</p>
-<p><img alt="Jupyter Notebook" src="../../../../images/teaching/python/course/jupyter-notebook.png" title="Jupyter Notebook"/></p>
+<p>Open the terminal (instructions depend on your distribution). If you allowed conda to initialize, then you should be ready to call Anaconda's python and supporting functions.  If not, you should</p>
+<pre><code>cd ~/anaconda3/bin
+./conda init</code></pre>
+<p>and then reopen your terminal.</p>
 </div>
 </div>
 </div>
@@ -224,15 +199,13 @@ start of a new IPython session.</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Launching-IPython-in-Jupyter-QtConsole">Launching IPython in Jupyter QtConsole<a class="anchor-link" href="#Launching-IPython-in-Jupyter-QtConsole">¶</a>
+<h3 id="Launching-Jupyter-notebook">Launching Jupyter notebook<a class="anchor-link" href="#Launching-Jupyter-notebook">¶</a>
 </h3>
-<p>Anaconda includes a QtConsole application which provides a rich interface to IPython
-that can display images inline. While I like the experience that QtConsole provides to 
-IPython, this method is optional and is only ideal for short sessions since it is less easy
-to save your work as you go.</p>
-<p>To open QtConsole, launch Jupyter QtConsole from the Start menu, Spotlight, or your operating 
-system's launcher. You should see a window like the one below.</p>
-<p><img alt="IPython QtConsole" src="../../../../images/teaching/python/course/ipython-qtconsole.png" title="IPython QtConsole"/></p>
+<ol>
+<li>Launch Jupyter Notebook from the Start Menu or launcher.</li>
+<li>Change directory to the location where you store your notebooks.</li>
+</ol>
+<p><img alt="Jupyter Notebook" src="../../../../images/teaching/python/course/jupyter-notebook.png" title="Jupyter Notebook"/></p>
 </div>
 </div>
 </div>
@@ -261,65 +234,6 @@ the python file in the same directory as the notebook. </li>
 <p>If everything works as expected, you should see</p>
 <div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mf">2.718281828459045</span><span class="p">,</span> <span class="n">log</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">=</span><span class="mf">1.0</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Jupyter-notebooks-in-PyCharm-Professional">Jupyter notebooks in PyCharm Professional<a class="anchor-link" href="#Jupyter-notebooks-in-PyCharm-Professional">¶</a>
-</h3>
-<div class="alert alert-info">
-PyCharm Professional is my recommended approach if you are going to use Python throughout the course.
-It provides the best experience and can be acquired for free using the student program.
-</div>
-<p>PyCharm Professional has deeply integrated Jupyter Notebooks. To create an IPython
-notebook:</p>
-<ol>
-<li>Open PyCharm Profession</li>
-<li>Open the directory where your notebooks are stored</li>
-<li>Right-click on the root directory and select <code>New &gt; Jupyter Notebook</code>. Give your file a
-meaningful name, and it will open in the main window.</li>
-</ol>
-<p><img alt="PyCharm New Notebook" src="../../../../images/teaching/python/course/pycharm-new-notebook.png" title="PyCharm New Notebook"/></p>
-<p>PyCharm uses a special syntax where cells look like code and so can be edited like
-text. This allows PyCharm to use introspection and code completion on the code 
-you have written, a highly useful set of features. PyCharm stores the notebook in 
-a Jupyter notebook file (<code>.ipynb</code>), which means that you can trivially open it in 
-any other Jupyter notebook aware app.  This differs from <a href="#jupyter-notebooks-in-vsCode">VS code</a>
-which stores the file as a play Python file (<code>.py</code>) and requires an explicit export to 
-a Jupyter notebook file.</p>
-<p>A code cell is demarcated using <code>#%%</code> and a markdown cell begins with <code>#%% md</code>.  Below is a screenshot
-of this notebook in PyCharm.</p>
-<p><img alt="PyCharm Notebook" src="../../../../images/teaching/python/course/pycharm-notebook.png" title="Pycharm Notebook"/></p>
-<h4 id="Magic-Python-in-PyCharm">Magic Python in PyCharm<a class="anchor-link" href="#Magic-Python-in-PyCharm">¶</a>
-</h4>
-<p>PyCharm supports Magic Python cell execution. To use Magic Python, you need to enable
-<em>Scientific Mode</em> in the View menu. You can then use <code>#%%</code> to indicate the start and end of cells.
-Individual Cells can be executed in the console by pressing CTRL+Enter.</p>
-<ol>
-<li>In PyCharm, right-click on the root directory and select <code>New &gt; Python File</code>. Give
-your file a meaningful name.</li>
-<li>
-<p>Enter</p>
-<div class="highlight"><pre><span></span><span class="c1">#%%</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">'This is the first cell'</span><span class="p">)</span>
-
-<span class="c1">#%%</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">'This is not executed when the first cell is run'</span><span class="p">)</span>
-</pre></div>
-</li>
-<li>Enable Scientific Mode in the View menu.</li>
-<li>Run the first cell by placing you mouse in the cell and pressing CTRL+Enter.</li>
-<li>Run the second cell by clicking on the Play button (arrow) that appears in the
-gutter of the editor.</li>
-</ol>
-<div class="alert alert-warning">
-<b>Note:</b> Magic Python in PyCharm only supports python code, and so it is not possible to mix
-Markdown text and Python in the same file.
-</div>
 </div>
 </div>
 </div>
@@ -412,6 +326,65 @@ directly executed.</p>
 <p>To export a Magic Python file, open the command palette and enter "import jupyter". 
 Select the option to import the notebook.</p>
 <p><img alt="VS Code Import" src="../../../../images/teaching/python/course/vscode-import.png" title="VS Code Import"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Jupyter-notebooks-in-PyCharm-Professional">Jupyter notebooks in PyCharm Professional<a class="anchor-link" href="#Jupyter-notebooks-in-PyCharm-Professional">¶</a>
+</h3>
+<div class="alert alert-info">
+PyCharm Professional is my recommended approach if you are going to use Python throughout the course.
+It provides the best experience and can be acquired for free using the student program.
+</div>
+<p>PyCharm Professional has deeply integrated Jupyter Notebooks. To create an IPython
+notebook:</p>
+<ol>
+<li>Open PyCharm Profession</li>
+<li>Open the directory where your notebooks are stored</li>
+<li>Right-click on the root directory and select <code>New &gt; Jupyter Notebook</code>. Give your file a
+meaningful name, and it will open in the main window.</li>
+</ol>
+<p><img alt="PyCharm New Notebook" src="../../../../images/teaching/python/course/pycharm-new-notebook.png" title="PyCharm New Notebook"/></p>
+<p>PyCharm uses a special syntax where cells look like code and so can be edited like
+text. This allows PyCharm to use introspection and code completion on the code 
+you have written, a highly useful set of features. PyCharm stores the notebook in 
+a Jupyter notebook file (<code>.ipynb</code>), which means that you can trivially open it in 
+any other Jupyter notebook aware app.  This differs from <a href="#jupyter-notebooks-in-vsCode">VS code</a>
+which stores the file as a play Python file (<code>.py</code>) and requires an explicit export to 
+a Jupyter notebook file.</p>
+<p>A code cell is demarcated using <code>#%%</code> and a markdown cell begins with <code>#%% md</code>.  Below is a screenshot
+of this notebook in PyCharm.</p>
+<p><img alt="PyCharm Notebook" src="../../../../images/teaching/python/course/pycharm-notebook.png" title="Pycharm Notebook"/></p>
+<h4 id="Magic-Python-in-PyCharm">Magic Python in PyCharm<a class="anchor-link" href="#Magic-Python-in-PyCharm">¶</a>
+</h4>
+<p>PyCharm supports Magic Python cell execution. To use Magic Python, you need to enable
+<em>Scientific Mode</em> in the View menu. You can then use <code>#%%</code> to indicate the start and end of cells.
+Individual Cells can be executed in the console by pressing CTRL+Enter.</p>
+<ol>
+<li>In PyCharm, right-click on the root directory and select <code>New &gt; Python File</code>. Give
+your file a meaningful name.</li>
+<li>
+<p>Enter</p>
+<div class="highlight"><pre><span></span><span class="c1">#%%</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">'This is the first cell'</span><span class="p">)</span>
+
+<span class="c1">#%%</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">'This is not executed when the first cell is run'</span><span class="p">)</span>
+</pre></div>
+</li>
+<li>Enable Scientific Mode in the View menu.</li>
+<li>Run the first cell by placing you mouse in the cell and pressing CTRL+Enter.</li>
+<li>Run the second cell by clicking on the Play button (arrow) that appears in the
+gutter of the editor.</li>
+</ol>
+<div class="alert alert-warning">
+<b>Note:</b> Magic Python in PyCharm only supports python code, and so it is not possible to mix
+Markdown text and Python in the same file.
+</div>
 </div>
 </div>
 </div>
