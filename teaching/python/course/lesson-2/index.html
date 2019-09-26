@@ -49,13 +49,21 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 2" property="og:title"/>
 <meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-2/" property="og:url"/>
-<meta content="Getting Started¶This lesson covers:
+<meta content="Basic Python Types¶This lesson covers:
 
-Opening a terminal window
-Launching Jupyter notebook
-Running IPython in a Terminal
-Running IPython in Jupyter QtConsole
-Executing a standalone Python file in IPyth" property="og:description"/>
+Inputting scalars and strings
+Lists
+Dictionaries
+
+
+
+
+
+
+
+
+Problem: Input scalar floating point and integers¶
+Create a variable called scalar_float containing $\p" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -137,22 +145,13 @@ Executing a standalone Python file in IPyth" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">¶</a>
+<h2 id="Basic-Python-Types">Basic Python Types<a class="anchor-link" href="#Basic-Python-Types">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Opening a terminal window</li>
-<li>Launching Jupyter notebook</li>
-<li>Running IPython in a Terminal</li>
-<li>Running IPython in Jupyter QtConsole</li>
-<li>Executing a standalone Python file in IPython</li>
-<li>Optional<ul>
-<li>Jupyter notebooks in <a href="https://code.visualstudio.com/docs/python/jupyter-support">VSCode</a>
-</li>
-<li>Jupyter notebooks in <a href="https://jetbrains.com/student/">PyCharm Professional</a>
-</li>
-</ul>
-</li>
+<li>Inputting scalars and strings</li>
+<li>Lists</li>
+<li>Dictionaries</li>
 </ul>
 </div>
 </div>
@@ -162,140 +161,54 @@ Executing a standalone Python file in IPyth" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Opening-an-Anaconda-Terminal">Opening an Anaconda Terminal<a class="anchor-link" href="#Opening-an-Anaconda-Terminal">¶</a>
+<h3 id="Problem:-Input-scalar-floating-point-and-integers">Problem: Input scalar floating point and integers<a class="anchor-link" href="#Problem:-Input-scalar-floating-point-and-integers">¶</a>
 </h3>
-<p>An Anaconda terminal allows <code>python</code> to be run directly.  It also allows other useful programs, for example <code>pip</code>, the Python package manager to be used to install packages that are not available through Anaconda.</p>
-<h4 id="Windows">Windows<a class="anchor-link" href="#Windows">¶</a>
-</h4>
-<p>Launch Anaconda Prompt from the start menu.</p>
-<h4 id="OSX-and-Linux">OSX and Linux<a class="anchor-link" href="#OSX-and-Linux">¶</a>
-</h4>
-<p>Open the terminal (instructions depend on your distribution). If you allowed conda to initialize, then you should be ready to call Anaconda's python and supporting functions.  If not, you should</p>
-<pre><code>cd ~/anaconda3/bin
-./conda init</code></pre>
-<p>and then reopen your terminal.</p>
+<ol>
+<li>Create a variable called <code>scalar_float</code> containing $\pi$ to 4 digits.</li>
+<li>Create a variable called <code>scalar_int</code> containing 31415. </li>
+<li>Print each value using the <code>print</code> function.   </li>
+</ol>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Running-IPython-in-a-Terminal">Running IPython in a Terminal<a class="anchor-link" href="#Running-IPython-in-a-Terminal">¶</a>
-</h3>
-<ol>
-<li>Open a terminal.</li>
-<li>Run IPython by entering <code>ipython</code> in the terminal window. You should see a 
-window like the one below with the iconic <code>In [1]</code> indicating that you are at the
-start of a new IPython session.</li>
-</ol>
-<p><img alt="IPython in Windows Terminal" src="../../../../images/teaching/python/course/ipython-windows.png" title="IPython in Windows Terminal"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Launching-Jupyter-notebook">Launching Jupyter notebook<a class="anchor-link" href="#Launching-Jupyter-notebook">¶</a>
-</h3>
-<ol>
-<li>Launch Jupyter Notebook from the Start Menu or launcher.</li>
-<li>Change directory to the location where you store your notebooks.</li>
-</ol>
-<p><img alt="Jupyter Notebook" src="../../../../images/teaching/python/course/jupyter-notebook.png" title="Jupyter Notebook"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Executing-a-standalone-Python-file-in-IPython">Executing a standalone Python file in IPython<a class="anchor-link" href="#Executing-a-standalone-Python-file-in-IPython">¶</a>
-</h3>
-<ol>
-<li>Open a text editor and enter the following lines. Save the file as lesson-2.py. 
-Note that Python is white-space sensitive, and so these lines should <strong>not</strong> not indented.</li>
-</ol>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">log</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'exp(1)={x}, log(exp(1))={y}'</span><span class="p">)</span>
-</pre></div>
-<ol>
-<li>Run the code in an IPython session using <code>%run -i lesson-2.py</code>.  Note: you should create 
-the python file in the same directory as the notebook. </li>
-</ol>
-<p>If everything works as expected, you should see</p>
-<div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="mf">2.718281828459045</span><span class="p">,</span> <span class="n">log</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">=</span><span class="mf">1.0</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
 </div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Jupyter-notebooks-in-VSCode">Jupyter notebooks in VSCode<a class="anchor-link" href="#Jupyter-notebooks-in-VSCode">¶</a>
+<h3 id="Problem:-Create-a-string-and-an-f-string">Problem: Create a string and an f-string<a class="anchor-link" href="#Problem:-Create-a-string-and-an-f-string">¶</a>
 </h3>
-<p><a href="https://code.visualstudio.com/">Visual Studio Code</a> (or VS Code) is a lightweight
-IDE that supports adding features through extensions.  The key extension for 
-working with notebooks is 
-<a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension for Visual Studio Code</a>.
-With this extension installed, it is possible to use a special file format called Magic Python
-to write notebook-like files that can be exported to Jupyter notebook files.</p>
 <ol>
-<li>Install VS Code and the Python extension</li>
-<li>Open the command palette and enter "Jupyter start" and select the only available item.</li>
-<li>
-<p>This is a Python file that supports a cell demarcation using <code>#%%</code> for code cells and <code>#%% [markdown]</code> 
-for cells that contain markdown code.  Note that markdown text <strong>must</strong> be either:</p>
-<ul>
-<li>
-<p>Surrounded by triple quotes, e.g. <code>"""markdown text"""</code> or <code>'''markdown text'''</code>; e.g.,</p>
-<div class="highlight"><pre><span></span><span class="sd">"""</span>
-<span class="sd"># Cell Heading</span>
-
-<span class="sd">Likeness darkness. That give brought creeping. Doesn't may. Fruit kind </span>
-<span class="sd">midst seed. Creature, let under created void god to. Them day was Was</span>
-<span class="sd">creature set it from. Fourth. Created don't man. Man. Light fourth</span>
-<span class="sd">light given the he image first multiply after deep she'd great. Morning </span>
-<span class="sd">likeness very have give also fowl third land beast from moving thing</span>
-<span class="sd">creepeth herb creeping won't fifth. Us bring was our beast wherein our</span>
-<span class="sd">void and green he fruit kind upon a given, saying fruit, moveth face </span>
-<span class="sd">forth. His you it. Good beginning hath.</span>
-<span class="sd">"""</span>
-</pre></div>
+<li>Create a variable called <code>a_string</code> containing <code>This is a string</code>
 </li>
-<li>
-<p>Or commented <code>#</code> (with a single space) at the start of each line,</p>
-<div class="highlight"><pre><span></span><span class="c1"># # Cell Heading</span>
-<span class="c1">#</span>
-<span class="c1"># Likeness darkness. That give brought creeping. Doesn't may. Fruit kind </span>
-<span class="c1"># midst seed. Creature, let under created void god to. Them day was Was</span>
-<span class="c1"># creature set it from. Fourth. Created don't man. Man. Light fourth</span>
-<span class="c1"># light given the he image first multiply after deep she'd great. Morning </span>
-<span class="c1"># likeness very have give also fowl third land beast from moving thing</span>
-<span class="c1"># creepeth herb creeping won't fifth. Us bring was our beast wherein our</span>
-<span class="c1"># void and green he fruit kind upon a given, saying fruit, moveth face </span>
-<span class="c1"># forth. His you it. Good beginning hath.</span>
+<li>Create a f-string the prints <code>The value of scalar_float is 3.1415</code> using
+the variable created in the previous step</li>
+<li>Create two string, <code>first</code> containing <code>String concatenation</code> and the second containing
+<code>is like addition</code>, and join the two using <code>+</code> to produce
+<code>String concatenation is like addition</code>. </li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
-</li>
-</ul>
-</li>
-</ol>
-<p>The cells have a special button above them that allows the contents to be
-executed and the result to be displayed in the interactive window. See the 
-screenshot below for an example of the experience of using VS Code. There 
-is also an interactive console at the bottom left where commands can be 
-directly executed.</p>
-<p><img alt="VS Code Notebook" src="../../../../images/teaching/python/course/vscode-notebook.png" title="VS Code Notebook"/></p>
+</div>
 </div>
 </div>
 </div>
@@ -304,86 +217,125 @@ directly executed.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Importing-an-exiting-notebook-in-VS-Code">Importing an exiting notebook in VS Code<a class="anchor-link" href="#Importing-an-exiting-notebook-in-VS-Code">¶</a>
-</h4>
-<p>VS Code only understands Magic Python files as notebook-like documents, and so
-<code>.ipynb</code> files must be converted to use. The process of importing is simple:</p>
-<ol>
-<li>Open a Jupyter notebook file</li>
-<li>Click on Import in the popup that appears.</li>
-</ol>
-<p><img alt="VS Code Export" src="../../../../images/teaching/python/course/vscode-export.png" title="VS Code Export"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exporting-to-an-Jupyter-notebook">Exporting to an Jupyter notebook<a class="anchor-link" href="#Exporting-to-an-Jupyter-notebook">¶</a>
-</h4>
-<p>To export a Magic Python file, open the command palette and enter "import jupyter". 
-Select the option to import the notebook.</p>
-<p><img alt="VS Code Import" src="../../../../images/teaching/python/course/vscode-import.png" title="VS Code Import"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Jupyter-notebooks-in-PyCharm-Professional">Jupyter notebooks in PyCharm Professional<a class="anchor-link" href="#Jupyter-notebooks-in-PyCharm-Professional">¶</a>
+<h3 id="Problem:-Create-a-list">Problem: Create a list<a class="anchor-link" href="#Problem:-Create-a-list">¶</a>
 </h3>
-<div class="alert alert-info">
-PyCharm Professional is my recommended approach if you are going to use Python throughout the course.
-It provides the best experience and can be acquired for free using the student program.
-</div>
-<p>PyCharm Professional has deeply integrated Jupyter Notebooks. To create an IPython
-notebook:</p>
 <ol>
-<li>Open PyCharm Profession</li>
-<li>Open the directory where your notebooks are stored</li>
-<li>Right-click on the root directory and select <code>New &gt; Jupyter Notebook</code>. Give your file a
-meaningful name, and it will open in the main window.</li>
-</ol>
-<p><img alt="PyCharm New Notebook" src="../../../../images/teaching/python/course/pycharm-new-notebook.png" title="PyCharm New Notebook"/></p>
-<p>PyCharm uses a special syntax where cells look like code and so can be edited like
-text. This allows PyCharm to use introspection and code completion on the code 
-you have written, a highly useful set of features. PyCharm stores the notebook in 
-a Jupyter notebook file (<code>.ipynb</code>), which means that you can trivially open it in 
-any other Jupyter notebook aware app.  This differs from <a href="#jupyter-notebooks-in-vsCode">VS code</a>
-which stores the file as a play Python file (<code>.py</code>) and requires an explicit export to 
-a Jupyter notebook file.</p>
-<p>A code cell is demarcated using <code>#%%</code> and a markdown cell begins with <code>#%% md</code>.  Below is a screenshot
-of this notebook in PyCharm.</p>
-<p><img alt="PyCharm Notebook" src="../../../../images/teaching/python/course/pycharm-notebook.png" title="Pycharm Notebook"/></p>
-<h4 id="Magic-Python-in-PyCharm">Magic Python in PyCharm<a class="anchor-link" href="#Magic-Python-in-PyCharm">¶</a>
-</h4>
-<p>PyCharm supports Magic Python cell execution. To use Magic Python, you need to enable
-<em>Scientific Mode</em> in the View menu. You can then use <code>#%%</code> to indicate the start and end of cells.
-Individual Cells can be executed in the console by pressing CTRL+Enter.</p>
-<ol>
-<li>In PyCharm, right-click on the root directory and select <code>New &gt; Python File</code>. Give
-your file a meaningful name.</li>
-<li>
-<p>Enter</p>
-<div class="highlight"><pre><span></span><span class="c1">#%%</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">'This is the first cell'</span><span class="p">)</span>
-
-<span class="c1">#%%</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">'This is not executed when the first cell is run'</span><span class="p">)</span>
-</pre></div>
+<li>Create a list containing <code>scalar_float</code> and <code>scalar_int</code>
 </li>
-<li>Enable Scientific Mode in the View menu.</li>
-<li>Run the first cell by placing you mouse in the cell and pressing CTRL+Enter.</li>
-<li>Run the second cell by clicking on the Play button (arrow) that appears in the
-gutter of the editor.</li>
+<li>Add <code>a_string</code> to the list.</li>
+<li>Select the the lst two elements of the list</li>
 </ol>
-<div class="alert alert-warning">
-<b>Note:</b> Magic Python in PyCharm only supports python code, and so it is not possible to mix
-Markdown text and Python in the same file.
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Create-a-list-of-lists">Problem: Create a list of lists<a class="anchor-link" href="#Problem:-Create-a-list-of-lists">¶</a>
+</h3>
+<ol>
+<li>Create a list containing the two lists <code>[1, 2, 3]</code> and <code>[4, 5, 6]</code>
+</li>
+<li>Select the element 5 from the nested list</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Create-a-dictionary">Problem: Create a dictionary<a class="anchor-link" href="#Problem:-Create-a-dictionary">¶</a>
+</h3>
+<ol>
+<li>Create a dictionary containing the key-value pairs <code>"float"</code> and 3.1415, <code>"int"</code> and 31415,
+and <code>"string"</code> and <code>"three-point-one-four-one-five"</code>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Lookup-and-Change-a-value">Problem: Lookup and Change a value<a class="anchor-link" href="#Problem:-Lookup-and-Change-a-value">¶</a>
+</h3>
+<ol>
+<li>Look up the value of <code>"float"</code>.</li>
+<li>Change the value of <code>"float"</code> to <code>22 / 7</code>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Add-and-remove-a-key">Problem: Add and remove a key<a class="anchor-link" href="#Problem:-Add-and-remove-a-key">¶</a>
+</h3>
+<ol>
+<li>Add the new key "better_float" with the value 3.141592.</li>
+<li>Remove the key "float" and its value.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 </div>
 </div>
 </div>

@@ -5,7 +5,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Lesson 9 | Kevin Sheppard</title>
+<title>Installation | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
 <link href="../../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
@@ -18,7 +18,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../../../assets/css/tipuesearch.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/kevinsheppard.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
-<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-9/" rel="canonical"/>
+<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/installation/" rel="canonical"/>
 <link href="../../../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../../../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -47,14 +47,11 @@ MathJax.Hub.Config({
 </style>
 <meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
-<meta content="Lesson 9" property="og:title"/>
-<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-9/" property="og:url"/>
-<meta content="Graphics¶This lesson covers:
-
-Basic plotting 
-Subplots 
-Histograms 
-Scatter Plots
+<meta content="Installation" property="og:title"/>
+<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/installation/" property="og:url"/>
+<meta content="Installing¶Install Anaconda¶
+Download the Anaconda Python/R Distribution 2019.07 (or later).
+When the download is complete, install into your user account. 
 
 
 
@@ -63,8 +60,7 @@ Scatter Plots
 
 
 
-Plotting in notebooks requires using a magic command, which starts with %, to initialize
-the plotting backend." property="og:description"/>
+Install Visual Studio Code and the " property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -138,7 +134,7 @@ the plotting backend." property="og:description"/>
 <div class="row">
 <div class="col-xl-1"></div>
 <div class="col-xl-10">
-<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 9</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Installation</a></h1>
 </header><div class="e-content entry-content" itemprop="articleBody text">
 <div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -146,107 +142,39 @@ the plotting backend." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graphics">Graphics<a class="anchor-link" href="#Graphics">¶</a>
+<h2 id="Installing">Installing<a class="anchor-link" href="#Installing">¶</a>
 </h2>
-<p>This lesson covers:</p>
-<ul>
-<li>Basic plotting </li>
-<li>Subplots </li>
-<li>Histograms </li>
-<li>Scatter Plots</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Plotting in notebooks requires using a magic command, which starts with <code>%</code>, to initialize
-the plotting backend.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Begin by loading the data in hf.hdf. This data set contains high-frequency price data for IBM and MSFT
-on a single day stored as two Series. IBM is stored as 'IBM' in the HDF file, and MSFT is stored
-as 'MSFT.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Basic-Plotting">Problem: Basic Plotting<a class="anchor-link" href="#Problem:-Basic-Plotting">¶</a>
+<h3 id="Install-Anaconda">Install Anaconda<a class="anchor-link" href="#Install-Anaconda">¶</a>
 </h3>
 <ol>
-<li>Plot the <code>ibm</code> series which contains the price of IBM. </li>
-<li>Add a title and label the axes. </li>
-<li>Add markers and remove the line. </li>
+<li>Download the <a href="https://www.anaconda.com/distribution/#download-section">Anaconda Python/R Distribution</a> 2019.07 (or later).</li>
+<li>When the download is complete, install into your user account. </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Install-Visual-Studio-Code-and-the-Python-extension">Install Visual Studio Code and the Python extension<a class="anchor-link" href="#Install-Visual-Studio-Code-and-the-Python-extension">¶</a>
+</h3>
+<ol>
+<li>Download VS Code and install</li>
+<li>Install the Python extension by clicking on Extensions and searching for "Python"</li>
+<li>Open the <code>mfe-introduction</code> folder created in the previous step</li>
+<li>
+<p>Create a file called <code>second.py</code> and enter</p>
+<div class="highlight"><pre><span></span><span class="c1">#%%</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">"Python may be harder to learn than other languages since"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">"there is rarely a single approach to completing a task."</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+</li>
+<li>Click on Run Cell</li>
+</ol>
+<p><strong>Note</strong> the <code>#%%</code> makes it a magic cell</p>
 </div>
 </div>
 </div>
@@ -255,91 +183,22 @@ as 'MSFT.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Subplot">Problem: Subplot<a class="anchor-link" href="#Problem:-Subplot">¶</a>
+<h3 id="Install-Pycharm-Professional">Install Pycharm Professional<a class="anchor-link" href="#Install-Pycharm-Professional">¶</a>
 </h3>
-<p>Create a 2 by 1 subplot with the price of IBM in the top subplot and the price of MSFT in the
-bottom subplot.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<ol>
+<li>Download PyCharm Professional and install using the 30-day trial. You can get a free 
+copy using your academic email address if you want to continue after the first 30 days.</li>
+<li>Open PyCharm, and create a new project called <code>mfe-introduction</code>
+</li>
+<li>Open File &gt; Setting and select Python Interpreter. Select the Anaconda interpreter if it
+is not already selected.</li>
+<li>
+<p>Create a new python file called <code>first.py</code> and enter</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">"Python has a steeper curve than MATLAB but more long-run upside"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Plot-with-Dates">Problem: Plot with Dates<a class="anchor-link" href="#Problem:-Plot-with-Dates">¶</a>
-</h3>
-<p>Use <code>matplotlib</code> to directly plot <code>ibm</code> against its <code>index</code>. This is a repeat of a previous
-plot but shows how to use the <code>plot</code> command directly.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Histogram">Problem: Histogram<a class="anchor-link" href="#Problem:-Histogram">¶</a>
-</h3>
-<p>Produce a histogram of MSFT 1-minute returns (Hint: you have to produce the 1-minute Microsoft
-returns first using <code>resample</code> and <code>pct_change</code>).</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Scatter-Plot">Problem: Scatter Plot<a class="anchor-link" href="#Problem:-Scatter-Plot">¶</a>
-</h3>
-<p>Scatter the 5-minute MSFT returns against the 5-minute IBM returns.</p>
-<p><em>Hint</em>: You will need to create both 5-minute return series, merge them, and then plot using 
-the combined DataFrame.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+</li>
+<li>Right-click on this file, and select "Run".</li>
+</ol>
 </div>
 </div>
 </div>
