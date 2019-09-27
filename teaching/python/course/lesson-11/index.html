@@ -5,7 +5,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Lesson 7 | Kevin Sheppard</title>
+<title>Lesson 11 | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
 <link href="../../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
@@ -18,7 +18,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../../../assets/css/tipuesearch.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/kevinsheppard.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
-<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-7/" rel="canonical"/>
+<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-11/" rel="canonical"/>
 <link href="../../../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../../../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -47,13 +47,27 @@ MathJax.Hub.Config({
 </style>
 <meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
-<meta content="Lesson 7" property="og:title"/>
-<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-7/" property="og:url"/>
-<meta content="Accessing Elements in DataFrames¶This lesson covers:
+<meta content="Lesson 11" property="og:title"/>
+<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-11/" property="og:url"/>
+<meta content="Logic and Loops¶This lesson covers:
 
-Assessing specific elements in Pandas Series and DataFrames 
+Mixing logic and loops 
+all and any 
 
-Accessing elements in an array or a DataFrame is a common task. To begin this lesson" property="og:description"/>
+Begin by loading the data in momentum.csv.
+
+
+
+
+
+
+In [ ]:
+
+    
+# Setup: Load the momentum data
+
+import numpy as np
+import pan" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -127,7 +141,7 @@ Accessing elements in an array or a DataFrame is a common task. To begin this le
 <div class="row">
 <div class="col-xl-1"></div>
 <div class="col-xl-10">
-<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 7</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 11</a></h1>
 </header><div class="e-content entry-content" itemprop="articleBody text">
 <div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -135,154 +149,15 @@ Accessing elements in an array or a DataFrame is a common task. To begin this le
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Accessing-Elements-in-DataFrames">Accessing Elements in DataFrames<a class="anchor-link" href="#Accessing-Elements-in-DataFrames">¶</a>
+<h2 id="Logic-and-Loops">Logic and Loops<a class="anchor-link" href="#Logic-and-Loops">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Assessing specific elements in Pandas Series and DataFrames </li>
+<li>Mixing logic and loops </li>
+<li>
+<code>all</code> and <code>any</code> </li>
 </ul>
-<p>Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
-workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
-to determine which elements are selected by a command.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Numeric-indexing-Series-and-DataFrame">Problem: Numeric indexing Series and DataFrame<a class="anchor-link" href="#Problem:-Numeric-indexing-Series-and-DataFrame">¶</a>
-</h3>
-<p>Repeat the previous questions on <code>y_s</code> and <code>x_df</code> using <code>.iloc</code>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-by-Name-in-Series-and-DataFrames">Problem: Selecting by Name in Series and DataFrames<a class="anchor-link" href="#Problem:-Selecting-by-Name-in-Series-and-DataFrames">¶</a>
-</h3>
-<p>Using <code>x_name</code> and <code>y_name</code>:</p>
-<ol>
-<li>Select the (0,2) and the (2,0) element of <code>x_name</code>.</li>
-<li>Select the 2nd row of <code>x_name</code> using <code>.loc</code>.</li>
-<li>Select the 2nd columns of <code>x_name</code> using <code>.loc</code>.</li>
-<li>Select the 2nd element of <code>y_name</code> using both <code>[]</code> and <code>loc</code>.</li>
-<li>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x_name</code>.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Data-by-Date">Problem: Selecting Data by Date<a class="anchor-link" href="#Problem:-Selecting-Data-by-Date">¶</a>
-</h3>
-<p>Load the data in momentum.csv.</p>
+<p>Begin by loading the data in momentum.csv.</p>
 </div>
 </div>
 </div>
@@ -293,10 +168,16 @@ to determine which elements are selected by a command.</p>
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="n">mom_01</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_01'</span><span class="p">]</span>
+<span class="n">mom_10</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_10'</span><span class="p">]</span>
+<span class="n">mom_05</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_05'</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -307,10 +188,158 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Logical-Statements-and-for-Loops">Problem: Logical Statements and for Loops<a class="anchor-link" href="#Problem:-Logical-Statements-and-for-Loops">¶</a>
+</h3>
+<p>Use a for loop along with an if statement to simulate an asymmetric random walk of the form</p>
+$$y_{i}=y_{i-1}+e_{i}+I_{[e_{i}&lt;0]}e_{i}$$<p>where $I_{[e_{i}&lt;0]}$ is known as an indicator variable that takes the value 1 if the statement in 
+brackets is true. Plot y. $e$ is a standard normal shock. Use <code>cumsum</code> to simulate a symmetric
+one (<code>z</code>), and plot the two using the code in the cell below.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Plot the data</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Selecting-Elements-using-Logical-Statements">Problem: Selecting Elements using Logical Statements<a class="anchor-link" href="#Problem:-Selecting-Elements-using-Logical-Statements">¶</a>
+</h3>
+<p>For portfolio 1 and portfolio 10, select the elements that are $&lt;0$, $\geq 0$ and exactly equal to 
+$0$. Next select the elements where both portfolios are less than $0$.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Using-where">Problem: Using <code>where</code><a class="anchor-link" href="#Problem:-Using-where">¶</a>
+</h3>
+<p>Use <code>where</code> to select the index of the elements in portfolio 5 that are negative. Next, use the
+<code>where</code> command in its two output form to determine which elements of the portfolio return matrix
+are less than -2%.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Combining-flow-control">Problem: Combining flow control<a class="anchor-link" href="#Problem:-Combining-flow-control">¶</a>
+</h3>
+<p>For momentum portfolios 1 and 10, compute the length of the runs in the series. In pseudo code,</p>
+<ul>
+<li>Start at i=1 and define run(1) = 1</li>
+<li>For i in 2,...,T, define run(i) = run(i-1) + 1 if 
+$\textrm{sgn}\left(r_{i}\right)=\textrm{sgn}\left(r_{i-1}\right)$ else 1.</li>
+</ul>
+<p>You will need to use <code>len</code> and <code>zeros</code>.</p>
 <ol>
-<li>Select returns on February 16, 2016.</li>
-<li>Select return in March 2016.</li>
-<li>Select returns between May 1, 2016, and June 15, 2016</li>
+<li>Compute the length longest run in the series and the index of the location of the longest run. 
+Was it positive or negative?</li>
+<li>How many distinct runs lasted 5 or more days?</li>
 </ol>
 </div>
 </div>
@@ -337,6 +366,17 @@ to determine which elements are selected by a command.</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Use-any-to-find-large-losses">Problem: Use <code>any</code> to find large losses<a class="anchor-link" href="#Problem:-Use-any-to-find-large-losses">¶</a>
+</h3>
+<p>Use any to determine if any of the 10 portfolios experienced a loss greater than -5%.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
@@ -345,6 +385,63 @@ to determine which elements are selected by a command.</p>
 <div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use <code>all</code> and negation to do the same check as <code>any</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a>
+</h3>
+<h4 id="Exercise:-all-and-any">Exercise: all and any<a class="anchor-link" href="#Exercise:-all-and-any">¶</a>
+</h4>
+<p>Use all to determine the number of days where all of the portfolio returns were negative. Use any 
+to compute the number of days with at least 1 negative return and with no negative returns (Hint: 
+use negation (~ or <code>logical_not</code>)).</p>
 </div>
 </div>
 </div>

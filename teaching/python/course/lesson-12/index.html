@@ -5,7 +5,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Lesson 7 | Kevin Sheppard</title>
+<title>Lesson 12 | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
 <link href="../../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
@@ -18,7 +18,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../../../assets/css/tipuesearch.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/kevinsheppard.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
-<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-7/" rel="canonical"/>
+<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-12/" rel="canonical"/>
 <link href="../../../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../../../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -47,13 +47,25 @@ MathJax.Hub.Config({
 </style>
 <meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
-<meta content="Lesson 7" property="og:title"/>
-<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-7/" property="og:url"/>
-<meta content="Accessing Elements in DataFrames¶This lesson covers:
+<meta content="Lesson 12" property="og:title"/>
+<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-12/" property="og:url"/>
+<meta content="Importing Data¶This lesson covers:
 
-Assessing specific elements in Pandas Series and DataFrames 
+Importing data 
+Converting dates 
 
-Accessing elements in an array or a DataFrame is a common task. To begin this lesson" property="og:description"/>
+
+
+
+
+
+
+
+Problem: Reading in data with Dates¶Read in the files GS10.csv and GS10.xlsx which have both been downloaded from
+FRED.
+
+
+" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -127,7 +139,7 @@ Accessing elements in an array or a DataFrame is a common task. To begin this le
 <div class="row">
 <div class="col-xl-1"></div>
 <div class="col-xl-10">
-<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 7</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 12</a></h1>
 </header><div class="e-content entry-content" itemprop="articleBody text">
 <div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -135,15 +147,25 @@ Accessing elements in an array or a DataFrame is a common task. To begin this le
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Accessing-Elements-in-DataFrames">Accessing Elements in DataFrames<a class="anchor-link" href="#Accessing-Elements-in-DataFrames">¶</a>
+<h2 id="Importing-Data">Importing Data<a class="anchor-link" href="#Importing-Data">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Assessing specific elements in Pandas Series and DataFrames </li>
+<li>Importing data </li>
+<li>Converting dates </li>
 </ul>
-<p>Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
-workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
-to determine which elements are selected by a command.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Reading-in-data-with-Dates">Problem: Reading in data with Dates<a class="anchor-link" href="#Problem:-Reading-in-data-with-Dates">¶</a>
+</h3>
+<p>Read in the files <code>GS10.csv</code> and <code>GS10.xlsx</code> which have both been downloaded from
+<a href="https://fred.stlouisfed.org/">FRED</a>.</p>
 </div>
 </div>
 </div>
@@ -163,177 +185,12 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Numeric-indexing-Series-and-DataFrame">Problem: Numeric indexing Series and DataFrame<a class="anchor-link" href="#Problem:-Numeric-indexing-Series-and-DataFrame">¶</a>
+<h3 id="Problem:-Converting-Dates">Problem: Converting Dates<a class="anchor-link" href="#Problem:-Converting-Dates">¶</a>
 </h3>
-<p>Repeat the previous questions on <code>y_s</code> and <code>x_df</code> using <code>.iloc</code>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-by-Name-in-Series-and-DataFrames">Problem: Selecting by Name in Series and DataFrames<a class="anchor-link" href="#Problem:-Selecting-by-Name-in-Series-and-DataFrames">¶</a>
-</h3>
-<p>Using <code>x_name</code> and <code>y_name</code>:</p>
 <ol>
-<li>Select the (0,2) and the (2,0) element of <code>x_name</code>.</li>
-<li>Select the 2nd row of <code>x_name</code> using <code>.loc</code>.</li>
-<li>Select the 2nd columns of <code>x_name</code> using <code>.loc</code>.</li>
-<li>Select the 2nd element of <code>y_name</code> using both <code>[]</code> and <code>loc</code>.</li>
-<li>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x_name</code>.</li>
+<li>Load the CSV file without converting the dates in <code>read_csv</code>.</li>
+<li>Convert the date column, remove it from the DataFrame, and set it as the index. </li>
 </ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Data-by-Date">Problem: Selecting Data by Date<a class="anchor-link" href="#Problem:-Selecting-Data-by-Date">¶</a>
-</h3>
-<p>Load the data in momentum.csv.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Select returns on February 16, 2016.</li>
-<li>Select return in March 2016.</li>
-<li>Select returns between May 1, 2016, and June 15, 2016</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>

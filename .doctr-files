@@ -198,8 +198,14 @@
 ./files/teaching/mfe/notes/front-matter-tablet.pdf
 ./files/teaching/mfe/notes/front-matter.pdf
 ./files/teaching/python/course/data.zip
+./files/teaching/python/course/installation.ipynb
 ./files/teaching/python/course/lesson-1.ipynb
 ./files/teaching/python/course/lesson-10.ipynb
+./files/teaching/python/course/lesson-11.ipynb
+./files/teaching/python/course/lesson-12.ipynb
+./files/teaching/python/course/lesson-13.ipynb
+./files/teaching/python/course/lesson-14.ipynb
+./files/teaching/python/course/lesson-15.ipynb
 ./files/teaching/python/course/lesson-2.ipynb
 ./files/teaching/python/course/lesson-3.ipynb
 ./files/teaching/python/course/lesson-4.ipynb
@@ -2771,6 +2777,11 @@
 ./teaching/python/course/lesson-1/index.html
 ./teaching/python/course/lesson-1/index.ipynb
 ./teaching/python/course/lesson-10/index.html
+./teaching/python/course/lesson-11/index.html
+./teaching/python/course/lesson-12/index.html
+./teaching/python/course/lesson-13/index.html
+./teaching/python/course/lesson-14/index.html
+./teaching/python/course/lesson-15/index.html
 ./teaching/python/course/lesson-2/index.html
 ./teaching/python/course/lesson-2/index.ipynb
 ./teaching/python/course/lesson-3/index.html
