@@ -49,23 +49,24 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 12" property="og:title"/>
 <meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-12/" property="og:url"/>
-<meta content="Importing Data¶This lesson covers:
+<meta content="Logical Operators¶This lesson covers:
 
-Importing data 
-Converting dates 
+Basic logical operators 
+Compound operators 
 
-
-
-
+Begin by loading the data in momentum.csv.
 
 
 
 
-Problem: Reading in data with Dates¶Read in the files GS10.csv and GS10.xlsx which have both been downloaded from
-FRED.
 
 
-" property="og:description"/>
+In [ ]:
+
+    
+# Setup: Load the momentum data
+
+import pandas as pd" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -147,13 +148,35 @@ FRED.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Importing-Data">Importing Data<a class="anchor-link" href="#Importing-Data">¶</a>
+<h2 id="Logical-Operators">Logical Operators<a class="anchor-link" href="#Logical-Operators">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Importing data </li>
-<li>Converting dates </li>
+<li>Basic logical operators </li>
+<li>Compound operators </li>
 </ul>
+<p>Begin by loading the data in momentum.csv.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="n">mom_01</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_01'</span><span class="p">]</span>
+<span class="n">mom_10</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_10'</span><span class="p">]</span>
+<span class="n">mom_05</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_05'</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -162,10 +185,22 @@ FRED.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Reading-in-data-with-Dates">Problem: Reading in data with Dates<a class="anchor-link" href="#Problem:-Reading-in-data-with-Dates">¶</a>
+<h3 id="Problem:-Basic-Logical-Statements">Problem: Basic Logical Statements<a class="anchor-link" href="#Problem:-Basic-Logical-Statements">¶</a>
 </h3>
-<p>Read in the files <code>GS10.csv</code> and <code>GS10.xlsx</code> which have both been downloaded from
-<a href="https://fred.stlouisfed.org/">FRED</a>.</p>
+<p>For portfolio 1 and portfolio 10, count the number of elements that are $&lt;0$, $\geq0$, and exactly
+equal to 0. Next count the number of times that the returns in portfolio 5 are greater, 
+in absolute value, that 2 times the standard deviation of the returns in that portfolio.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -185,12 +220,22 @@ FRED.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Converting-Dates">Problem: Converting Dates<a class="anchor-link" href="#Problem:-Converting-Dates">¶</a>
+<h3 id="Problem:-Compound-Statements">Problem: Compound Statements<a class="anchor-link" href="#Problem:-Compound-Statements">¶</a>
 </h3>
-<ol>
-<li>Load the CSV file without converting the dates in <code>read_csv</code>.</li>
-<li>Convert the date column, remove it from the DataFrame, and set it as the index. </li>
-</ol>
+<p>Count the number of times that the returns in both portfolio 1 and portfolio 10 are negative. 
+Next count the number of times that the returns in portfolios 1 and 10 are both greater, in 
+absolute value, that 2 times their respective standard deviations.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>

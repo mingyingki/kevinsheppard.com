@@ -49,12 +49,11 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 8" property="og:title"/>
 <meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-8/" property="og:url"/>
-<meta content="Accessing Elements in NumPy Arrays¶This lesson covers:
+<meta content="Accessing Elements in DataFrames¶This lesson covers:
 
-Accessing specific elements in NumPy arrays
+Assessing specific elements in Pandas Series and DataFrames 
 
-Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
-wor" property="og:description"/>
+Accessing elements in an array or a DataFrame is a common task. To begin this lesson" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -136,11 +135,11 @@ wor" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Accessing-Elements-in-NumPy-Arrays">Accessing Elements in NumPy Arrays<a class="anchor-link" href="#Accessing-Elements-in-NumPy-Arrays">¶</a>
+<h2 id="Accessing-Elements-in-DataFrames">Accessing Elements in DataFrames<a class="anchor-link" href="#Accessing-Elements-in-DataFrames">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Accessing specific elements in NumPy arrays</li>
+<li>Assessing specific elements in Pandas Series and DataFrames </li>
 </ul>
 <p>Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
 workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
@@ -164,56 +163,9 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Zero-based-indexing">Zero-based indexing<a class="anchor-link" href="#Zero-based-indexing">¶</a>
+<h3 id="Problem:-Numeric-indexing-Series-and-DataFrame">Problem: Numeric indexing Series and DataFrame<a class="anchor-link" href="#Problem:-Numeric-indexing-Series-and-DataFrame">¶</a>
 </h3>
-<p>Python indexing is 0 based so that the first element has position <code>0</code>, the second has position <code>1</code>
-and so on until the last element has position <code>n-1</code> in an array that contains <code>n</code> elements in
-total.</p>
-<h3 id="Problem:-Picking-an-Element-out-of-a-Matrix">Problem: Picking an Element out of a Matrix<a class="anchor-link" href="#Problem:-Picking-an-Element-out-of-a-Matrix">¶</a>
-</h3>
-<ol>
-<li>Select the third element of all three, x, y, and z. </li>
-<li>Select the 11$^{\text{th}}$ element of x.</li>
-<li>Using double index notation, select the (0,2) and the (2,0) element of x.</li>
-</ol>
-<p><strong>Issues to ponder</strong></p>
-<ul>
-<li>Which index is rows and which index is columns?</li>
-<li>Does NumPy count across first then down or down first then across? </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
+<p>Repeat the previous questions on <code>y_s</code> and <code>x_df</code> using <code>.iloc</code>.</p>
 </div>
 </div>
 </div>
@@ -233,74 +185,15 @@ total.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Entire-Rows">Problem: Selecting Entire Rows<a class="anchor-link" href="#Problem:-Selecting-Entire-Rows">¶</a>
+<h3 id="Problem:-Selecting-by-Name-in-Series-and-DataFrames">Problem: Selecting by Name in Series and DataFrames<a class="anchor-link" href="#Problem:-Selecting-by-Name-in-Series-and-DataFrames">¶</a>
 </h3>
+<p>Using <code>x_name</code> and <code>y_name</code>:</p>
 <ol>
-<li>Select the 2nd row of x using the colon (:) operator.</li>
-<li>Select the 2nd element of z and y using the same syntax.</li>
-</ol>
-<p><strong>Issues to ponder</strong></p>
-<ul>
-<li>What happens to the output in each case? </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Entire-Columns">Problem: Selecting Entire Columns<a class="anchor-link" href="#Problem:-Selecting-Entire-Columns">¶</a>
-</h3>
-<p>Select the 2nd column of x using the colon (:) operator.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Specific-Rows-or-Columns">Problem: Selecting Specific Rows or Columns<a class="anchor-link" href="#Problem:-Selecting-Specific-Rows-or-Columns">¶</a>
-</h3>
-<ol>
-<li>Select the 2nd and 3rd columns of x using the colon (:) operator.</li>
-<li>Select the 2nd and 4th rows of x. </li>
-<li>Combine these be combined to select columns 2 and 3 and rows 2 and 4. </li>
+<li>Select the (0,2) and the (2,0) element of <code>x_name</code>.</li>
+<li>Select the 2nd row of <code>x_name</code> using <code>.loc</code>.</li>
+<li>Select the 2nd columns of <code>x_name</code> using <code>.loc</code>.</li>
+<li>Select the 2nd element of <code>y_name</code> using both <code>[]</code> and <code>loc</code>.</li>
+<li>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x_name</code>.</li>
 </ol>
 </div>
 </div>
@@ -338,14 +231,98 @@ total.</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Use-ix_-to-select-arbitrary-rows-and-columns">Problem: Use <code>ix_</code> to select arbitrary rows and columns<a class="anchor-link" href="#Problem:-Use-ix_-to-select-arbitrary-rows-and-columns">¶</a>
+<h3 id="Problem:-Selecting-Data-by-Date">Problem: Selecting Data by Date<a class="anchor-link" href="#Problem:-Selecting-Data-by-Date">¶</a>
 </h3>
-<p>Use <code>ix_</code> to select the 2nd and 4th rows and 1st and 3rd columns of <code>x</code>.</p>
+<p>Load the data in momentum.csv.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Select returns on February 16, 2016.</li>
+<li>Select return in March 2016.</li>
+<li>Select returns between May 1, 2016, and June 15, 2016</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>

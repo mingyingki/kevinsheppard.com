@@ -5,7 +5,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Lesson 10 | Kevin Sheppard</title>
+<title>Lesson 17 | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
 <link href="../../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
@@ -18,7 +18,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../../../assets/css/tipuesearch.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/kevinsheppard.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
-<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-10/" rel="canonical"/>
+<link href="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-17/" rel="canonical"/>
 <link href="../../../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../../../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -47,13 +47,29 @@ MathJax.Hub.Config({
 </style>
 <meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
-<meta content="Lesson 10" property="og:title"/>
-<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-10/" property="og:url"/>
-<meta content="Numeric Indexing of DataFrames¶This lesson covers:
+<meta content="Lesson 17" property="og:title"/>
+<meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-17/" property="og:url"/>
+<meta content="Graphics: Other Plots¶This lesson covers:
 
-Accessing specific elements in DataFrames using numeric indices
+Histograms 
+Scatter Plots
 
-Accessing elements in a DataFrame is a common task. To begin this lesson, clear the" property="og:description"/>
+
+
+
+
+
+
+
+Plotting in notebooks requires using a magic command, which starts with %, to initialize
+the plotting backend.
+
+
+
+
+
+
+In [ ]" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -127,7 +143,7 @@ Accessing elements in a DataFrame is a common task. To begin this lesson, clear 
 <div class="row">
 <div class="col-xl-1"></div>
 <div class="col-xl-10">
-<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 10</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 17</a></h1>
 </header><div class="e-content entry-content" itemprop="articleBody text">
 <div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -135,15 +151,46 @@ Accessing elements in a DataFrame is a common task. To begin this lesson, clear 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Numeric-Indexing-of-DataFrames">Numeric Indexing of DataFrames<a class="anchor-link" href="#Numeric-Indexing-of-DataFrames">¶</a>
+<h2 id="Graphics:-Other-Plots">Graphics: Other Plots<a class="anchor-link" href="#Graphics:-Other-Plots">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Accessing specific elements in DataFrames using numeric indices</li>
+<li>Histograms </li>
+<li>Scatter Plots</li>
 </ul>
-<p>Accessing elements in a DataFrame is a common task. To begin this lesson, clear the
-workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
-to determine which elements are selected by a command.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plotting in notebooks requires using a magic command, which starts with <code>%</code>, to initialize
+the plotting backend.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Begin by loading the data in hf.hdf. This data set contains high-frequency price data for IBM and MSFT
+on a single day stored as two Series. IBM is stored as 'IBM' in the HDF file, and MSFT is stored
+as 'MSFT.</p>
 </div>
 </div>
 </div>
@@ -163,9 +210,10 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Picking-an-Element-out-of-a-Matrix">Problem: Picking an Element out of a Matrix<a class="anchor-link" href="#Problem:-Picking-an-Element-out-of-a-Matrix">¶</a>
+<h3 id="Problem:-Histogram">Problem: Histogram<a class="anchor-link" href="#Problem:-Histogram">¶</a>
 </h3>
-<p>Using double index notation, select the (0,2) and the (2,0) element of <code>x_named</code>.</p>
+<p>Produce a histogram of MSFT 1-minute returns (Hint: you have to produce the 1-minute Microsoft
+returns first using <code>resample</code> and <code>pct_change</code>).</p>
 </div>
 </div>
 </div>
@@ -185,136 +233,11 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Entire-Rows">Problem: Selecting Entire Rows<a class="anchor-link" href="#Problem:-Selecting-Entire-Rows">¶</a>
+<h3 id="Problem:-Scatter-Plot">Problem: Scatter Plot<a class="anchor-link" href="#Problem:-Scatter-Plot">¶</a>
 </h3>
-<ol>
-<li>Select the 2nd row of <code>x_named</code> using the colon (:) operator.</li>
-<li>Select the 2nd element of <code>y_named</code> using the same syntax.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Entire-Columns">Problem: Selecting Entire Columns<a class="anchor-link" href="#Problem:-Selecting-Entire-Columns">¶</a>
-</h3>
-<p>Select the 2nd column of <code>x_named</code> using the colon (:) operator.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Specific-Columns">Problem: Selecting Specific Columns<a class="anchor-link" href="#Problem:-Selecting-Specific-Columns">¶</a>
-</h3>
-<p>Select the 2nd and 3rd columns of <code>x_named</code> using the colon (:) operator.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Select-Specific-Rows">Problem: Select Specific Rows<a class="anchor-link" href="#Problem:-Select-Specific-Rows">¶</a>
-</h3>
-<p>Select the 2nd and 4th rows of <code>x_named</code>. 
-Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Select-Specific-Rows-and-Columns">Problem: Select Specific Rows and Columns<a class="anchor-link" href="#Problem:-Select-Specific-Rows-and-Columns">¶</a>
-</h3>
-<p>Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Select-arbitrary-rows-and-columns">Problem: Select arbitrary rows and columns<a class="anchor-link" href="#Problem:-Select-arbitrary-rows-and-columns">¶</a>
-</h3>
-<p>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x</code>.</p>
-<p><strong>Note</strong>: This is the only important difference with NumPy.  Arbitrary row/column
-selection using <code>DataFrame.iloc</code> is simpler but less flexible.</p>
+<p>Scatter the 5-minute MSFT returns against the 5-minute IBM returns.</p>
+<p><em>Hint</em>: You will need to create both 5-minute return series, merge them, and then plot using 
+the combined DataFrame.</p>
 </div>
 </div>
 </div>

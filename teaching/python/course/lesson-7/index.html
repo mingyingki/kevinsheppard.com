@@ -49,11 +49,13 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 7" property="og:title"/>
 <meta content="https://bashtage.github.io/kevinsheppard.com/teaching/python/course/lesson-7/" property="og:url"/>
-<meta content="Accessing Elements in DataFrames¶This lesson covers:
+<meta content="Using DataFrames¶This lesson introduces:
 
-Assessing specific elements in Pandas Series and DataFrames 
+Basic mathematical operations on DataFrames
+Common DataFrame methods (functions)
+Computing percentage change (returns)
 
-Accessing elements in an array or a DataFrame is a common task. To begin this lesson" property="og:description"/>
+Problem: Addition and Subtraction¶Add " property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -135,37 +137,18 @@ Accessing elements in an array or a DataFrame is a common task. To begin this le
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Accessing-Elements-in-DataFrames">Accessing Elements in DataFrames<a class="anchor-link" href="#Accessing-Elements-in-DataFrames">¶</a>
+<h2 id="Using-DataFrames">Using DataFrames<a class="anchor-link" href="#Using-DataFrames">¶</a>
 </h2>
-<p>This lesson covers:</p>
+<p>This lesson introduces:</p>
 <ul>
-<li>Assessing specific elements in Pandas Series and DataFrames </li>
+<li>Basic mathematical operations on DataFrames</li>
+<li>Common DataFrame methods (functions)</li>
+<li>Computing percentage change (returns)</li>
 </ul>
-<p>Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
-workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
-to determine which elements are selected by a command.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Numeric-indexing-Series-and-DataFrame">Problem: Numeric indexing Series and DataFrame<a class="anchor-link" href="#Problem:-Numeric-indexing-Series-and-DataFrame">¶</a>
+<h3 id="Problem:-Addition-and-Subtraction">Problem: Addition and Subtraction<a class="anchor-link" href="#Problem:-Addition-and-Subtraction">¶</a>
 </h3>
-<p>Repeat the previous questions on <code>y_s</code> and <code>x_df</code> using <code>.iloc</code>.</p>
+<p>Add the prices of the three series together using <code>.sum(axis=1)</code>. Add the prices in <code>sep_04</code> to 
+the prices of <code>goog</code>. What happens?</p>
 </div>
 </div>
 </div>
@@ -174,129 +157,33 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-by-Name-in-Series-and-DataFrames">Problem: Selecting by Name in Series and DataFrames<a class="anchor-link" href="#Problem:-Selecting-by-Name-in-Series-and-DataFrames">¶</a>
-</h3>
-<p>Using <code>x_name</code> and <code>y_name</code>:</p>
-<ol>
-<li>Select the (0,2) and the (2,0) element of <code>x_name</code>.</li>
-<li>Select the 2nd row of <code>x_name</code> using <code>.loc</code>.</li>
-<li>Select the 2nd columns of <code>x_name</code> using <code>.loc</code>.</li>
-<li>Select the 2nd element of <code>y_name</code> using both <code>[]</code> and <code>loc</code>.</li>
-<li>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x_name</code>.</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Data-by-Date">Problem: Selecting Data by Date<a class="anchor-link" href="#Problem:-Selecting-Data-by-Date">¶</a>
-</h3>
-<p>Load the data in momentum.csv.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
-
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load prices</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">'data/data.h5'</span><span class="p">,</span> <span class="s1">'prices'</span><span class="p">)</span>
+<span class="n">sep_04</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">'data/data.h5'</span><span class="p">,</span> <span class="s1">'sep_04'</span><span class="p">)</span>
+<span class="n">goog</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s1">'data/data.h5'</span><span class="p">,</span> <span class="s1">'goog'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -307,11 +194,61 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Select returns on February 16, 2016.</li>
-<li>Select return in March 2016.</li>
-<li>Select returns between May 1, 2016, and June 15, 2016</li>
-</ol>
+<h3 id="Problem:-Multiplication">Problem: Multiplication<a class="anchor-link" href="#Problem:-Multiplication">¶</a>
+</h3>
+<p>Multiply the price of Google by 2.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Constructing-portfolio-returns">Problem: Constructing portfolio returns<a class="anchor-link" href="#Problem:-Constructing-portfolio-returns">¶</a>
+</h3>
+<p>Set up a vector or portfolio weights $w=\left(\frac{1}{3},\,\frac{1}{3}\,,\frac{1}{3}\right)$ and 
+compute the price of a portfolio with $\frac{1}{3}$ share of each.</p>
+<p><em>Note</em>: Division uses the slash operator (/).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Compute-Returns">Problem: Compute Returns<a class="anchor-link" href="#Problem:-Compute-Returns">¶</a>
+</h3>
+<p>Compute returns using</p>
+<div class="highlight"><pre><span></span><span class="n">returns</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+</pre></div>
+<p>which computes the percentage change.</p>
+<p>Additionally, extract returns for each name using</p>
+<div class="highlight"><pre><span></span><span class="n">spy_returns</span> <span class="o">=</span> <span class="n">returns</span><span class="p">[</span><span class="s1">'SPY'</span><span class="p">]</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -334,6 +271,234 @@ to determine which elements are selected by a command.</p>
 <div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Compute-Log-Returns">Problem: Compute Log Returns<a class="anchor-link" href="#Problem:-Compute-Log-Returns">¶</a>
+</h3>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">log_returns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+</pre></div>
+<p>first difference of the natural log of the prices. Mathematically this is 
+$r_{t}=\ln\left(P_{t}\right)-\ln\left(P_{t-1}\right)=\ln\left(\frac{P_{t}}{P_{t-1}}\right)\approx\frac{P_{t}}{P_{t-1}}-1$.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Mean,-Standard-Deviation-and-Correlation">Problem: Mean, Standard Deviation and Correlation<a class="anchor-link" href="#Problem:-Mean,-Standard-Deviation-and-Correlation">¶</a>
+</h3>
+<p>Using the function mean, compute the mean of the three returns series one at a time. For example</p>
+<div class="highlight"><pre><span></span><span class="n">goog_mean</span> <span class="o">=</span> <span class="n">goog_returns</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+<p>Next, compute the mean of the matrix of returns using</p>
+<div class="highlight"><pre><span></span><span class="n">retmean</span> <span class="o">=</span> <span class="n">returns</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+<p>What is the relationship between these two? Repeat this exercise for the standard deviation (<code>std()</code>).
+Finally, compute the correlation of the matrix of returns (<code>corr()</code>).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Summing-all-elements">Problem: Summing all elements<a class="anchor-link" href="#Problem:-Summing-all-elements">¶</a>
+</h3>
+<p>Compute the sum of the columns of returns using <code>.sum()</code>. How is this related to the mean computed 
+in the previous step?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Maximum-and-Minimum-Values">Problem: Maximum and Minimum Values<a class="anchor-link" href="#Problem:-Maximum-and-Minimum-Values">¶</a>
+</h3>
+<p>Compute the minimum and maximum values of the columns of returns using the <code>min()</code> and <code>max()</code> commands.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Rounding-Up,-Down-and-to-the-Closest-Integer">Problem: Rounding Up, Down and to the Closest Integer<a class="anchor-link" href="#Problem:-Rounding-Up,-Down-and-to-the-Closest-Integer">¶</a>
+</h3>
+<p>Rounding up is handled by ceil, rounding down is handled by floor and rounding to the closest 
+integer is handled by round. Try all of these commands on 100 times returns. For example,</p>
+<div class="highlight"><pre><span></span><span class="n">rounded</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">returns</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">()</span>
+</pre></div>
+<p>Use <code>ceil</code> and <code>floor</code> to round up and down, respectively.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Problem:-Element-by-Element-Multiplication">Problem: Element-by-Element Multiplication<a class="anchor-link" href="#Problem:-Element-by-Element-Multiplication">¶</a>
+</h3>
+<p>Mathematical commands in Python are element-by-element, except the <code>@</code> operator which is matrix 
+multiplication and uses the rules of linear algebra.</p>
+<p>Multiply the returns of Google and SPY together using the dot operator.</p>
 </div>
 </div>
 </div>
