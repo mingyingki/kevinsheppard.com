@@ -314,7 +314,7 @@ var tipuesearch = {
     },
     {
       "title": "MATLAB",
-      "text": "Under Construction\u00b6\n This content has not been ported from my other site.",
+      "text": "Notes and Course\u00b6\nA set of notes and an introductory course that introduces MATLAB to new users.\nMATLAB Notes and Course",
       "tags": "",
       "url": "https://www.kevinsheppard.com/teaching/matlab/"
     },
