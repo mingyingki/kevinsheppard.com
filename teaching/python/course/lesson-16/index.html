@@ -55,22 +55,26 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 16" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-16/" property="og:url"/>
-<meta content="Graphics: Line Plots¶This lesson covers:
+<meta content="%%¶Boolean Selection¶This lesson covers:
 
-Basic plotting 
-Subplots 
-Histograms 
-Scatter Plots
+Boolean selection
+where
 
-
+Begin by loading the data in momentum.csv.
 
 
 
 
 
 
-Plotting in notebooks requires using a magic command, which starts with %, to initialize
-the plott" property="og:description"/>
+In [ ]:
+
+    
+#%%
+# Setup: Load the momentum data
+
+import numpy as np
+import pandas " property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -152,25 +156,16 @@ the plott" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graphics:-Line-Plots">Graphics: Line Plots<a class="anchor-link" href="#Graphics:-Line-Plots">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h2 id="Boolean-Selection">Boolean Selection<a class="anchor-link" href="#Boolean-Selection">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Basic plotting </li>
-<li>Subplots </li>
-<li>Histograms </li>
-<li>Scatter Plots</li>
+<li>Boolean selection</li>
+<li><code>where</code></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Plotting in notebooks requires using a magic command, which starts with <code>%</code>, to initialize
-the plotting backend.</p>
+<p>Begin by loading the data in momentum.csv.</p>
 </div>
 </div>
 </div>
@@ -179,8 +174,15 @@ the plotting backend.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<span class="c1"># Setup: Load the momentum data</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/momentum.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">"date"</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -191,35 +193,11 @@ the plotting backend.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Begin by loading the data in hf.h5. This data set contains high-frequency price data for IBM and MSFT
-on a single day stored as two Series. IBM is stored as 'IBM' in the HDF file, and MSFT is stored
-as 'MSFT.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Basic-Plotting">Problem: Basic Plotting<a class="anchor-link" href="#Problem:-Basic-Plotting">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-rows-with-boolean-conditions">Problem: Selecting rows with boolean conditions<a class="anchor-link" href="#Problem:-Selecting-rows-with-boolean-conditions">¶</a>
 </h3>
-<ol>
-<li>Plot the <code>ibm</code> series which contains the price of IBM. </li>
-<li>Add a title and label the axes. </li>
-<li>Add markers and remove the line. </li>
-</ol>
+<p>Select the rows in <code>momentum</code> where all returns on a day are negative.</p>
 </div>
 </div>
 </div>
@@ -228,29 +206,7 @@ as 'MSFT.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -261,10 +217,11 @@ as 'MSFT.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Subplot">Problem: Subplot<a class="anchor-link" href="#Problem:-Subplot">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-rows">Problem: Selecting rows<a class="anchor-link" href="#Problem:-Selecting-rows">¶</a>
 </h3>
-<p>Create a 2 by 1 subplot with the price of IBM in the top subplot and the price of MSFT in the
-bottom subplot.</p>
+<p>Select the rows in <code>momentum</code> where 50% or more of the returns on a day are negative.</p>
 </div>
 </div>
 </div>
@@ -273,7 +230,7 @@ bottom subplot.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -284,10 +241,11 @@ bottom subplot.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Plot-with-Dates">Problem: Plot with Dates<a class="anchor-link" href="#Problem:-Plot-with-Dates">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-columns">Problem: Selecting columns<a class="anchor-link" href="#Problem:-Selecting-columns">¶</a>
 </h3>
-<p>Use <code>matplotlib</code> to directly plot <code>ibm</code> against its <code>index</code>. This is a repeat of a previous
-plot but shows how to use the <code>plot</code> command directly.</p>
+<p>Select the columns in <code>momentum</code> what have the smallest and second smallest average returns.</p>
 </div>
 </div>
 </div>
@@ -296,7 +254,234 @@ plot but shows how to use the <code>plot</code> command directly.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-rows-and-columns">Problem: Selecting rows and columns<a class="anchor-link" href="#Problem:-Selecting-rows-and-columns">¶</a>
+</h3>
+<p>Select the returns for the column with the single most negative return
+on days where all of the returns are negative.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-Elements-using-Logical-Statements">Problem: Selecting Elements using Logical Statements<a class="anchor-link" href="#Problem:-Selecting-Elements-using-Logical-Statements">¶</a>
+</h3>
+<p>For portfolio 1 and portfolio 10 compute the correlation when both 
+returns are negative and when both are positive.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<span class="c1"># Setup: Reproducible random numbers</span>
+
+<span class="n">rs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">19991231</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Select-the-columns-of-x-that-means-&gt;=-$E[x]$">Problem: Select the columns of x that means &gt;= $E[x]$<a class="anchor-link" href="#Problem:-Select-the-columns-of-x-that-means-&gt;=-%24E%5Bx%5D%24">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Select-the-rows-of-x-that-means-&gt;=-$E[x]$">Problem: Select the rows of x that means &gt;= $E[x]$<a class="anchor-link" href="#Problem:-Select-the-rows-of-x-that-means-&gt;=-%24E%5Bx%5D%24">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Select-the-rows-and-column-of-x-where-both-have-means-&lt;-$E[x]$">Problem: Select the rows and column of x where both have means &lt; $E[x]$<a class="anchor-link" href="#Problem:-Select-the-rows-and-column-of-x-where-both-have-means-&lt;-%24E%5Bx%5D%24">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Using-where">Problem: Using <code>where</code><a class="anchor-link" href="#Problem:-Using-where">¶</a>
+</h3>
+<p>Use <code>where</code> to select the index of the elements in portfolio 5 that are
+negative. Next, use the <code>where</code> command in its two output form to determine
+which elements of the portfolio return matrix are less than -2%.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>

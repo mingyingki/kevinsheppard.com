@@ -55,19 +55,25 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 15" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-15/" property="og:url"/>
-<meta content="Saving and Exporting Data¶This lesson covers:
+<meta content="%%¶Boolean Arrays¶This lesson covers:
 
-Saving and reloading data
+Creating Boolean arrays
+Combining Boolean arrays
+all and any
 
-
-
-
-
-
+Begin by loading the data in momentum.csv.
 
 
-Problem: Reading in data with Dates¶Read in the files GS10.csv and GS10.xlsx which have both been downloaded from
-FRED." property="og:description"/>
+
+
+
+
+In [ ]:
+
+    
+#%%
+# Setup: Load the momentum data
+" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -149,24 +155,19 @@ FRED." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Saving-and-Exporting-Data">Saving and Exporting Data<a class="anchor-link" href="#Saving-and-Exporting-Data">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h2 id="Boolean-Arrays">Boolean Arrays<a class="anchor-link" href="#Boolean-Arrays">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Saving and reloading data</li>
+<li>Creating Boolean arrays</li>
+<li>Combining Boolean arrays</li>
+<li>
+<code>all</code> and <code>any</code>
+</li>
 </ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Reading-in-data-with-Dates">Problem: Reading in data with Dates<a class="anchor-link" href="#Problem:-Reading-in-data-with-Dates">¶</a>
-</h3>
-<p>Read in the files <code>GS10.csv</code> and <code>GS10.xlsx</code> which have both been downloaded from
-<a href="https://fred.stlouisfed.org/">FRED</a>.</p>
+<p>Begin by loading the data in momentum.csv.</p>
 </div>
 </div>
 </div>
@@ -175,11 +176,19 @@ FRED." property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the data to use later</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<span class="c1"># Setup: Load the momentum data</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">gs10_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/GS10.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'DATE'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">gs10_excel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'data/GS10.xls'</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'observation_date'</span><span class="p">)</span>
+<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/momentum.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">"date"</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="n">mom_01</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s2">"mom_01"</span><span class="p">]</span>
+<span class="n">mom_10</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s2">"mom_10"</span><span class="p">]</span>
+<span class="n">mom_05</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s2">"mom_05"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -190,9 +199,11 @@ FRED." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Export-to-Excel,-CSV,-HDF,-and-Pickle.">Problem: Export to Excel, CSV, HDF, and Pickle.<a class="anchor-link" href="#Problem:-Export-to-Excel,-CSV,-HDF,-and-Pickle.">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Boolean-arrays">Problem: Boolean arrays<a class="anchor-link" href="#Problem:-Boolean-arrays">¶</a>
 </h3>
-<p>Export both <code>gs10_excel</code> and <code>gs10_csv</code> to the same Excel file</p>
+<p>For portfolios 1 and 10, determine whether each return is $&lt;0$ (separately).</p>
 </div>
 </div>
 </div>
@@ -201,7 +212,7 @@ FRED." property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -212,9 +223,14 @@ FRED." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Export-to-CSV">Problem: Export to CSV<a class="anchor-link" href="#Problem:-Export-to-CSV">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Combining-boolean-arrays">Problem: Combining boolean arrays<a class="anchor-link" href="#Problem:-Combining-boolean-arrays">¶</a>
 </h3>
-<p>Export <code>gs10_excel</code> to CSV.</p>
+<p>Count the number of times that the returns in both portfolio 1 and portfolio
+10 are negative. Next count the number of times that the returns in portfolios
+1 and 10 are both greater, in absolute value, that 2 times their respective
+standard deviations.</p>
 </div>
 </div>
 </div>
@@ -223,7 +239,18 @@ FRED." property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -234,9 +261,11 @@ FRED." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Export-to-HDF">Problem: Export to HDF<a class="anchor-link" href="#Problem:-Export-to-HDF">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Combining-boolean-arrays">Problem: Combining boolean arrays<a class="anchor-link" href="#Problem:-Combining-boolean-arrays">¶</a>
 </h3>
-<p>Export both to an HDF file (the closest thing to a "native" format in pandas)</p>
+<p>For portfolios 1 and 10, count the number of times either of the returns is $&lt;0$.</p>
 </div>
 </div>
 </div>
@@ -245,7 +274,7 @@ FRED." property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -256,12 +285,11 @@ FRED." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Export-to-Pickle">Problem: Export to Pickle<a class="anchor-link" href="#Problem:-Export-to-Pickle">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Count-the-frequency-of-negative-returns">Problem: Count the frequency of negative returns<a class="anchor-link" href="#Problem:-Count-the-frequency-of-negative-returns">¶</a>
 </h3>
-<ol>
-<li>Export <code>gs10_excel</code> to a pickle file.</li>
-<li>Combine <code>gs10_excel</code> and <code>gs10_csv</code> into a dictionary and pickle the dictionary.</li>
-</ol>
+<p>What percent of returns are negative for each of the 10 momentum portfolios?</p>
 </div>
 </div>
 </div>
@@ -270,18 +298,7 @@ FRED." property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -292,9 +309,12 @@ FRED." property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Import-from-HDF-and-Pickle.">Problem: Import from HDF and Pickle.<a class="anchor-link" href="#Problem:-Import-from-HDF-and-Pickle.">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Use-any-to-find-large-losses">Problem: Use <code>any</code> to find large losses<a class="anchor-link" href="#Problem:-Use-any-to-find-large-losses">¶</a>
 </h3>
-<p>Import the data saved in steps 3-5 of the previous problem.</p>
+<p>Use any to determine if any of the 10 portfolios experienced a loss
+greater than -5%.</p>
 </div>
 </div>
 </div>
@@ -303,9 +323,70 @@ FRED." property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<p>Use <code>all</code> and negation to do the same check as <code>any</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a>
+</h3>
+<h4 id="Exercise:-all-and-any">Exercise: all and any<a class="anchor-link" href="#Exercise:-all-and-any">¶</a>
+</h4>
+<p>Use all to determine the number of days where all of the portfolio returns
+were negative. Use any to compute the number of days with at least 1 negative
+return and with no negative returns (Hint: use negation (~ or <code>logical_not</code>)).</p>
 </div>
 </div>
 </div>

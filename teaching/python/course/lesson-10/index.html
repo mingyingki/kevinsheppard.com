@@ -55,11 +55,12 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 10" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-10/" property="og:url"/>
-<meta content="Numeric Indexing of DataFrames¶This lesson covers:
+<meta content="%%¶Accessing Elements in DataFrames¶This lesson covers:
 
-Accessing specific elements in DataFrames using numeric indices
+Assessing specific elements in Pandas Series and DataFrames 
 
-Accessing elements in a DataFrame is a common task. To begin this lesson, clear the" property="og:description"/>
+Accessing elements in an array or a DataFrame is a common task. To begin this
+les" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -141,15 +142,35 @@ Accessing elements in a DataFrame is a common task. To begin this lesson, clear 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Numeric-Indexing-of-DataFrames">Numeric Indexing of DataFrames<a class="anchor-link" href="#Numeric-Indexing-of-DataFrames">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h2 id="Accessing-Elements-in-DataFrames">Accessing Elements in DataFrames<a class="anchor-link" href="#Accessing-Elements-in-DataFrames">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Accessing specific elements in DataFrames using numeric indices</li>
+<li>Assessing specific elements in Pandas Series and DataFrames </li>
 </ul>
-<p>Accessing elements in a DataFrame is a common task. To begin this lesson, clear the
-workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
-to determine which elements are selected by a command.</p>
+<p>Accessing elements in an array or a DataFrame is a common task. To begin this
+lesson, clear the workspace set up some vectors and a $5\times5$ array. These
+vectors and matrix will make it easy to determine which elements are selected
+by a command.</p>
+<p>Start by creating 2 DataFrame and 2 Series. Define <code>x=np.arange(24).reshape(5,5)</code> 
+which is a 5 by 5 array and <code>y=np.arange(5)</code> which is a 5-element 1-d array.
+We need:</p>
+<ul>
+<li>
+<code>x_df</code>: A default <code>DataFrame</code> containing <code>x</code>
+</li>
+<li>
+<code>x_named</code>: A <code>DataFrame</code> containing <code>x</code> with index <code>"r0"</code>, <code>"r1"</code>, ..., <code>"r4"</code> and
+columns <code>"c0"</code>, <code>"c1"</code>, ... <code>"c4"</code>.</li>
+<li>
+<code>y_s</code>: A default <code>Series</code> containing <code>y</code>
+</li>
+<li>
+<code>y_named</code>: A <code>Series</code> containing <code>y</code> that has the index <code>"r0"</code>, <code>"r1"</code>, ..., <code>"r4"</code>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -158,7 +179,7 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -169,9 +190,11 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Picking-an-Element-out-of-a-Matrix">Problem: Picking an Element out of a Matrix<a class="anchor-link" href="#Problem:-Picking-an-Element-out-of-a-Matrix">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-row-by-name">Problem: Selecting a row by name<a class="anchor-link" href="#Problem:-Selecting-a-row-by-name">¶</a>
 </h3>
-<p>Using double index notation, select the (0,2) and the (2,0) element of <code>x_named</code>.</p>
+<p>Select the 2nd row of <code>x_name</code> using <code>.loc</code>.</p>
 </div>
 </div>
 </div>
@@ -180,7 +203,7 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -191,12 +214,11 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Entire-Rows">Problem: Selecting Entire Rows<a class="anchor-link" href="#Problem:-Selecting-Entire-Rows">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-column-by-name">Problem: Selecting a column by name<a class="anchor-link" href="#Problem:-Selecting-a-column-by-name">¶</a>
 </h3>
-<ol>
-<li>Select the 2nd row of <code>x_named</code> using the colon (:) operator.</li>
-<li>Select the 2nd element of <code>y_named</code> using the same syntax.</li>
-</ol>
+<p>Select the 2nd columns of <code>x_name</code> using  both <code>[]</code> and <code>.loc</code>.</p>
 </div>
 </div>
 </div>
@@ -205,7 +227,29 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -216,9 +260,11 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Entire-Columns">Problem: Selecting Entire Columns<a class="anchor-link" href="#Problem:-Selecting-Entire-Columns">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-elements-of-a-Series-by-name">Problem: Selecting a elements of a Series by name<a class="anchor-link" href="#Problem:-Selecting-a-elements-of-a-Series-by-name">¶</a>
 </h3>
-<p>Select the 2nd column of <code>x_named</code> using the colon (:) operator.</p>
+<p>Select the 2nd element of <code>y_name</code> using both <code>[]</code> and <code>loc</code>.</p>
 </div>
 </div>
 </div>
@@ -227,7 +273,7 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -238,20 +284,9 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Selecting-Specific-Columns">Problem: Selecting Specific Columns<a class="anchor-link" href="#Problem:-Selecting-Specific-Columns">¶</a>
-</h3>
-<p>Select the 2nd and 3rd columns of <code>x_named</code> using the colon (:) operator.</p>
 </div>
 </div>
 </div>
@@ -260,7 +295,7 @@ to determine which elements are selected by a command.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -271,10 +306,11 @@ to determine which elements are selected by a command.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Select-Specific-Rows">Problem: Select Specific Rows<a class="anchor-link" href="#Problem:-Select-Specific-Rows">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-rows-and-columns-by-name">Problem: Selecting rows and columns by name<a class="anchor-link" href="#Problem:-Selecting-rows-and-columns-by-name">¶</a>
 </h3>
-<p>Select the 2nd and 4th rows of <code>x_named</code>. 
-Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
+<p>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x_name</code>.</p>
 </div>
 </div>
 </div>
@@ -283,7 +319,29 @@ Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -294,9 +352,11 @@ Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Select-Specific-Rows-and-Columns">Problem: Select Specific Rows and Columns<a class="anchor-link" href="#Problem:-Select-Specific-Rows-and-Columns">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-DataFrame-selection-with-default-index-and-column-names">Problem: DataFrame selection with default index and column names<a class="anchor-link" href="#Problem:-DataFrame-selection-with-default-index-and-column-names">¶</a>
 </h3>
-<p>Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
+<p>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x_df</code>.</p>
 </div>
 </div>
 </div>
@@ -305,7 +365,7 @@ Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -316,11 +376,11 @@ Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Select-arbitrary-rows-and-columns">Problem: Select arbitrary rows and columns<a class="anchor-link" href="#Problem:-Select-arbitrary-rows-and-columns">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Series-selection-with-the-default-index">Problem: Series selection with the default index<a class="anchor-link" href="#Problem:-Series-selection-with-the-default-index">¶</a>
 </h3>
-<p>Select the 2nd and 4th rows and 1st and 3rd columns of <code>x</code>.</p>
-<p><strong>Note</strong>: This is the only important difference with NumPy.  Arbitrary row/column
-selection using <code>DataFrame.iloc</code> is simpler but less flexible.</p>
+<p>Select the final element in <code>y_s</code></p>
 </div>
 </div>
 </div>
@@ -329,7 +389,177 @@ selection using <code>DataFrame.iloc</code> is simpler but less flexible.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Subseries-selection">Problem: Subseries selection<a class="anchor-link" href="#Problem:-Subseries-selection">¶</a>
+</h3>
+<p>Select the subseries of <code>y_named</code> and <code>y_s</code> containing the first, fourth and fifth element.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<p>Load the data in momentum.csv.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<span class="c1"># Setup: Load the momentum data</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/momentum.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">"date"</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-data-on-a-single-day">Problem: Selecting data on a single day<a class="anchor-link" href="#Problem:-Selecting-data-on-a-single-day">¶</a>
+</h3>
+<p>Select returns on February 16, 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-data-in-a-single-month">Problem: Selecting data in a single month<a class="anchor-link" href="#Problem:-Selecting-data-in-a-single-month">¶</a>
+</h3>
+<p>Select return in March 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-data-in-a-single-year">Problem: Selecting data in a single year<a class="anchor-link" href="#Problem:-Selecting-data-in-a-single-year">¶</a>
+</h3>
+<p>Select return in 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-data-in-a-date-range">Problem: Selecting data in a date range<a class="anchor-link" href="#Problem:-Selecting-data-in-a-date-range">¶</a>
+</h3>
+<p>Select returns between May 1, 2016, and June 15, 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>

@@ -55,10 +55,8 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 17" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-17/" property="og:url"/>
-<meta content="Graphics: Other Plots¶This lesson covers:
-
-Histograms 
-Scatter Plots
+<meta content="%%¶Conditional Statements¶
+if-elif-else blocks
 
 
 
@@ -67,15 +65,9 @@ Scatter Plots
 
 
 
-Plotting in notebooks requires using a magic command, which starts with %, to initialize
-the plotting backend.
-
-
-
-
-
-
-In [ ]" property="og:description"/>
+%%¶Problem: Print value if negative¶Draw a standard normal value using np.random.standard_normal and print the
+value if it is negative.
+Note: Rer" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -157,12 +149,13 @@ In [ ]" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Graphics:-Other-Plots">Graphics: Other Plots<a class="anchor-link" href="#Graphics:-Other-Plots">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<p>This lesson covers:</p>
+<h2 id="Conditional-Statements">Conditional Statements<a class="anchor-link" href="#Conditional-Statements">¶</a>
+</h2>
 <ul>
-<li>Histograms </li>
-<li>Scatter Plots</li>
+<li>
+<code>if</code>-<code>elif</code>-<code>else</code> blocks</li>
 </ul>
 </div>
 </div>
@@ -172,54 +165,13 @@ In [ ]" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Plotting in notebooks requires using a magic command, which starts with <code>%</code>, to initialize
-the plotting backend.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Begin by loading the data in hf.h5. This data set contains high-frequency price data for IBM and MSFT
-on a single day stored as two Series. IBM is stored as 'IBM' in the HDF file, and MSFT is stored
-as 'MSFT.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Histogram">Problem: Histogram<a class="anchor-link" href="#Problem:-Histogram">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Print-value-if-negative">Problem: Print value if negative<a class="anchor-link" href="#Problem:-Print-value-if-negative">¶</a>
 </h3>
-<p>Produce a histogram of MSFT 1-minute returns (Hint: you have to produce the 1-minute Microsoft
-returns first using <code>resample</code> and <code>pct_change</code>).</p>
+<p>Draw a standard normal value using <code>np.random.standard_normal</code> and print the
+value if it is negative.</p>
+<p><strong>Note</strong>: Rerun the cell a few time to see different output.</p>
 </div>
 </div>
 </div>
@@ -228,7 +180,7 @@ returns first using <code>resample</code> and <code>pct_change</code>).</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -239,11 +191,12 @@ returns first using <code>resample</code> and <code>pct_change</code>).</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Scatter-Plot">Problem: Scatter Plot<a class="anchor-link" href="#Problem:-Scatter-Plot">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Print-different-messages-based-on-value">Problem: Print different messages based on value<a class="anchor-link" href="#Problem:-Print-different-messages-based-on-value">¶</a>
 </h3>
-<p>Scatter the 5-minute MSFT returns against the 5-minute IBM returns.</p>
-<p><em>Hint</em>: You will need to create both 5-minute return series, merge them, and then plot using 
-the combined DataFrame.</p>
+<p>Draw a standard normal value and print "Positive" if it is positive
+and "Negative" if not.</p>
 </div>
 </div>
 </div>
@@ -252,7 +205,7 @@ the combined DataFrame.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -263,9 +216,13 @@ the combined DataFrame.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Saving-plots">Problem: Saving plots<a class="anchor-link" href="#Problem:-Saving-plots">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:">Problem:<a class="anchor-link" href="#Problem:">¶</a>
 </h3>
-<p>Save the previous plot to PNG and PDF.</p>
+<p>Draw a standard t random variable with 2 degrees of freedom using
+<code>np.random.standard_t(2)</code> and print "Negative Outlier" if less than -2,
+"Positive Outlier" if larger than 2, and "Inlier" if between -2 and 2.</p>
 </div>
 </div>
 </div>
@@ -274,7 +231,7 @@ the combined DataFrame.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>

@@ -55,24 +55,12 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 12" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-12/" property="og:url"/>
-<meta content="Logical Operators¶This lesson covers:
+<meta content="%%¶Numeric Indexing of DataFrames¶This lesson covers:
 
-Basic logical operators 
-Compound operators 
+Accessing specific elements in DataFrames using numeric indices
 
-Begin by loading the data in momentum.csv.
-
-
-
-
-
-
-In [ ]:
-
-    
-# Setup: Load the momentum data
-
-import pandas as pd" property="og:description"/>
+Accessing elements in a DataFrame is a common task. To begin this lesson,
+clear " property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -154,14 +142,26 @@ import pandas as pd" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Logical-Operators">Logical Operators<a class="anchor-link" href="#Logical-Operators">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h2 id="Numeric-Indexing-of-DataFrames">Numeric Indexing of DataFrames<a class="anchor-link" href="#Numeric-Indexing-of-DataFrames">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>Basic logical operators </li>
-<li>Compound operators </li>
+<li>Accessing specific elements in DataFrames using numeric indices</li>
 </ul>
-<p>Begin by loading the data in momentum.csv.</p>
+<p>Accessing elements in a DataFrame is a common task. To begin this lesson,
+clear the workspace set up some vectors and a $5\times5$ array. These vectors
+and matrix will make it easy to determine which elements are selected by a
+command.</p>
+<p>Begin by creating:</p>
+<ul>
+<li>A 5-by-5 DataFrame <code>x_df</code> containing <code>np.arange(25).reshape((5,5))</code>.</li>
+<li>A 5-element Series <code>y_s</code> containing <code>np.arange(5)</code>.</li>
+<li>A 5-by-5 DataFrame <code>x_named</code> that is <code>x_df</code> with columns "c0", "c1", ...,
+"c4" and rows "r0", "r1", ..., "r4".</li>
+<li>A 5-element Series <code>y_named</code> with index "r0", "r1", ..., "r4". </li>
+</ul>
 </div>
 </div>
 </div>
@@ -170,17 +170,7 @@ import pandas as pd" property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="n">mom_01</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_01'</span><span class="p">]</span>
-<span class="n">mom_10</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_10'</span><span class="p">]</span>
-<span class="n">mom_05</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s1">'mom_05'</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -191,11 +181,12 @@ import pandas as pd" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Basic-Logical-Statements">Problem: Basic Logical Statements<a class="anchor-link" href="#Problem:-Basic-Logical-Statements">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Picking-an-Element-out-of-a-DataFrame">Problem: Picking an Element out of a DataFrame<a class="anchor-link" href="#Problem:-Picking-an-Element-out-of-a-DataFrame">¶</a>
 </h3>
-<p>For portfolio 1 and portfolio 10, count the number of elements that are $&lt;0$, $\geq0$, and exactly
-equal to 0. Next count the number of times that the returns in portfolio 5 are greater, 
-in absolute value, that 2 times the standard deviation of the returns in that portfolio.</p>
+<p>Using double index notation, select the (0,2) and the (2,0) element of
+<code>x_named</code>.</p>
 </div>
 </div>
 </div>
@@ -204,18 +195,7 @@ in absolute value, that 2 times the standard deviation of the returns in that po
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -226,11 +206,11 @@ in absolute value, that 2 times the standard deviation of the returns in that po
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Compound-Statements">Problem: Compound Statements<a class="anchor-link" href="#Problem:-Compound-Statements">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Select-Elements-from-Series">Problem: Select Elements from Series<a class="anchor-link" href="#Problem:-Select-Elements-from-Series">¶</a>
 </h3>
-<p>Count the number of times that the returns in both portfolio 1 and portfolio 10 are negative. 
-Next count the number of times that the returns in portfolios 1 and 10 are both greater, in 
-absolute value, that 2 times their respective standard deviations.</p>
+<p>Select the 2nd element of <code>y_named</code>.</p>
 </div>
 </div>
 </div>
@@ -239,7 +219,59 @@ absolute value, that 2 times their respective standard deviations.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-Rows-as-Series">Problem: Selecting Rows as Series<a class="anchor-link" href="#Problem:-Selecting-Rows-as-Series">¶</a>
+</h3>
+<p>Select the 2nd row of <code>x_named</code> using the colon (:) operator.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-Rows-as-DataFrames">Problem: Selecting Rows as DataFrames<a class="anchor-link" href="#Problem:-Selecting-Rows-as-DataFrames">¶</a>
+</h3>
+<ol>
+<li>Select the 2nd row of <code>x_named</code> using a slice so that the selection
+remains a DataFrame.</li>
+<li>Repeat using a list of indices to retain the DataFrame. </li>
+</ol>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -250,7 +282,193 @@ absolute value, that 2 times their respective standard deviations.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-Entire-Columns-as-Series">Problem: Selecting Entire Columns as Series<a class="anchor-link" href="#Problem:-Selecting-Entire-Columns-as-Series">¶</a>
+</h3>
+<p>Select the 2nd column of <code>x_named</code> using the colon (:) operator.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-Single-Columns-as-DataFrames">Problem: Selecting Single Columns as DataFrames<a class="anchor-link" href="#Problem:-Selecting-Single-Columns-as-DataFrames">¶</a>
+</h3>
+<p>Select the 2nd column of <code>x_named</code>  so that the selection remains a DataFrame.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-Specific-Columns">Problem: Selecting Specific Columns<a class="anchor-link" href="#Problem:-Selecting-Specific-Columns">¶</a>
+</h3>
+<p>Select the 2nd and 3rd columns of <code>x_named</code> using a slice.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Select-Specific-Rows">Problem: Select Specific Rows<a class="anchor-link" href="#Problem:-Select-Specific-Rows">¶</a>
+</h3>
+<p>Select the 2nd and 4th rows of <code>x_named</code> using a slice.  Repeat the 
+selection using a list of integers.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Select-arbitrary-rows-and-columns">Problem: Select arbitrary rows and columns<a class="anchor-link" href="#Problem:-Select-arbitrary-rows-and-columns">¶</a>
+</h3>
+<p>Combine the previous selections to select columns 2 and 3 and rows 2 and 4
+of <code>x_named</code>.</p>
+<p><strong>Note</strong>: This is the only important difference with NumPy.  Arbitrary
+row/column selection using <code>DataFrame.iloc</code> is simpler but less flexible.</p>
+<p>print(x_named.iloc[1:4:2, 1:3])
+print(x_named.iloc[[1, 3],[1, 2]])
+print(x_named.iloc[[1,3], 1:3])</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Mixed-selection">Problem: Mixed selection<a class="anchor-link" href="#Problem:-Mixed-selection">¶</a>
+</h3>
+<p>Select the columns c1 and c2 and rows 0, 2 and 4.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Mixed-selection-2">Problem: Mixed selection 2<a class="anchor-link" href="#Problem:-Mixed-selection-2">¶</a>
+</h3>
+<p>Select the rows r1 and r2 and columns 0, 2 and 4.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>

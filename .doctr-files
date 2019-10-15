@@ -2705,6 +2705,10 @@
 ./images/teaching/python/course/vscode-export.thumbnail.png
 ./images/teaching/python/course/vscode-import.png
 ./images/teaching/python/course/vscode-import.thumbnail.png
+./images/teaching/python/course/vscode-magic-python.png
+./images/teaching/python/course/vscode-magic-python.thumbnail.png
+./images/teaching/python/course/vscode-notebook-new.png
+./images/teaching/python/course/vscode-notebook-new.thumbnail.png
 ./images/teaching/python/course/vscode-notebook.png
 ./images/teaching/python/course/vscode-notebook.thumbnail.png
 ./index.html
@@ -2772,6 +2776,7 @@
 ./teaching/mfe/notes/index.md
 ./teaching/other/index.html
 ./teaching/other/index.md
+./teaching/python/course/final-exam/index.html
 ./teaching/python/course/index.html
 ./teaching/python/course/index.md
 ./teaching/python/course/installation/index.html
@@ -2785,8 +2790,13 @@
 ./teaching/python/course/lesson-15/index.html
 ./teaching/python/course/lesson-16/index.html
 ./teaching/python/course/lesson-17/index.html
+./teaching/python/course/lesson-18/index.html
+./teaching/python/course/lesson-19/index.html
 ./teaching/python/course/lesson-2/index.html
 ./teaching/python/course/lesson-2/index.ipynb
+./teaching/python/course/lesson-20/index.html
+./teaching/python/course/lesson-21/index.html
+./teaching/python/course/lesson-22/index.html
 ./teaching/python/course/lesson-3/index.html
 ./teaching/python/course/lesson-3/index.ipynb
 ./teaching/python/course/lesson-4/index.html

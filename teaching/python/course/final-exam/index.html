@@ -11,7 +11,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
     gtag('config', 'UA-2701681-1');
   </script><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Lesson 6 | Kevin Sheppard</title>
+<title>Final exam | Kevin Sheppard</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CRoboto:300,400,500,700&amp;display=fallback" rel="stylesheet"/>
 <link href="../../../../assets/css/bootstrap-material-design.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css"/>
@@ -24,7 +24,7 @@ og: http://ogp.me/ns# article: http://ogp.me/ns/article#
 <link href="../../../../assets/css/tipuesearch.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../assets/css/kevinsheppard.css" rel="stylesheet" type="text/css"/>
 <link href="../../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml"/>
-<link href="https://www.kevinsheppard.com/teaching/python/course/lesson-6/" rel="canonical"/>
+<link href="https://www.kevinsheppard.com/teaching/python/course/final-exam/" rel="canonical"/>
 <link href="../../../../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../../../../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../../../../favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
@@ -53,21 +53,12 @@ MathJax.Hub.Config({
 </style>
 <meta content="Kevin Sheppard" name="author"/>
 <meta content="Kevin Sheppard" property="og:site_name"/>
-<meta content="Lesson 6" property="og:title"/>
-<meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-6/" property="og:url"/>
-<meta content="%%¶Methods and Functions¶This lesson covers:
-
-Calling functions with more than one input and output 
-Calling functions when some inputs are not used
-
-
-
-
-
-
-
-
-%%¶Read the data in momentum.csv and creati" property="og:description"/>
+<meta content="Final exam" property="og:title"/>
+<meta content="https://www.kevinsheppard.com/teaching/python/course/final-exam/" property="og:url"/>
+<meta content="%%¶Final Exam¶This self-grading notebook serves as a final exam for the introductory course.
+If you have grasped the contents of the course, you should be able to complete
+this exam.
+It is essential t" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -141,7 +132,7 @@ Calling functions when some inputs are not used
 <div class="row">
 <div class="col-xl-1"></div>
 <div class="col-xl-10">
-<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Lesson 6</a></h1>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a class="u-url" href=".">Final exam</a></h1>
 </header><div class="e-content entry-content" itemprop="articleBody text">
 <div>
 <div class="cell border-box-sizing text_cell rendered">
@@ -151,16 +142,356 @@ Calling functions when some inputs are not used
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<h2 id="Methods-and-Functions">Methods and Functions<a class="anchor-link" href="#Methods-and-Functions">¶</a>
+<h2 id="Final-Exam">Final Exam<a class="anchor-link" href="#Final-Exam">¶</a>
 </h2>
-<p>This lesson covers:</p>
+<p>This self-grading notebook serves as a final exam for the introductory course.
+If you have grasped the contents of the course, you should be able to complete
+this exam.</p>
+<p>It is essential that you answer each cell by assigning the solution to <code>QUESTION_#</code>
+where <code>#</code> is the question number.</p>
+<p>We will start with a warm-up question that is already answered.</p>
+<h3 id="Question-0">Question 0<a class="anchor-link" href="#Question-0">¶</a>
+</h3>
+<p>Create a 3-element 1-dimensional array containing the values [1,1,1]</p>
+<p><em>Note</em>: This answer is not assessed.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<span class="c1"># Setup: The solution is used as a model</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">QUESTION_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">¶</a>
+</h3>
+<p>Construct the correlation matrix</p>
+$$\left[\begin{array}{ccc} 1 &amp; 0.2 &amp; 0.5 \\ 0.2 &amp; 1 &amp; 0.8 \\ 0.5 &amp; 0.8 &amp; 1 \end{array}\right]$$<p>as a NumPy array.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">¶</a>
+</h3>
+<p>Construct the correlation matrix</p>
+$$\left[\begin{array}{ccc} 1 &amp; 0.2 &amp; 0.5 \\ 0.2 &amp; 1 &amp; 0.8 \\ 0.5 &amp; 0.8 &amp; 1 \end{array}\right]$$<p>as a DataFrame with columns and index both equal to <code>['A', 'B', 'C']</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">¶</a>
+</h3>
+<p>Load the momentum data in the CSV file <code>momentum.csv</code>, set the column <code>date</code> 
+as the index, and ensure that <code>date</code> is a <code>DateTimeIndex</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">¶</a>
+</h3>
+<p>Construct a DataFrame using the data loaded in the previous question
+that contains the returns from momentum portfolio 5 in March and April 2016.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-5">Question 5<a class="anchor-link" href="#Question-5">¶</a>
+</h3>
+<p>What is the standard deviation of the data:</p>
+$$ 1, 3, 1, 2,9, 4, 5, 6, 10, 4 $$<p><strong>Note</strong> Use 1 degree of freedom in the denominator.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-6">Question 6<a class="anchor-link" href="#Question-6">¶</a>
+</h3>
+<p>Compute the correlation matrix of momentum portfolios 1, 4, 6, and 10 as a DataFrame
+where the index and columns are the portfolio names (e.g., 'mom_01') in the order
+listed above.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-7">Question 7<a class="anchor-link" href="#Question-7">¶</a>
+</h3>
+<p>Compute the percentage of returns of each of the 10 momentum portfolios
+that are outside of the interval</p>
+$$ [\hat{\mu} - \hat{\sigma}, \hat{\mu} + \hat{\sigma}]$$<p>where $\hat{\mu}$ is the mean and $\hat{\sigma}$ is the standard deviation computed using
+1 dof.  The returned variable must be a <code>Series</code> where the index is the portfolio
+names ordered from 1 to 10.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-8">Question 8<a class="anchor-link" href="#Question-8">¶</a>
+</h3>
+<p>Import the data the data in the sheet <code>question 8</code> in <code>final-exam.xlsx</code> into
+a DataFrame where the index contains the dates and variable name is the column
+name.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-9">Question 9<a class="anchor-link" href="#Question-9">¶</a>
+</h3>
+<p>Enter the DataFrame in the table below and save it to HDF with the key 'question9'. The answer to
+this problem must be the full path to the hdf file. The values in
+index should be the DataFrame's index.</p>
+<div class="table-responsive"><table>
+<thead><tr>
+<th style="text-align:left">index</th>
+<th style="text-align:left">data</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">6.0</td>
+</tr>
+<tr>
+<td style="text-align:left">E</td>
+<td style="text-align:left">2.7</td>
+</tr>
+<tr>
+<td style="text-align:left">G</td>
+<td style="text-align:left">1.6</td>
+</tr>
+<tr>
+<td style="text-align:left">P</td>
+<td style="text-align:left">3.1</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Note</strong>: If you want to get the full path to a file saved in the current directory, 
+you can use</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">'my_file_name'</span>
+<span class="n">full_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">file_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-10">Question 10<a class="anchor-link" href="#Question-10">¶</a>
+</h3>
+<p>Compute the cumulative return on a portfolio the longs mom_10 and shorts mom_01. The
+first value should be <code>1 + mom_10.iloc[0] - mom_01.iloc[0]</code>. The second cumulative
+return should be the first return times <code>1 + mom_10.iloc[1] - mom_01.iloc[1]</code>, and
+so on.  The solution must be a Series with the name 'momentum_factor' and index
+equal to the index of the momentum DataFrame.</p>
+<p><strong>Note</strong>: The data in the momentum return file is in percentages, i.e., a return of
+4.2% is recorded as 4.2.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-11">Question 11<a class="anchor-link" href="#Question-11">¶</a>
+</h3>
+<p>Write a function named QUESTION_11 that take 1 numerical input <code>x</code> and returns:</p>
 <ul>
-<li>Calling functions with more than one input and output </li>
-<li>Calling functions when some inputs are not used</li>
+<li>$exp(x)$ is x is less than 0</li>
+<li>$log(1+x)$ if <code>x</code> is greater than or equal to 0</li>
 </ul>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -168,8 +499,12 @@ Calling functions when some inputs are not used
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<p>Read the data in momentum.csv and creating some variable. This cell uses
-some magic to automate repeated typing.</p>
+<h3 id="Question-12">Question 12<a class="anchor-link" href="#Question-12">¶</a>
+</h3>
+<p>Produce a scatter plot of the momentum returns of portfolios 1 (x-axis) and 10 using only
+data in 2016.  Set the x limits and y limits to be tight so that the lower bound is the 
+smallest return plotted and the upper bound is the largest return plotted. Use the 'darkgrid'
+theme from seaborn.  Assign the <strong>figure</strong> handle to QUESTION_12.</p>
 </div>
 </div>
 </div>
@@ -179,15 +514,89 @@ some magic to automate repeated typing.</p>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-<span class="c1"># Setup: Load the momentum data</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-13">Question 13<a class="anchor-link" href="#Question-13">¶</a>
+</h3>
+<p>Compute the excess kurtosis of daily, weekly (using Friday and the end of the week) and monthly 
+returns on the 10 momentum portfolios using the pandas function <code>kurt</code>. The solution must be a
+DataFrame with the portfolio names as the index ordered form 1 to 10 and the sampling frequencies,
+'daily', 'weekly', or 'monthly' as the columns (in order). When computing weekly or monthly returns
+from daily data, use the sum of the daily returns.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-14">Question 14<a class="anchor-link" href="#Question-14">¶</a>
+</h3>
+<p>Simulate a random walk using 100 normal observations from a
+NumPy <code>RandomState</code> initialized with a seed of <code>19991231</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Question-15">Question 15<a class="anchor-link" href="#Question-15">¶</a>
+</h3>
+<p>Defining</p>
+<pre><code>import numpy as np
 
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/momentum.csv"</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">"date"</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">momentum</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="n">mom_01</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s2">"mom_01"</span><span class="p">]</span>
-<span class="n">mom_10</span> <span class="o">=</span> <span class="n">momentum</span><span class="p">[</span><span class="s2">"mom_10"</span><span class="p">]</span>
+cum_momentum = np.cumprod(1 + momentum / 100)</code></pre>
+<p>compute the ratio of the high-price to the low price in each month.  The solution
+should be a DataFrame where the index is the last date in each month and the columns
+are the variables names.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -200,36 +609,12 @@ some magic to automate repeated typing.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<p>This data set contains 2 years of data on the 10 momentum portfolios from
-2016–2018. The variables are named mom_XX where XX ranges from 01 (work
-return over the past 12 months) to 10 (best return over the past 12 months).</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
-<h3 id="Problem:-Calling-Methods">Problem: Calling Methods<a class="anchor-link" href="#Problem:-Calling-Methods">¶</a>
+<h3 id="Question-16">Question 16<a class="anchor-link" href="#Question-16">¶</a>
 </h3>
-<p>Get used to calling methods by computing the mean, standard deviation, skewness, kurtosis, max, and min.</p>
-<p>Use the DataFrame functions <code>mean</code>, <code>std</code>, <code>skew</code> and <code>kurt</code>, <code>min</code> and <code>max</code> to print the
-values for <code>mom_01</code>.</p>
-<p>In the second cell, call <code>describe</code>, a method that summariezes <code>Series</code> and <code>DataFrames</code> on <code>mom_01</code>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
+<p>Simulate 100 observations from the model</p>
+$$ y_i = 0.2 + 1.2 y_{i-1} - 0.2 y_{i-2} + \epsilon_i$$<p>where $\epsilon_i$ is a standard normal shock.  Set $y_0=\epsilon_0$ and
+$y_1=\epsilon_0 + \epsilon_1$. The solution should be a 1-d NumPy array with 100 elements. Use
+a RandomState with a seed value of 19991231.</p>
 </div>
 </div>
 </div>
@@ -251,10 +636,14 @@ values for <code>mom_01</code>.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<h3 id="Problem:-Use-NumPy-and-SciPy-functions">Problem: Use NumPy and SciPy functions<a class="anchor-link" href="#Problem:-Use-NumPy-and-SciPy-functions">¶</a>
+<h3 id="Question-17">Question 17<a class="anchor-link" href="#Question-17">¶</a>
 </h3>
-<p>Use the NumPy functions <code>mean</code>, <code>std</code>, <code>min</code>, <code>max</code> and the SciPy <code>stats</code> functions
-<code>skew</code> and <code>kurtosis</code> to produce the same output.</p>
+<p>What is the ratio of the largest eigenvalue to the smallest eigenvalue 
+of the correlation matrix of the 10 momentum returns?</p>
+<p><strong>Note</strong>: This is called the condition number of a matrix and is a measure of
+how closely correlated the series are. You can compute the eigenvalues from
+the correlation matrix using <code>np.linalg.eigs</code>.  See the help of this function
+for more details.</p>
 </div>
 </div>
 </div>
@@ -276,25 +665,12 @@ values for <code>mom_01</code>.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<h3 id="Problem:-Calling-Functions-with-2-Outputs">Problem: Calling Functions with 2 Outputs<a class="anchor-link" href="#Problem:-Calling-Functions-with-2-Outputs">¶</a>
+<h3 id="Question-18">Question 18<a class="anchor-link" href="#Question-18">¶</a>
 </h3>
-<p>Some useful functions return 2 or more outputs. One example is <code>np.linalg.slogdet</code> 
-computes the signed log determinant of a square array. It returns two output,
-the sign and the log of the absolute determinant.</p>
-<p>Use this function to compute the sign and log determinant of the 2 by 2 array:</p>
-<pre><code>1  2
-2  9</code></pre>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
+<p>Write a function that takes a single input 'x' and return the string
+"The value of x is " and the value of x. For example, if x is 3.14,
+then the returned value should be "The value of x is 3.14". The function name
+must be QUESTION_18.</p>
 </div>
 </div>
 </div>
@@ -316,12 +692,10 @@ the sign and the log of the absolute determinant.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<h3 id="Problem:-Calling-Functions-with-2-Inputs">Problem: Calling Functions with 2 Inputs<a class="anchor-link" href="#Problem:-Calling-Functions-with-2-Inputs">¶</a>
+<h3 id="Question-19">Question 19<a class="anchor-link" href="#Question-19">¶</a>
 </h3>
-<p>Many functions take two or more inputs. Like outputs, the inputs are simply
-listed in order separated by commas. Use <code>np.linspace</code> to produce a series
-of 11 points evenly spaced between 0 and 1.</p>
-<pre><code>np.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)</code></pre>
+<p>Compute the percentage of days where all 10 returns are positive and subtract the
+percentage of days where all 10 momentum returns are negative on the same day.</p>
 </div>
 </div>
 </div>
@@ -343,143 +717,23 @@ of 11 points evenly spaced between 0 and 1.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
 </h2>
-<h3 id="Problem:-Calling-Functions-using-Keyword-Arguments">Problem: Calling Functions using Keyword Arguments<a class="anchor-link" href="#Problem:-Calling-Functions-using-Keyword-Arguments">¶</a>
+<h3 id="Question-20">Question 20<a class="anchor-link" href="#Question-20">¶</a>
 </h3>
-<p>Many functions have optional arguments. You can see these in a docstring since
-optional arguments take the form <code>variable=default</code>. For example, see
-the help for <code>scipy.special.comb</code>, which has the function signature</p>
-<pre><code>comb(N, k, exact=False, repetition=False)</code></pre>
-<p>This tells us that <code>N</code> and <code>k</code> are required and
-that the other 2 inputs can be omitted if you are happy with the defaults.
-However, if we want to change some of the optional inputs, then we can
-directly use the inputs name in the function call.</p>
-<p>Compute the number of distinct combinations of 5 objects from a set of 10.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
-<p>Compute the total number of combinations allowing for repetition 
-using the <code>repetition=True</code> keyword argument.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
-<p>Compute the number of combinations using the exact representation using 
-only positional arguments for all 3 inputs.  Repeat using the keyword
-argument for <code>exact</code>.</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
-<h3 id="Problem:-Function-Help">Problem: Function Help<a class="anchor-link" href="#Problem:-Function-Help">¶</a>
-</h3>
-<p>Explore the help available for calling functions <code>?</code> operator. For example,</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="kn">as</span> <span class="nn">stats</span>
-
-<span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="err">?</span>
-</pre></div>
-<p>opens a help window that shows the inputs and output, while</p>
-<div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">)</span>
-</pre></div>
-<p>shows the help in the console.</p>
-<p><strong>Note</strong>: VS Code does <strong>not</strong> support the <code>?</code> form of help</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
-<h3 id="Problem:-Use-help-with-a-method">Problem: Use <code>help</code> with a method<a class="anchor-link" href="#Problem:-Use-help-with-a-method">¶</a>
-</h3>
-<p>Use <code>help</code> to get the help for the <code>kurt</code> method attached to <code>momentum</code>.</p>
+<p>Write the function <code>QUESTION_20</code> that will take a single input <code>s</code>, which is a string
+and will return a Series that counts the number of times each letter in <code>s</code> appears in <code>s</code>
+<em>without</em> regard to case. Do not include spaces.  Ensure the Series returned as its index sorted.</p>
+<p><strong>Hints</strong>:</p>
+<ul>
+<li>Have a look at <code>value_counts</code> for a pandas <code>Series</code>.</li>
+<li>You can iterate across the letters of a string using</li>
+</ul>
+<pre><code>some_string = 'abcdefg'
+for letter in some_string:
+    do somethign with letter...</code></pre>
+<ul>
+<li>
+<code>str.lower</code> can be used to get the lower case version of a string</li>
+</ul>
 </div>
 </div>
 </div>

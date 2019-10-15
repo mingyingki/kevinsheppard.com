@@ -55,19 +55,12 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 11" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-11/" property="og:url"/>
-<meta content="Program Flow¶This lesson covers:
+<meta content="%%¶Accessing Elements in NumPy Arrays¶This lesson covers:
 
-for loops 
-Nested loops 
+Accessing specific elements in NumPy arrays
 
-
-
-
-
-
-
-
-Problem: Basic For Loops¶Construct a for loop to sum the numbers between 1 and N for any N. A for loop that does nothing can be writt" property="og:description"/>
+Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
+" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -149,28 +142,34 @@ Problem: Basic For Loops¶Construct a for loop to sum the numbers between 1 and 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Program-Flow">Program Flow<a class="anchor-link" href="#Program-Flow">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h2 id="Accessing-Elements-in-NumPy-Arrays">Accessing Elements in NumPy Arrays<a class="anchor-link" href="#Accessing-Elements-in-NumPy-Arrays">¶</a>
 </h2>
 <p>This lesson covers:</p>
 <ul>
-<li>for loops </li>
-<li>Nested loops </li>
+<li>Accessing specific elements in NumPy arrays</li>
+</ul>
+<p>Accessing elements in an array or a DataFrame is a common task. To begin this lesson, clear the
+workspace set up some vectors and a $5\times5$ array. These vectors and matrix will make it easy
+to determine which elements are selected by a command.</p>
+<p>Using <code>arange</code> and <code>reshape</code> to create 3 arrays:</p>
+<ul>
+<li>5-by-5 array <code>x</code> containing the values 0,1,...,24 </li>
+<li>5-element, 1-dimensional array <code>y</code> containing 0,1,...,4</li>
+<li>5-by-1 array <code>z</code> containing 0,1,...,4</li>
 </ul>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Basic-For-Loops">Problem: Basic For Loops<a class="anchor-link" href="#Problem:-Basic-For-Loops">¶</a>
-</h3>
-<p>Construct a for loop to sum the numbers between 1 and N for any N. A for loop that does nothing can be written:</p>
-<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">pass</span>
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -179,22 +178,9 @@ Problem: Basic For Loops¶Construct a for loop to sum the numbers between 1 and 
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Compute-a-compound-return">Problem: Compute a compound return<a class="anchor-link" href="#Problem:-Compute-a-compound-return">¶</a>
-</h3>
-<p>The compound return on a bond that pays interest annually at rate r is given by 
-$cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total return for 
-£100 invested today for $1,2,\ldots,10$ years. Store this variable in a 10 by 1 vector cr.</p>
 </div>
 </div>
 </div>
@@ -203,7 +189,7 @@ $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total return
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -214,19 +200,17 @@ $cr_{t}=\prod_{i=1}^{T}(1+r)=(1+r)^{T}$. Use a for loop compute the total return
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Simulate-a-random-walk">Problem: Simulate a random walk<a class="anchor-link" href="#Problem:-Simulate-a-random-walk">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Zero-based-indexing">Zero-based indexing<a class="anchor-link" href="#Zero-based-indexing">¶</a>
 </h3>
-<p>(Pseudo) Normal random variables can be simulated using the command
-<code>np.random.standard_normal(shape)</code> where <code>shape</code> is a tuple (or a scalar) containing the 
-dimensions of the desired random numbers. Simulate 100 normals in a 100 by 1 vector and name 
-the result <code>e</code>. Initialize a vector <code>p</code> containing zeros using the function zeros. Add the 
-1st element of <code>e</code> to the first element of <code>p</code>. Use a for loop to simulate a process 
-$y_{i}=y_{i-1}+e_{i}$. When finished plot the results using</p>
-<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
+<p>Python indexing is 0 based so that the first element has position <code>0</code>, the second has position <code>1</code>
+and so on until the last element has position <code>n-1</code> in an array that contains <code>n</code> elements in
+total.</p>
+<h3 id="Problem:-Scalar-selection">Problem: Scalar selection<a class="anchor-link" href="#Problem:-Scalar-selection">¶</a>
+</h3>
+<p>Select the number 2 in all three, <code>x</code>, <code>y</code>, and <code>z</code>.</p>
+<p><strong>Question</strong>:  Which index is rows and which index is columns?</p>
 </div>
 </div>
 </div>
@@ -235,7 +219,7 @@ $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -246,7 +230,18 @@ $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -257,24 +252,12 @@ $y_{i}=y_{i-1}+e_{i}$. When finished plot the results using</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Nested-Loops">Problem: Nested Loops<a class="anchor-link" href="#Problem:-Nested-Loops">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Scalar-selection-of-a-single-row">Problem: Scalar selection of a single row<a class="anchor-link" href="#Problem:-Scalar-selection-of-a-single-row">¶</a>
 </h3>
-<p>Begin by loading momentum data used in an earlier lesson. Begin by adding 1 to the returns to
-produce gross returns. The gross return is the total value in the current period of £1 invested 
-in the previous period. A net return subtracts the original investment to produce the net gain 
-or loss. Use two loops to loop both across time and across the 10 portfolios to compute the 
-total compound return.</p>
-<p>For example, if only interested in a single series,</p>
-<div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">mom_01</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">cr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> 
-<span class="n">gr</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">mom_01</span> 
-<span class="n">cr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="n">mom_01</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">cr</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">=</span><span class="n">cr</span><span class="p">[</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">gr</span><span class="p">[</span><span class="n">t</span><span class="p">]</span>
-</pre></div>
-<p>computes the cumulative return.</p>
-<p>When finished, plot the cumulative returns using <code>plt.plot(cr)</code>. After finishing this problem,
-have a look at <code>np.cumsum?</code> and <code>np.cumprod?</code>.</p>
+<p>Select row 2 in <code>x</code> and <code>z</code> using a single integer value.</p>
+<p><strong>Question</strong>: What is the dimension of <code>x</code> and the second row of <code>x</code></p>
 </div>
 </div>
 </div>
@@ -283,13 +266,320 @@ have a look at <code>np.cumsum?</code> and <code>np.cumprod?</code>.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
-
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Slice-selection-of-a-single-row">Problem: Slice selection of a single row<a class="anchor-link" href="#Problem:-Slice-selection-of-a-single-row">¶</a>
+</h3>
+<p>Use a slice to select the 2nd row of <code>x</code> and the 2nd element of <code>y</code> and <code>z</code>.</p>
+<p><strong>Question</strong>: What are the dimension selections?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-List-selection-of-a-single-row">Problem: List selection of a single row<a class="anchor-link" href="#Problem:-List-selection-of-a-single-row">¶</a>
+</h3>
+<p>Use a list to select the 2nd row of <code>x</code> and the 2nd element of <code>y</code> and <code>z</code>.</p>
+<p><strong>Question</strong>: What are the dimension selections?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-single-Column">Problem: Selecting a single Column<a class="anchor-link" href="#Problem:-Selecting-a-single-Column">¶</a>
+</h3>
+<p>Select the 2nd column of x using a scalar integer, a slice and a list.</p>
+<p><strong>Question</strong>: What the the dimensions of the selected elemets?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-block-of-specific-columns">Problem: Selecting a block of specific columns<a class="anchor-link" href="#Problem:-Selecting-a-block-of-specific-columns">¶</a>
+</h3>
+<p>Select the 2nd and 3rd columns of x using a slice.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-block-of-specific-rows">Problem: Selecting a block of specific rows<a class="anchor-link" href="#Problem:-Selecting-a-block-of-specific-rows">¶</a>
+</h3>
+<p>Select the 2nd and 4th rows of x using both a slice and a list.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Selecting-a-block-of-specific-rows-and-columns">Problem: Selecting a block of specific rows and columns<a class="anchor-link" href="#Problem:-Selecting-a-block-of-specific-rows-and-columns">¶</a>
+</h3>
+<p>Combine these be combined to select columns 2 and 3 and rows 2 and 4.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Use-ix_-to-select-rows-and-columns-using-lists">Problem: Use <code>ix_</code> to select rows and columns using lists<a class="anchor-link" href="#Problem:-Use-ix_-to-select-rows-and-columns-using-lists">¶</a>
+</h3>
+<p>Use <code>ix_</code> to select the 2nd and 4th rows and 1st and 3rd columns of <code>x</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Convert-a-DataFrame-to-a-NumPy-array">Problem: Convert a DataFrame to a NumPy array<a class="anchor-link" href="#Problem:-Convert-a-DataFrame-to-a-NumPy-array">¶</a>
+</h3>
+<p>Use  <code>.to_numpy</code> to convert a DataFrame to a NumPy array.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<span class="c1"># Setup: Create a DataFrame</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/momentum.csv'</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">momentum</span> <span class="o">/</span> <span class="mi">100</span>  <span class="c1"># Convert to numeric values from percentages</span>
-<span class="c1"># Convert to a plain numpy array</span>
-<span class="n">momentum</span> <span class="o">=</span> <span class="n">momentum</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">x_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">names</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">names</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_df</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -300,18 +590,7 @@ have a look at <code>np.cumsum?</code> and <code>np.cumprod?</code>.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
 </pre></div>
 </div>
 </div>
@@ -322,17 +601,22 @@ have a look at <code>np.cumsum?</code> and <code>np.cumprod?</code>.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a>
+<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
+</h2>
+<h3 id="Problem:-Use-np.asarray-to-convert-to-an-array">Problem: Use <code>np.asarray</code> to convert to an array<a class="anchor-link" href="#Problem:-Use-np.asarray-to-convert-to-an-array">¶</a>
 </h3>
-<h4 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a>
-</h4>
-<ol>
-<li>Simulate a 1000 by 10 matrix consisting of 10 standard random walks using both nested loops
-and <code>np.cumsum</code>. </li>
-<li>Plot the results. </li>
-</ol>
-<p><strong>Question to think about</strong></p>
-<p>If you rerun the code in this Exercise, do the results change? Why?</p>
+<p>Use  <code>np.asarray</code> to convert a DataFrame to a NumPy array.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
