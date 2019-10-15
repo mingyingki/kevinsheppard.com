@@ -314,7 +314,7 @@ var tipuesearch = {
     },
     {
       "title": "MATLAB",
-      "text": "Notes and Course\u00b6\nA set of notes and an introductory course that introduces MATLAB to new users.\nMATLAB Notes and Course",
+      "text": "Introductory Notes and Course\u00b6\nMATLAB Notes and Course is a set of notes and an introductory\nMATLAB course designed for new users.\nMFE Companion Course\u00b6\nThe companion course is designed to accompany\nFinancial Econometrics I and II and to provide tools needed in Empirical Asset\npricing.  \nMFE Toolbox\u00b6\nThe MFE Toolbox provides a large collection of\nMATLAB functions for analyzing financial time series.",
       "tags": "",
       "url": "https://www.kevinsheppard.com/teaching/matlab/"
     },
