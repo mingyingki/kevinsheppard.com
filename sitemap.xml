@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.kevinsheppard.com/</loc>
-  <lastmod>2019-09-11T12:39:00Z</lastmod>
+  <lastmod>2019-10-15T14:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.kevinsheppard.com/2019/</loc>
   <lastmod>2019-09-03T12:52:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.kevinsheppard.com/404/</loc>
+  <lastmod>2019-10-15T14:47:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.kevinsheppard.com/archive.html</loc>
-  <lastmod>2019-10-15T13:57:00Z</lastmod>
+  <lastmod>2019-10-15T14:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.kevinsheppard.com/blog/</loc>

@@ -1,6 +1,12 @@
 var tipuesearch = {
   "pages": [
     {
+      "title": "404 Not Found",
+      "text": "404 Not Found\u00b6\nThe page you are looking for has not been found. This site has recently been reorganized\nand so you might have ended up here from bad link in a search engine.  You can try\nthe searching using the form above or navigate to my landing page.",
+      "tags": "",
+      "url": "https://www.kevinsheppard.com/404/"
+    },
+    {
       "title": "Installing Anaconda on Windows",
       "text": "",
       "tags": "",
@@ -284,7 +290,7 @@ var tipuesearch = {
     },
     {
       "title": "Python Course",
-      "text": "This course is an introduction to Python and programming aimed at students working\nin Finance and Economics. The course is designed to be taught using the Jupyter notebooks\nthat are in the course GitHub repository and\nare linked below. The complete course is available for\ndownload as a pdf.\nGitHub\u00b6\nThe introduction is available on Github. \nIf you are happy to use git, you can download everything\nusing git, or for even fork the repo and save your progress to your own fork.\nSelf-paced Study\u00b6\nThis course is intended as an alternative to the MATLAB introduction and so\nis self-paced.  Each of the lessons is covered in one or more videos that are\navailable in a YouTube channel.\nNote: The video content is a work-in-progress and should be completed by mid-October 2019.\nNotebooks\u00b6\n\n\n\n\ufeffLesson\nLink to Download\nDemonstration(s)\n\n\n\n\n\nInstallation\nDownload\nInstallation\n\n\n\nLesson 1\nDownload\nLesson 1: Part 1, Part 2, Part 3\n\n\n\nLesson 2\nDownload\nLesson 2\n\n\n\nLesson 3\nDownload\n\n\n\n\nLesson 4\nDownload\n\n\n\n\nLesson 5\nDownload\n\n\n\n\nLesson 6\nDownload\n\n\n\n\nLesson 7\nDownload\n\n\n\n\nLesson 8\nDownload\nLesson 8\n\n\n\nLesson 9\nDownload\n\n\n\n\nLesson 10\nDownload\n\n\n\n\nLesson 11\nDownload\n\n\n\n\nLesson 12\nDownload\n\n\n\n\nLesson 13\nDownload\n\n\n\n\nLesson 14\nDownload\n\n\n\n\nLesson 15\nDownload\n\n\n\n\nLesson 16\nDownload\n\n\n\n\nLesson 17\nDownload\n\n\n\n\n\nDownloading: Right-click and select Download to save the notebook files to your computer.\nData and Supporting Files\u00b6\nData",
+      "text": "This course is an introduction to Python and programming aimed at students working\nin Finance and Economics. The course is designed to be taught using the Jupyter notebooks\nthat are in the course GitHub repository and\nare linked below. The complete course is available for\ndownload as a pdf.\nGitHub\u00b6\nThe introduction is available on Github. \nIf you are happy to use git, you can download everything\nusing git, or for even fork the repo and save your progress to your own fork.\nSelf-paced Study\u00b6\nThis course is intended as an alternative to the MATLAB introduction and so\nis self-paced.  Each of the lessons is covered in one or more videos that are\navailable in a YouTube channel.\nNote: The video content is a work-in-progress and should be completed by mid-October 2019.\nNotebooks\u00b6\n\n\n\n\ufeffLesson\nLink to Download\nDemonstration(s)\n\n\n\n\n\nInstallation\nDownload\nInstallation\n\n\n\nLesson 1\nDownload\nLesson 1: Part 1, Part 2, Part 3\n\n\n\nLesson 2\nDownload\nLesson 2\n\n\n\nLesson 3\nDownload\nLesson 3\n\n\n\nLesson 4\nDownload\n\n\n\n\nLesson 5\nDownload\n\n\n\n\nLesson 6\nDownload\n\n\n\n\nLesson 7\nDownload\n\n\n\n\nLesson 8\nDownload\n\n\n\n\nLesson 9\nDownload\n\n\n\n\nLesson 10\nDownload\n\n\n\n\nLesson 11\nDownload\n\n\n\n\nLesson 12\nDownload\n\n\n\n\nLesson 13\nDownload\n\n\n\n\nLesson 14\nDownload\n\n\n\n\nLesson 15\nDownload\n\n\n\n\nLesson 16\nDownload\n\n\n\n\nLesson 17\nDownload\n\n\n\n\nLesson 18\nDownload\n\n\n\n\nLesson 19\nDownload\n\n\n\n\nLesson 20\nDownload\n\n\n\n\nLesson 21\nDownload\n\n\n\n\nLesson 22\nDownload\n\n\n\n\n\nDownloading: Right-click and select Download to save the notebook files to your computer.\nData and Supporting Files\u00b6\nData",
       "tags": "",
       "url": "https://www.kevinsheppard.com/teaching/python/course/"
     },
