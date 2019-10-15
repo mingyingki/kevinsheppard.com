@@ -55,13 +55,13 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 4" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-4/" property="og:url"/>
-<meta content="%%¶Series and DataFrames¶This lesson covers:
+<meta content="Series and DataFrames¶This lesson covers:
 
 Constructing pandas Series and DataFrames 
 
 
 Data¶September 2018 prices (adjusted closing prices) for the S&amp;P 500 EFT (SPY),
-Apple (AAPL) and Google (GOOG" property="og:description"/>
+Apple (AAPL) and Google (GOOG) a" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -143,8 +143,6 @@ Apple (AAPL) and Google (GOOG" property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h2 id="Series-and-DataFrames">Series and DataFrames<a class="anchor-link" href="#Series-and-DataFrames">¶</a>
 </h2>
 <p>This lesson covers:</p>
@@ -247,8 +245,6 @@ Apple (AAPL) and Google (GOOG) are listed below:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 </div>
 </div>
 </div>
@@ -257,8 +253,6 @@ Apple (AAPL) and Google (GOOG) are listed below:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Input-a-pandas-Series">Problem: Input a pandas Series<a class="anchor-link" href="#Problem:-Input-a-pandas-Series">¶</a>
 </h3>
 <p>Create vectors for each of the days in the <a href="#stock-data">Table</a> named <code>sep_xx</code>
@@ -276,7 +270,7 @@ where <code>xx</code> is the numeric date. For example,</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -287,8 +281,6 @@ where <code>xx</code> is the numeric date. For example,</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Create-a-Vector-of-Dates">Problem: Create a Vector of Dates<a class="anchor-link" href="#Problem:-Create-a-Vector-of-Dates">¶</a>
 </h3>
 <p>Use the pandas function <code>pd.to_datetime</code> to convert a list of string dates to
@@ -310,7 +302,7 @@ a pandas <code>DateTimeIndex</code>, which can be used to set dates in other arr
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -321,8 +313,6 @@ a pandas <code>DateTimeIndex</code>, which can be used to set dates in other arr
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Input-a-Series-with-Dates">Problem: Input a Series with Dates<a class="anchor-link" href="#Problem:-Input-a-Series-with-Dates">¶</a>
 </h3>
 <p>Create vectors for each of the ticker symbols in <a href="#stock-data">Table</a> named
@@ -340,7 +330,7 @@ in the previous step as the index.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -351,8 +341,6 @@ in the previous step as the index.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Create-a-DataFrame">Problem: Create a DataFrame<a class="anchor-link" href="#Problem:-Create-a-DataFrame">¶</a>
 </h3>
 <p>Create a DataFrame named <code>prices</code> containing <a href="#stock-data">Table</a>. Set the
@@ -368,7 +356,7 @@ column names equal to the ticker and set the index to <code>dates</code>.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -379,8 +367,6 @@ column names equal to the ticker and set the index to <code>dates</code>.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <p>Save the price data</p>
 <p>This block saves prices to a HDF file for use in later lessons. The
 function used to save the data is covered in a later lesson.</p>
@@ -394,8 +380,7 @@ worry if it is unclear at this point.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-<span class="c1"># Setup: Save prices, goog and sep_04 into a single file for use in other lessons</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Save prices, goog and sep_04 into a single file for use in other lessons</span>
 
 <span class="c1"># Only run if prices has been defined</span>
 <span class="k">if</span> <span class="s2">"prices"</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>

@@ -55,7 +55,7 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 16" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-16/" property="og:url"/>
-<meta content="%%¶Boolean Selection¶This lesson covers:
+<meta content="Boolean Selection¶This lesson covers:
 
 Boolean selection
 where
@@ -70,11 +70,12 @@ Begin by loading the data in momentum.csv.
 In [ ]:
 
     
-#%%
 # Setup: Load the momentum data
 
 import numpy as np
-import pandas " property="og:description"/>
+import pandas as pd
+
+" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -156,8 +157,6 @@ import pandas " property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h2 id="Boolean-Selection">Boolean Selection<a class="anchor-link" href="#Boolean-Selection">¶</a>
 </h2>
 <p>This lesson covers:</p>
@@ -174,8 +173,7 @@ import pandas " property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-<span class="c1"># Setup: Load the momentum data</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load the momentum data</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -193,8 +191,6 @@ import pandas " property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Selecting-rows-with-boolean-conditions">Problem: Selecting rows with boolean conditions<a class="anchor-link" href="#Problem:-Selecting-rows-with-boolean-conditions">¶</a>
 </h3>
 <p>Select the rows in <code>momentum</code> where all returns on a day are negative.</p>
@@ -206,7 +202,7 @@ import pandas " property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -217,8 +213,6 @@ import pandas " property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Selecting-rows">Problem: Selecting rows<a class="anchor-link" href="#Problem:-Selecting-rows">¶</a>
 </h3>
 <p>Select the rows in <code>momentum</code> where 50% or more of the returns on a day are negative.</p>
@@ -230,7 +224,7 @@ import pandas " property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -241,8 +235,6 @@ import pandas " property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Selecting-columns">Problem: Selecting columns<a class="anchor-link" href="#Problem:-Selecting-columns">¶</a>
 </h3>
 <p>Select the columns in <code>momentum</code> what have the smallest and second smallest average returns.</p>
@@ -254,7 +246,7 @@ import pandas " property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -265,7 +257,7 @@ import pandas " property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -276,7 +268,7 @@ import pandas " property="og:description"/>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -287,8 +279,6 @@ import pandas " property="og:description"/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Selecting-rows-and-columns">Problem: Selecting rows and columns<a class="anchor-link" href="#Problem:-Selecting-rows-and-columns">¶</a>
 </h3>
 <p>Select the returns for the column with the single most negative return
@@ -301,7 +291,7 @@ on days where all of the returns are negative.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -312,7 +302,7 @@ on days where all of the returns are negative.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -323,8 +313,6 @@ on days where all of the returns are negative.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Selecting-Elements-using-Logical-Statements">Problem: Selecting Elements using Logical Statements<a class="anchor-link" href="#Problem:-Selecting-Elements-using-Logical-Statements">¶</a>
 </h3>
 <p>For portfolio 1 and portfolio 10 compute the correlation when both 
@@ -337,7 +325,7 @@ returns are negative and when both are positive.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -348,7 +336,7 @@ returns are negative and when both are positive.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -359,8 +347,7 @@ returns are negative and when both are positive.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-<span class="c1"># Setup: Reproducible random numbers</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Reproducible random numbers</span>
 
 <span class="n">rs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">19991231</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
@@ -375,8 +362,6 @@ returns are negative and when both are positive.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Select-the-columns-of-x-that-means-&gt;=-$E[x]$">Problem: Select the columns of x that means &gt;= $E[x]$<a class="anchor-link" href="#Problem:-Select-the-columns-of-x-that-means-&gt;=-%24E%5Bx%5D%24">¶</a>
 </h3>
 </div>
@@ -387,7 +372,7 @@ returns are negative and when both are positive.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -398,8 +383,6 @@ returns are negative and when both are positive.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Select-the-rows-of-x-that-means-&gt;=-$E[x]$">Problem: Select the rows of x that means &gt;= $E[x]$<a class="anchor-link" href="#Problem:-Select-the-rows-of-x-that-means-&gt;=-%24E%5Bx%5D%24">¶</a>
 </h3>
 </div>
@@ -410,7 +393,7 @@ returns are negative and when both are positive.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -421,8 +404,6 @@ returns are negative and when both are positive.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Select-the-rows-and-column-of-x-where-both-have-means-&lt;-$E[x]$">Problem: Select the rows and column of x where both have means &lt; $E[x]$<a class="anchor-link" href="#Problem:-Select-the-rows-and-column-of-x-where-both-have-means-&lt;-%24E%5Bx%5D%24">¶</a>
 </h3>
 </div>
@@ -433,7 +414,7 @@ returns are negative and when both are positive.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -444,8 +425,6 @@ returns are negative and when both are positive.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Using-where">Problem: Using <code>where</code><a class="anchor-link" href="#Problem:-Using-where">¶</a>
 </h3>
 <p>Use <code>where</code> to select the index of the elements in portfolio 5 that are
@@ -459,7 +438,7 @@ which elements of the portfolio return matrix are less than -2%.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -470,7 +449,7 @@ which elements of the portfolio return matrix are less than -2%.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -481,7 +460,7 @@ which elements of the portfolio return matrix are less than -2%.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>

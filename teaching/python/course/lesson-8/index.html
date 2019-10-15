@@ -55,7 +55,7 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 8" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-8/" property="og:url"/>
-<meta content="%%¶Using DataFrames¶This lesson introduces:
+<meta content="Using DataFrames¶This lesson introduces:
 
 Computing returns (percentage change)
 Basic mathematical operations on DataFrames
@@ -70,7 +70,7 @@ This first cell load data for use in this lesson.
 In [ ]:
 
     
-#%" property="og:description"/>
+# Set" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -152,8 +152,6 @@ In [ ]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h2 id="Using-DataFrames">Using DataFrames<a class="anchor-link" href="#Using-DataFrames">¶</a>
 </h2>
 <p>This lesson introduces:</p>
@@ -170,8 +168,7 @@ In [ ]:
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-<span class="c1"># Setup: Load prices</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load prices</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">prices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s2">"data/dataframes.h5"</span><span class="p">,</span> <span class="s2">"prices"</span><span class="p">)</span>
 <span class="n">sep_04</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s2">"data/dataframes.h5"</span><span class="p">,</span> <span class="s2">"sep_04"</span><span class="p">)</span>
@@ -186,8 +183,6 @@ In [ ]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Compute-Returns">Problem: Compute Returns<a class="anchor-link" href="#Problem:-Compute-Returns">¶</a>
 </h3>
 <p>Compute returns using</p>
@@ -205,7 +200,7 @@ In [ ]:
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -216,7 +211,7 @@ In [ ]:
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -227,7 +222,7 @@ In [ ]:
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -238,8 +233,6 @@ In [ ]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Compute-Log-Returns">Problem: Compute Log Returns<a class="anchor-link" href="#Problem:-Compute-Log-Returns">¶</a>
 </h3>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -256,7 +249,7 @@ $r_{t}=\ln\left(P_{t}\right)-\ln\left(P_{t-1}\right)=\ln\left(\frac{P_{t}}{P_{t-
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -267,8 +260,6 @@ $r_{t}=\ln\left(P_{t}\right)-\ln\left(P_{t-1}\right)=\ln\left(\frac{P_{t}}{P_{t-
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Basic-Mathematical-Operations">Basic Mathematical Operations<a class="anchor-link" href="#Basic-Mathematical-Operations">¶</a>
 </h3>
 <div class="table-responsive"><table>
@@ -343,7 +334,7 @@ evaluated left to right.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -354,7 +345,7 @@ evaluated left to right.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -365,7 +356,7 @@ evaluated left to right.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -376,7 +367,7 @@ evaluated left to right.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -387,7 +378,7 @@ evaluated left to right.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -398,8 +389,6 @@ evaluated left to right.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Addition-on-Series">Problem: Addition on Series<a class="anchor-link" href="#Problem:-Addition-on-Series">¶</a>
 </h3>
 <p>Add the returns on SPY to those of AAPL</p>
@@ -411,7 +400,7 @@ evaluated left to right.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -422,8 +411,6 @@ evaluated left to right.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Addition-on-Series">Problem: Addition on Series<a class="anchor-link" href="#Problem:-Addition-on-Series">¶</a>
 </h3>
 <p>Using only basic mathematical operations compute the 
@@ -436,7 +423,7 @@ correlation between the returns on AAPL and SPY.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -447,8 +434,6 @@ correlation between the returns on AAPL and SPY.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Addition-of-DataFrames">Problem: Addition of DataFrames<a class="anchor-link" href="#Problem:-Addition-of-DataFrames">¶</a>
 </h3>
 <p>Construct a <code>DataFrame</code> that only contains the SPY column from returns
@@ -461,7 +446,7 @@ and add it to the return <code>DataFrame</code></p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -472,8 +457,6 @@ and add it to the return <code>DataFrame</code></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Non-conformable-math">Problem: Non-conformable math<a class="anchor-link" href="#Problem:-Non-conformable-math">¶</a>
 </h3>
 <p>Add the prices in <code>sep_04</code> to the prices of <code>goog</code>. What happens?</p>
@@ -485,7 +468,7 @@ and add it to the return <code>DataFrame</code></p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -496,8 +479,6 @@ and add it to the return <code>DataFrame</code></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Constructing-portfolio-returns">Problem: Constructing portfolio returns<a class="anchor-link" href="#Problem:-Constructing-portfolio-returns">¶</a>
 </h3>
 <p>Set up a 3-element array of portfolio weights</p>
@@ -510,7 +491,7 @@ $$w=\left(\frac{1}{3},\,\frac{1}{3}\,,\frac{1}{3}\right)$$<p>and compute the ret
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>

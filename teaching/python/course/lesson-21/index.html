@@ -55,7 +55,7 @@ MathJax.Hub.Config({
 <meta content="Kevin Sheppard" property="og:site_name"/>
 <meta content="Lesson 21" property="og:title"/>
 <meta content="https://www.kevinsheppard.com/teaching/python/course/lesson-21/" property="og:url"/>
-<meta content="%%¶Graphics: Line Plots¶This lesson covers:
+<meta content="Graphics: Line Plots¶This lesson covers:
 
 Basic plotting 
 Subplots 
@@ -69,8 +69,8 @@ Scatter Plots
 
 
 
-%%¶Plotting in notebooks requires using a magic command, which starts with
-%, to initialize the" property="og:description"/>
+Plotting in notebooks requires using a magic command, which starts with
+%, to initialize the plott" property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="2019-09-04T17:18:32+01:00" property="article:published_time"/>
 </head>
@@ -152,8 +152,6 @@ Scatter Plots
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h2 id="Graphics:-Line-Plots">Graphics: Line Plots<a class="anchor-link" href="#Graphics:-Line-Plots">¶</a>
 </h2>
 <p>This lesson covers:</p>
@@ -171,8 +169,6 @@ Scatter Plots
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <p>Plotting in notebooks requires using a magic command, which starts with
 <code>%</code>, to initialize the plotting backend.</p>
 </div>
@@ -183,8 +179,7 @@ Scatter Plots
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
-<span class="c1"># Setup</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
@@ -196,8 +191,6 @@ Scatter Plots
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <p>Begin by loading the data in hf.h5. This data set contains high-frequency
 price data for IBM and MSFT on a single day stored as two Series. IBM is
 stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
@@ -209,7 +202,7 @@ stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -220,8 +213,6 @@ stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Basic-Plotting">Problem: Basic Plotting<a class="anchor-link" href="#Problem:-Basic-Plotting">¶</a>
 </h3>
 <ol>
@@ -237,7 +228,7 @@ stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -248,7 +239,7 @@ stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -259,7 +250,7 @@ stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -270,8 +261,6 @@ stored as "IBM" in the HDF file, and MSFT is stored as "MSFT.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Subplot">Problem: Subplot<a class="anchor-link" href="#Problem:-Subplot">¶</a>
 </h3>
 <p>Create a 2 by 1 subplot with the price of IBM in the top subplot and the
@@ -284,7 +273,7 @@ price of MSFT in the bottom subplot.</p>
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -295,8 +284,6 @@ price of MSFT in the bottom subplot.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="%%">%%<a class="anchor-link" href="#%%">¶</a>
-</h2>
 <h3 id="Problem:-Plot-with-Dates">Problem: Plot with Dates<a class="anchor-link" href="#Problem:-Plot-with-Dates">¶</a>
 </h3>
 <p>Use <code>matplotlib</code> to directly plot <code>ibm</code> against its <code>index</code>. This is a
@@ -309,7 +296,7 @@ repeat of a previous plot but shows how to use the <code>plot</code> command dir
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#%%</span>
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
