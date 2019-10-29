@@ -302,6 +302,77 @@ repeat of a previous plot but shows how to use the <code>plot</code> command dir
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a>
+</h3>
+<h4 id="Exercise:-Change-seaborn">Exercise: Change seaborn<a class="anchor-link" href="#Exercise:-Change-seaborn">¶</a>
+</h4>
+<p>Produce a line plot of MSFT's price using seaborn's "whitegrid" style.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise:-HLOC-plot">Exercise: HLOC plot<a class="anchor-link" href="#Exercise:-HLOC-plot">¶</a>
+</h4>
+<p>Use the HLOC data to produce a plot of MSFT's 5 minute HLOC
+where the there are no lines, high is demarcated using a green triangle,
+low is demarcated using a red downward pointing triangle, open is demarcated 
+using a light grey leftward facing triangle and close is demarcated using
+a right facing triangle.</p>
+<p><strong>Note</strong> Get the axes from the first, plot, and reuse this when plotting 
+the other series.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Load data and create values</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">msft</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_hdf</span><span class="p">(</span><span class="s2">"data/hf.h5"</span><span class="p">,</span> <span class="s2">"MSFT"</span><span class="p">)</span>
+<span class="n">msft_5min</span> <span class="o">=</span> <span class="n">msft</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s2">"300S"</span><span class="p">)</span>
+<span class="n">high</span> <span class="o">=</span> <span class="n">msft_5min</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">low</span> <span class="o">=</span> <span class="n">msft_5min</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="nb">open</span> <span class="o">=</span> <span class="n">msft_5min</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<span class="n">close</span> <span class="o">=</span> <span class="n">msft_5min</span><span class="o">.</span><span class="n">last</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <script crossorigin="anonymous" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/x-mathjax-config">

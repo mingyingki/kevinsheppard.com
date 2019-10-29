@@ -209,7 +209,7 @@ return over the past 12 months) to 10 (best return over the past 12 months).</p>
 <p>Get used to calling methods by computing the mean, standard deviation, skewness, kurtosis, max, and min.</p>
 <p>Use the DataFrame functions <code>mean</code>, <code>std</code>, <code>skew</code> and <code>kurt</code>, <code>min</code> and <code>max</code> to print the
 values for <code>mom_01</code>.</p>
-<p>In the second cell, call <code>describe</code>, a method that summariezes <code>Series</code> and <code>DataFrames</code> on <code>mom_01</code>.</p>
+<p>In the second cell, call <code>describe</code>, a method that summarizes <code>Series</code> and <code>DataFrames</code> on <code>mom_01</code>.</p>
 </div>
 </div>
 </div>
@@ -455,6 +455,110 @@ argument for <code>exact</code>.</p>
 <h3 id="Problem:-Use-help-with-a-method">Problem: Use <code>help</code> with a method<a class="anchor-link" href="#Problem:-Use-help-with-a-method">¶</a>
 </h3>
 <p>Use <code>help</code> to get the help for the <code>kurt</code> method attached to <code>momentum</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a>
+</h3>
+<h4 id="Exercise:-Use-info">Exercise: Use <code>info</code><a class="anchor-link" href="#Exercise:-Use-info">¶</a>
+</h4>
+<p>Use the <code>info</code> method on <code>momentum</code> to get information about this <code>DataFrame</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise:-Compute-the-day-by-day-mean">Exercise: Compute the day-by-day mean<a class="anchor-link" href="#Exercise:-Compute-the-day-by-day-mean">¶</a>
+</h4>
+<p>Compute the day-by-day mean return of the portfolios in the momentum <code>DataFrame</code> using
+the <code>axis</code> keyword argument. Use <code>head</code> and <code>tail</code> to show
+the first 5 rows and last 5 rows</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise:-Compute-the-standard-deviation-of-mean-returns">Exercise: Compute the standard deviation of mean returns<a class="anchor-link" href="#Exercise:-Compute-the-standard-deviation-of-mean-returns">¶</a>
+</h4>
+<p>Compute the standard deviation of the mean returns by chaining methods.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise:-Compute-the-average-standard-deviation">Exercise: Compute the average standard deviation<a class="anchor-link" href="#Exercise:-Compute-the-average-standard-deviation">¶</a>
+</h4>
+<p>Compute the mean standard deviation as:</p>
+$$ \sqrt{N^{-1} \sum_{i=1}^N V[r_i]} $$<p>where $V[r_i]$ is the variance of portfolio $i$.</p>
 </div>
 </div>
 </div>

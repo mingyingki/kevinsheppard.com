@@ -389,7 +389,7 @@ evaluated left to right.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Addition-on-Series">Problem: Addition on Series<a class="anchor-link" href="#Problem:-Addition-on-Series">¶</a>
+<h3 id="Problem:-Addition-of-Series">Problem: Addition of Series<a class="anchor-link" href="#Problem:-Addition-of-Series">¶</a>
 </h3>
 <p>Add the returns on SPY to those of AAPL</p>
 </div>
@@ -411,7 +411,7 @@ evaluated left to right.</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Problem:-Addition-on-Series">Problem: Addition on Series<a class="anchor-link" href="#Problem:-Addition-on-Series">¶</a>
+<h3 id="Problem:-Combining-methods-and-mathematical-operations">Problem: Combining methods and mathematical operations<a class="anchor-link" href="#Problem:-Combining-methods-and-mathematical-operations">¶</a>
 </h3>
 <p>Using only basic mathematical operations compute the 
 correlation between the returns on AAPL and SPY.</p>
@@ -483,6 +483,149 @@ and add it to the return <code>DataFrame</code></p>
 </h3>
 <p>Set up a 3-element array of portfolio weights</p>
 $$w=\left(\frac{1}{3},\,\frac{1}{3}\,,\frac{1}{3}\right)$$<p>and compute the return of a portfolio with weight $\frac{1}{3}$ in each security.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercises">Exercises<a class="anchor-link" href="#Exercises">¶</a>
+</h3>
+<h4 id="Exercise:-Combine-math-with-function">Exercise: Combine math with function<a class="anchor-link" href="#Exercise:-Combine-math-with-function">¶</a>
+</h4>
+<p>Add 1 to the output of <code>np.arange</code> to produce the sequence 1, 2, ..., 10.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise:-Understand-pandas-math">Exercise: Understand pandas math<a class="anchor-link" href="#Exercise:-Understand-pandas-math">¶</a>
+</h4>
+<p>Use the <code>Series</code> and <code>DataFrame</code> below to compute the sums</p>
+<ul>
+<li><code>a+b</code></li>
+<li><code>a+c</code></li>
+<li><code>b+c</code></li>
+<li><code>a+b+c</code></li>
+</ul>
+<p>to understand how missing values are treated by pandas</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Data for exercise</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">rs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">19991231</span><span class="p">)</span>
+
+<span class="n">idx</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"A"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"B"</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"A"</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">"B"</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">idx</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">rs</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Exercise:-Math-with-duplicates">Exercise: Math with duplicates<a class="anchor-link" href="#Exercise:-Math-with-duplicates">¶</a>
+</h4>
+<p>Add the Series <code>d</code> to <code>a</code> to see what happens with delays.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup: Data for exercise</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">101</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span><span class="s2">"A"</span><span class="p">])</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
