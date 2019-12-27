@@ -68,8 +68,33 @@ Question 6 asks the applicants to apply their understanding of static and dynami
 
 Question 7 is open-ended. Applicants may discuss extended issues from the paper such as the critical role uncertainty plays in dynamic costs or the estimated social cost of emissions.
 
+## Preparing for an interview
+
+Interviews in economics do not follow a single pattern.  Over the past 10 years I have used combinations of:
+ 
+* complex logic puzzles that are ultimately applications of game theory;
+* math questions, especially using approximation in graphical analysis to demonstrate understand of a topic
+* readings that can be deconsructed using economic analysis; and
+* interpretation of data (e.g., [the trends in inequality over time]()).
+
+There is no single approach to preparing. My (admittedly generic) advice to prepare for an interview in Economics includes:
+
+**Practice**
+
+**Think like an economist**
+
+**Build on facts**
+
+**Know your personal statement** - You should be familiar with the details of your personal statement.  This is especially true of specific points you make about how events or readings have influenced your decision to pursue economics.
+
+**Practice** Practicing a wide range of problems is the best method to prepare for the
+uncertainty in an Economics interview. 
+
+The most fruitful strategy is to prepare for as wide a range of problems as possible. This is the same advide I provide to candidates when they ask about the TSA: practice, practice and then practice. Practice thinking about problem with little notice that do not have a definitive answer. Candidates shoudl ensure that they are comfortable communicating arguments verbally. Verbal communication of challenging concepts is not simple, and requires practice. Most candidates are comfortable producing written work. I have found not all applicants are comfortable verbalizing their logic.  While the interview is not designed to trip up candidates, it is also not intended to be easy.  It is also not a competition in fact recollection. It is essential that candidates apply _economic_ reasoning - not political, sociological, or philosophical - to the problem. Readings are chosen to provide a factbase that is sufficient to last the entireity of the interview. It is not usually necessary to introduce facts that are not readily verified.
+
+
 ## Performing Well
 
-The interview is short and intense.  Candidates need to be ready to demonstrate their subject mastery and understand of the material. Anyone applying to Oxford must be able to communicate their ideas verbally.  Verbal communication is essential in the Oxford education system, where students spend hundreds of hours in small groups settings over their degree. Assessing the student's ability to communicate verbally, as well as to make reasoned arguments, is the justification of the interview.  I have performed interviews over many years. Not all 17-year-old applicants are in a place where they can take full advantage of Oxford's peculiar, labor-intensive, but effective method of teaching. My beleif does not reflect on their intellect, their motivation, or their preparation. I do beleive that an applicant's performance in an interview indicates whether they are ready to be placed into the unique setting of a tutorial.
+The interview is short and intense.  Candidates need to be ready to demonstrate their subject mastery and understand of the material. Anyone applying to Oxford must be able to communicate their ideas verbally.  Verbal communication is essential in the Oxford education system, where students spend hundreds of hours in small groups settings over their degree. Assessing the student's ability to communicate verbally, as well as to make reasoned arguments, is the justification of the interview.  I have performed interviews over many years. Not all 17-year-old applicants are in a place where they can take full advantage of Oxford's peculiar, labor-intensive, but effective method of teaching. My belief does not reflect on their intellect, their motivation, or their preparation. I do believe that an applicant's performance in an interview indicates whether they are ready to be placed into the unique setting of a tutorial.
 
 I have no doubts that all of the candidates I have been this year, whether we are in a position to offer them a place or not, will go on to great things.
