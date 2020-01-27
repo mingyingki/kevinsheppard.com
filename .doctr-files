@@ -117,7 +117,6 @@
 ./files/teaching/matlab/course/GBPUSD.mat
 ./files/teaching/matlab/course/HS_VaR.mat
 ./files/teaching/matlab/course/JPYUSD.mat
-./files/teaching/matlab/course/Raw_data_files.zip
 ./files/teaching/matlab/course/SP500_table.mat
 ./files/teaching/matlab/course/SP_FTSE.mat
 ./files/teaching/matlab/course/VAR_data.mat
@@ -185,6 +184,7 @@
 ./files/teaching/matlab/course/probit_loglike.m
 ./files/teaching/matlab/course/program_flow.m
 ./files/teaching/matlab/course/program_flow.mlx
+./files/teaching/matlab/course/raw_data_files.zip
 ./files/teaching/matlab/course/rolling_and_recursive_ols.m
 ./files/teaching/matlab/course/rolling_and_recursive_ols.mlx
 ./files/teaching/matlab/course/simulation.m
