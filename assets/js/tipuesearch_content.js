@@ -1,6 +1,12 @@
 var tipuesearch = {
   "pages": [
     {
+      "title": "Financial Econometrics Companion Course",
+      "text": "See the folders \"autumn\" and \"winter\" in the github repository.",
+      "tags": "",
+      "url": "https://www.kevinsheppard.com/teaching/python/companion-course/"
+    },
+    {
       "title": "Financial Econometrics II",
       "text": "Slides\u00b6\nUnivariate Volatility (Week 1-3)\nSlides with Markup\u00b6\nThese slides contain the mark-up produced in the lecture including any derivations.\n\nUnivariate Volatility (Week 1)\nUnivariate Volatility (Available Week 2)\nUnivariate Volatility (Available Week 3)\nValue-at-Risk (Available Week 3)\nValue-at-Risk (Available Week 4)\n\nPractice Quizzes\u00b6\nThere is a new quize each week on the course canvas page. \nHomework\u00b6\n\nWeeks 1 - 4\n\nEmpirical Projects\u00b6\n\nEmpirical Project 2 (Due Week 5)\nEmpirical Project 3 (Due Week 9)\n\nNotes\u00b6\nSee the notes page for standard and tablet optimized versions of the course notes.",
       "tags": "mfe,teaching",
@@ -386,7 +392,7 @@ var tipuesearch = {
     },
     {
       "title": "Python",
-      "text": "Python Notes\u00b6\nA set of notes that introduce the core concepts of Python that\nare relevant to applications in Statistics, Econometrics and many other\nnumerical areas. Codes Python fundamentals, NumPy, Pandas,\nand some parts of SciPy and statsmdoels.  \nPython Notes\nIntroductory Python Course\u00b6\nA short course designed for people new to Python, and often new\nto programming.  Starts with the basics - getting the Python environemnt\nright, and work through entering arrays and pandas DataFrame, selecting\nelements, basic looping and graphics.  \nIntroductory Course",
+      "text": "Python Notes\u00b6\nA set of notes that introduce the core concepts of Python that\nare relevant to applications in Statistics, Econometrics and many other\nnumerical areas. Codes Python fundamentals, NumPy, Pandas,\nand some parts of SciPy and statsmdoels.  \nPython Notes\nIntroductory Python Course\u00b6\nA short course designed for people new to Python, and often new\nto programming.  Starts with the basics - getting the Python environemnt\nright, and work through entering arrays and pandas DataFrame, selecting\nelements, basic looping and graphics.  \nIntroductory Course\nFinancial Econometrics Python Course\u00b6\nA course that accompanies the MFE Financial Econometrics teaching. It is\ndesigned to complement the lecture and provide the core set fo skills\nneeded to analyze data and fit models. \nCompanion Course",
       "tags": "",
       "url": "https://www.kevinsheppard.com/teaching/python/"
     },
