@@ -346,6 +346,7 @@
 ./files/teaching/python/notes/example-gmm.ipynb
 ./files/teaching/python/notes/example-latex.ipynb
 ./files/teaching/python/notes/python_introduction_2019.pdf
+./files/teaching/scanning-recommendations.pdf
 ./galleries/Arizona-(2010)/DSC_0001.jpg
 ./galleries/Arizona-(2010)/DSC_0001.thumbnail.jpg
 ./galleries/Arizona-(2010)/DSC_0009.JPG
@@ -2834,6 +2835,14 @@
 ./images/teaching/python/course/vscode-notebook-new.thumbnail.png
 ./images/teaching/python/course/vscode-notebook.png
 ./images/teaching/python/course/vscode-notebook.thumbnail.png
+./images/teaching/scanning/arm.png
+./images/teaching/scanning/arm.thumbnail.png
+./images/teaching/scanning/device.png
+./images/teaching/scanning/device.thumbnail.png
+./images/teaching/scanning/high-quality.png
+./images/teaching/scanning/high-quality.thumbnail.png
+./images/teaching/scanning/location.jpg
+./images/teaching/scanning/location.thumbnail.jpg
 ./index.html
 ./mstile-150x150.png
 ./mstile-310x310.png
@@ -2907,3 +2916,4 @@
 ./teaching/python/notes/notebooks/example-gjr-garch/index.html
 ./teaching/python/notes/notebooks/example-gmm-estimation/index.html
 ./teaching/python/notes/notebooks/example-latex-output/index.html
+./teaching/scanning-recommendations/index.html
