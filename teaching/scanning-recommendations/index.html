@@ -223,6 +223,98 @@ that is mostly monochrome text but contains a full-color diagram. Genius Scan is
 recommendation if you have a good lighting setup. If not, I would use CamScanner.</p>
 <p>There are many other scanners, so please do try others if you are not happy with
 these. </p>
+<h4 id="genius-scan-settings">Genius Scan Settings<a class="headerlink" href="#genius-scan-settings" title="Permanent link">¶</a>
+</h4>
+<ul>
+<li>
+<p>Set Image Quality to medium before scanning your document (Menu &gt; Settings &gt; Image Quality &gt; Medium).
+  I Could not detect any relevant differences when scanning black and white documents
+  across Medium, High, and Highest.  File sizes, however, do vary with this setting, and Medium
+  minimizes the output size of the PDF without compromising legibility.</p>
+</li>
+<li>
+<p>Edit images before exporting. After you have scanned the document, you can tap on any page to
+  open the edit view.  Editing lets you:</p>
+</li>
+<li>
+<p>Adjust the scanning mode to select Black &amp; White if color incorrectly was detected;</p>
+</li>
+<li>Rotate the images so that they have the correct orientation; and</li>
+<li>
+<p>Recrop any images where GeniusScan's edge detection was not adequate.</p>
+</li>
+<li>
+<p>Change the <em>File size</em> when exporting.  GeniusScan will <strong>estimate</strong> size of the file after
+  export. In my tests, Small produced files that are easy to read (about 600kB per scanned page,
+  when used with Medium image quality). The table below shows the <strong>estimated</strong> size of the file
+  exported using combinations of Image Quality and <em>File size</em>.  Medium/Medium and Medium/Large
+  appear to be the most sensible choices. Both Highest Image Quality and Actual <em>File size</em> should
+  be avoided. </p>
+</li>
+</ul>
+<div class="table-responsive"><table>
+<thead><tr>
+<th>Image Quality</th>
+<th align="right">Small</th>
+<th align="right">Medium</th>
+<th align="right">Large</th>
+<th align="right">Actual</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td align="right">571kB</td>
+<td align="right">640kB</td>
+<td align="right">811kB</td>
+<td align="right">2.1MB</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td align="right">1.2MB</td>
+<td align="right">1.3MB</td>
+<td align="right">1.7MB</td>
+<td align="right">4.3MB</td>
+</tr>
+<tr>
+<td>High</td>
+<td align="right">2.1MB</td>
+<td align="right">2.3MB</td>
+<td align="right">2.9MB</td>
+<td align="right">7.5MB</td>
+</tr>
+<tr>
+<td>Highest</td>
+<td align="right">3.6MB</td>
+<td align="right">4.0MB</td>
+<td align="right">5.1MB</td>
+<td align="right">13MB</td>
+</tr>
+</tbody>
+</table></div>
+<p>I have included two sample files where you can compare
+   <a href="../../files/teaching/scanning/highest-actual.pdf">Highest/Actual</a> with
+   <a href="../../files/teaching/scanning/medium-small.pdf">Medium/Small</a>. Note that the
+   file size of the Medium/Small file is 2.5MB, not 1.2MB, as estimated by GeniusScan. </p>
+<h5 id="excessively-large-scans">Excessively Large Scans<a class="headerlink" href="#excessively-large-scans" title="Permanent link">¶</a>
+</h5>
+<p>If you attempt to export and the resulting file is excessively large, you can split a scan
+in GeniusScan. </p>
+<ol>
+<li>Begin by selecting the document.</li>
+<li>Long press a page in the second half of the document.</li>
+<li>Select all pages in the second half.</li>
+<li>Select the move icon and select <em>New document</em>.</li>
+</ol>
+<p>The animation below illustrates these steps.</p>
+<p><img alt="Splitting using GeniusScan" src="../../images/teaching/scanning/genius-scan-splitting.gif" title="Splitting a document in GeniusScan"/></p>
+<p>You will then need to rejoin the parts into a single PDF using <a href="#pdf-sam">PDF Sam Basic</a>
+or an online tool.</p>
+<h5 id="excessively-large-pdfs">Excessively Large PDFs<a class="headerlink" href="#excessively-large-pdfs" title="Permanent link">¶</a>
+</h5>
+<p>If the PDF you have produced exceeds the upload limit, you can compress it using
+an <a href="https://www.ilovepdf.com/compress_pdf">online PDF compressor</a>.  I recommend using the
+most conservative compression (<em>Less Compression</em>) which reduced scanned file sizes by 50% in 
+my experiments. </p>
 <h3 id="additional-issues">Additional Issues<a class="headerlink" href="#additional-issues" title="Permanent link">¶</a>
 </h3>
 <p><em>I do not believe that at-home exam takers need to be overly concerned with carefully</em>
@@ -232,7 +324,9 @@ these. </p>
 <em>you have two files, combining them into a Zip file before uploading.</em></p>
 <h4 id="embedding-images-in-documents">Embedding Images in Documents<a class="headerlink" href="#embedding-images-in-documents" title="Permanent link">¶</a>
 </h4>
-<p>When writing essays, you may need one or more diagrams or one or more equations. The best format (as in nicest for your tutor or assessor) is to embed the image into your word document. The simplest method to do this is to:</p>
+<p>When writing essays, you may need one or more diagrams or one or more equations. The best
+format (as in nicest for your tutor or assessor) is to embed the image into your word document.
+The simplest method to do this is to:</p>
 <ul>
 <li>draw your diagram;</li>
 <li>photograph it;</li>
@@ -242,7 +336,19 @@ these. </p>
   Google photos to back up your images by opening the Google photos app.  The image will then
   be available <a href="https://photos.google.com/">through your browser</a>.</li>
 </ul>
-<p>You should then be able to directly insert the equation or diagram into your document without further formatting.</p>
+<p>You should then be able to directly insert the equation or diagram into your document
+without further formatting.</p>
+<h4 id="snipping-tools">Snipping Tools<a class="headerlink" href="#snipping-tools" title="Permanent link">¶</a>
+</h4>
+<p>Snipping is a simple way to copy anything you can see on your computer into a Word
+or Google docs document.  You can snip just the content you want, and so should not 
+need to crop the image further.</p>
+<ul>
+<li>Windows 10: The preferred option is <em>Snip and Sketch</em>. The snipping window can be opened using
+  <code>Win</code>+<code>Shift</code>+<code>S</code>.</li>
+<li>Windows 7/8: These operating systems come with a program called <em>Snipping Tool</em>.</li>
+<li>macOS: <code>Command</code> + <code>Shift</code> + <code>4</code> allows you to select a region to copy.</li>
+</ul>
 <h4 id="combining-pdfs">Combining PDFs<a class="headerlink" href="#combining-pdfs" title="Permanent link">¶</a>
 </h4>
 <p>You may have assignments or exams that require mixed answers where some questions
@@ -254,6 +360,7 @@ these into a single PDF before submission.</p>
 drag-and-drop to arrange their order, combine them, and then download them. This
 methods comes with a standard disclaimer about privacy. Combine PDF states they delete
 all content after an hour, but they do not have a Privacy Policy visible.</p>
+<p><a name="pdf-sam"></a></p>
 <p>The second uses <a href="https://pdfsam.org/">PDF Sam Basic</a> to merge them. PDF Sam is both
 free to use and open source.  This program has to be locally installed to use. Merging
 two or more PDFs can be done by:</p>

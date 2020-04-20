@@ -347,6 +347,8 @@
 ./files/teaching/python/notes/example-latex.ipynb
 ./files/teaching/python/notes/python_introduction_2019.pdf
 ./files/teaching/scanning-recommendations.pdf
+./files/teaching/scanning/highest-actual.pdf
+./files/teaching/scanning/medium-small.pdf
 ./galleries/Arizona-(2010)/DSC_0001.jpg
 ./galleries/Arizona-(2010)/DSC_0001.thumbnail.jpg
 ./galleries/Arizona-(2010)/DSC_0009.JPG
@@ -2839,6 +2841,8 @@
 ./images/teaching/scanning/arm.thumbnail.png
 ./images/teaching/scanning/device.png
 ./images/teaching/scanning/device.thumbnail.png
+./images/teaching/scanning/genius-scan-splitting.gif
+./images/teaching/scanning/genius-scan-splitting.thumbnail.gif
 ./images/teaching/scanning/high-quality.png
 ./images/teaching/scanning/high-quality.thumbnail.png
 ./images/teaching/scanning/location.jpg
