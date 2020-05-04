@@ -280,6 +280,11 @@
 ./files/teaching/mfe/advanced-econometrics/White.pdf
 ./files/teaching/mfe/advanced-econometrics/lecture4.m
 ./files/teaching/mfe/advanced-econometrics/rrrr_demo.m
+./files/teaching/mfe/advanced-financial-econometrics-2020/card.pdf
+./files/teaching/mfe/advanced-financial-econometrics-2020/es.pdf
+./files/teaching/mfe/advanced-financial-econometrics-2020/intro.pdf
+./files/teaching/mfe/advanced-financial-econometrics-2020/sarima.pdf
+./files/teaching/mfe/advanced-financial-econometrics-2020/theta.pdf
 ./files/teaching/mfe/assignments/computational-exercise-2-2019-2020.pdf
 ./files/teaching/mfe/assignments/computational-exercise-3-2019-2020.pdf
 ./files/teaching/mfe/assignments/computational-exercise-3-2019-2020.zip
@@ -2884,6 +2889,7 @@
 ./teaching/matlab/mfe-matlab/index.html
 ./teaching/matlab/notes/index.html
 ./teaching/mfe/advanced-econometrics/index.html
+./teaching/mfe/advanced-financial-econometrics-forecasting/index.html
 ./teaching/mfe/hilary-term/index.html
 ./teaching/mfe/index.html
 ./teaching/mfe/notes/index.html
