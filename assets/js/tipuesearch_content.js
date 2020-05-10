@@ -2,7 +2,7 @@ var tipuesearch = {
   "pages": [
     {
       "title": "Advanced Financial Econometrics: Forecasting",
-      "text": "Lecture Slides\u00b6\n\nIntroduction\nSARIMA: Seasonal Autoregressive Integrated Moving Average Models\nExponential Smoothing\nThe Theta Method\nThe CARD Method\n\nLectures\u00b6\nEach of the lectures is presented in small blocks. You can find the presentation\non the YouTube lecture list.\nNotebooks\u00b6\nComing Soon",
+      "text": "Reading List\u00b6\nThe reading list contains a set of papers related to the course content. \nGitHub Repository\u00b6\nThe notebooks and data are shared through the course's GitHub repository.\nAssignment\u00b6\nThe AFE group work asks you to use the method presented in teh course on a subset of the M4 data.\nLectures\u00b6\nEach of the lectures is presented in small blocks. You can find the presentation\non the YouTube lecture list.\nLecture Slides and Notebooks\u00b6\n\n\n\nSlides\nNotebook\n\n\n\n\nIntroduction\n\n\n\nSARIMA: Seasonal Autoregressive Integrated Moving Average Models\nSARIMA\n\n\nExponential Smoothing\nExponential Smoothing\n\n\nThe Theta Method\nThe Theta Method\n\n\nThe CARD Method\nThe CARD Method\n\n\nForecast Combination Coming Soon\nForecast Combination Coming Soon",
       "tags": "econometrics,mfe",
       "url": "https://www.kevinsheppard.com/teaching/mfe/advanced-financial-econometrics-forecasting/"
     },
