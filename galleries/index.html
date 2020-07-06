@@ -257,6 +257,8 @@ MathJax.Hub.Config({
 </script><!--<script src="/assets/js/justified-layout.min.js"></script>
   <script src="/assets/js/gallery.min.js"></script>-->
 <script>
+      var blueImplinksElementExists = !!document.getElementById('links');
+      if (blueImplinksElementExists == true){
       document.getElementById('links').onclick = function (event) {
           event = event || window.event;
           var target = event.target || event.srcElement,
@@ -264,6 +266,7 @@ MathJax.Hub.Config({
               options = {index: link, event: event},
               links = this.getElementsByTagName('a');
           blueimp.Gallery(links, options);
+      };
       };
 </script>
 <script>
